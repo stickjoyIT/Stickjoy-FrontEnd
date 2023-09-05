@@ -145,7 +145,7 @@ struct ElsesProfileHeader: View {
                         .bold()
                     Spacer()
                 }
-                Text(username)
+                Text("@"+name.replacingOccurrences(of: " ", with: ""))
                     .font(.headline)
                 
                 Text(descrip)

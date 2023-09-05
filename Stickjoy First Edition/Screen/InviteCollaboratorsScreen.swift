@@ -43,8 +43,8 @@ struct InviteCollaboratorsScreen: View {
                             .padding()
                     }
                     
-                    SearchBarView(amigos: $amigosList)
-                        .padding(.horizontal)
+                    ///SearchBarView(amigos: $amigosList)
+                        ///.padding(.horizontal)
                     
                     if inviteUser.count > 0 {
                         Spacer()
@@ -78,7 +78,9 @@ struct InviteCollaboratorsScreen: View {
                 .padding()
                 .navigationBarTitleDisplayMode(.inline)
                 .onAppear{
-                    
+                    uvm.getFriends(amigos: {fri in
+                        amigosList = fri
+                    })
                 }
                 .snackbar(isShowing: $showSnackBar, title: mensaje, style: .default)
             }

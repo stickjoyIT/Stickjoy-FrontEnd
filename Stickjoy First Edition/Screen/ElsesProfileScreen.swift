@@ -13,7 +13,7 @@ struct ElsesProfileScreen: View {
     //Esto se manda a llamar para que la imagen del encabezado ignore las safe areas de arriba
     @StateObject var homeData = ElsesProfileViewModel()
     @ObservedObject var uvm = UsuariosViewModel()
-    
+    @State var isActiveViewAlbum = false
     @Binding var id_usuario:String
     @Binding var isPinet:Bool
     @Binding var isFriend:Bool
@@ -21,6 +21,10 @@ struct ElsesProfileScreen: View {
     @Binding var name:String
     @Binding var username:String
     @Binding var descrip:String
+    @State var id_album = ""
+    @State var nameAlbum = ""
+    @State var descripAlbum = ""
+    @State var imgPortada = ""
     
     @ObservedObject var avm = AlbumViewModel()
     
@@ -60,7 +64,7 @@ struct ElsesProfileScreen: View {
                     //For each para que aparezcan los álbumes del usuario
                     ForEach(avm.albumsFriend){elsesalbums in
                         // El albums se repite aquí:
-                        ElsesProfileBody(elsesalbumsinfo: elsesalbums)
+                        ElsesProfileBody(elsesalbumsinfo: elsesalbums, isActive: $isActiveViewAlbum, id_album: $id_album, nameAlbum: $nameAlbum, descrip: $descripAlbum, imgPortada: $imgPortada)
                     }
                 }
             })
@@ -79,6 +83,9 @@ struct ElsesProfileScreen: View {
             uvm.getUserDetails(user_id: id_usuario)
             avm.getAlbumListFriend(id_user: id_usuario)
         }
+        .fullScreenCover(isPresented: $isActiveViewAlbum, content: {
+            ElsesAlbumScreen(id_album: $id_album, nameAlbum: $nameAlbum, descripAlbum: $descripAlbum, username: $username, imgPortada: $imgPortada)
+        })
     }
 }
 

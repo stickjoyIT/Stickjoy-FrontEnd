@@ -48,6 +48,8 @@ final class AlbumViewModel : ObservableObject {
                                 let privacy = i["privacy"] as! Int
                                 let created_date = i["created_date"] as! NSDictionary
                                 let last_added_date = i["last_added_date"] as! NSDictionary
+                                let owner = i["owner"] as! NSDictionary
+                                let nameAdmin = owner["name"] as! String
                                 
                                 let creacion = created_date["_seconds"] as! Int
                                 let actualizacion = last_added_date["_seconds"] as! Int
@@ -79,7 +81,7 @@ final class AlbumViewModel : ObservableObject {
                                 
                                 let nameUser = UserDefaults.standard.string(forKey: "nombre") ?? ""
                                 
-                                self.listAlbum.append(AlbumInfo(albumTitle: name, albumImage: url, albumAdministrator: "@\(nameUser.replacingOccurrences(of: " ", with: "")) es admin", albumCreation: "Creado el \(localDateC)", albumUpdate: "Actualizado \(relativeDate)", albumType: tipoAlbum, albumParticipants: "\(share_to.count) Participantes", albumPrivacy: privacy,id_album: id, owner_id: owner_id, description: descrip))
+                                self.listAlbum.append(AlbumInfo(albumTitle: name, albumImage: url, albumAdministrator: "@\(nameAdmin.replacingOccurrences(of: " ", with: "")) es admin", albumCreation: "Creado el \(localDateC)", albumUpdate: "Actualizado \(relativeDate)", albumType: tipoAlbum, albumParticipants: "\(share_to.count) Participantes", albumPrivacy: privacy,id_album: id, owner_id: owner_id, description: descrip))
                             }
                         }
                         compation(self.listAlbum)
@@ -283,6 +285,8 @@ final class AlbumViewModel : ObservableObject {
                                 let privacy = i["privacy"] as! Int
                                 let created_date = i["created_date"] as! NSDictionary
                                 let last_added_date = i["last_added_date"] as! NSDictionary
+                                let owner = i["owner"] as! NSDictionary
+                                let nameAdmin = owner["name"] as! String
                                 
                                 let creacion = created_date["_seconds"] as! Int
                                 let actualizacion = last_added_date["_seconds"] as! Int
@@ -313,7 +317,7 @@ final class AlbumViewModel : ObservableObject {
                                 
                                 let nameUser = UserDefaults.standard.string(forKey: "nombre") ?? ""
                                 
-                                self.albumsFriend.append(ElsesAlbumInfo(albumTitle: name, albumImage: url, albumAdministrator: "@\(nameUser.replacingOccurrences(of: " ", with: "")) es admin", albumCreation: "Creado el \(localDateC)", albumUpdate: "Actualizado \(relativeDate)", albumType: tipoAlbum, albumParticipants: "\(share_to.count) Participantes", albumPrivacy: privacy,id_album: id, owner_id: owner_id, description: descrip))
+                                self.albumsFriend.append(ElsesAlbumInfo(albumTitle: name, albumImage: url, albumAdministrator: "@\(nameAdmin.replacingOccurrences(of: " ", with: "")) es admin", albumCreation: "Creado el \(localDateC)", albumUpdate: "Actualizado \(relativeDate)", albumType: tipoAlbum, albumParticipants: "\(share_to.count) Participantes", albumPrivacy: privacy,id_album: id, owner_id: owner_id, description: descrip))
                             }
                         }
                     } else {
@@ -350,7 +354,8 @@ final class AlbumViewModel : ObservableObject {
                         let resp = ResponseData(status: 200, message: "Se envió la solicitud para compartir el album")
                         responseData(resp)
                     } else {
-                        let resp = ResponseData(status: 400, message: "Ya has enviado solicitud")
+                        let resp = ResponseData(status: status, message: "Ya has enviado solicitud")
+                        responseData(resp)
                     }
                     
                 }

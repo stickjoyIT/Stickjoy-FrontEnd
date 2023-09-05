@@ -6,9 +6,16 @@
 //  Paulo: este archivo manda a llamar al mismo file que ProfileScreen, en caso de que se requiera separar, copiar información y cambiar de nombres.
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct ElsesProfileBody: View {
     var elsesalbumsinfo: ElsesAlbumInfo
+    @Binding var isActive:Bool
+    @Binding var id_album:String
+    @Binding var nameAlbum:String
+    @Binding var descrip:String
+    @Binding var imgPortada:String
+    
     var body: some View {
         HStack {
             VStack(alignment: .leading, spacing: 16, content: {
@@ -19,15 +26,28 @@ struct ElsesProfileBody: View {
                 
                 //Botón de álbum para abrir la pantalla de álbum
                 Button(action: {
-                    
                     //Añadir acción de ir al álbum
+                    isActive = true
+                    id_album = elsesalbumsinfo.id_album
+                    nameAlbum = elsesalbumsinfo.albumTitle
+                    descrip = elsesalbumsinfo.description
+                    imgPortada = elsesalbumsinfo.albumImage
                     
                 }) {
-                    Image(elsesalbumsinfo.albumImage)
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .frame(width: 350, height: 250)
-                        .cornerRadius(24)
+                    if elsesalbumsinfo.albumImage.isEmpty {
+                        Image("stickjoyLogo")
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: 350, height: 250)
+                            .cornerRadius(24)
+                    } else {
+                        AnimatedImage(url: URL(string: elsesalbumsinfo.albumImage))
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: 350, height: 250)
+                            .cornerRadius(24)
+                    }
+                    
                 }
                 
                 Text(elsesalbumsinfo.albumAdministrator)

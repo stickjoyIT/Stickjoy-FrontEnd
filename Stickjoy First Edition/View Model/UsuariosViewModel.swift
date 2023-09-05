@@ -34,6 +34,7 @@ final class UsuariosViewModel: ObservableObject {
     @Published var inboxList = [Amigo]()
     @Published var outList = [Amigo]()
     @Published var UserElse = ElsesProfileInfo(profileName: "", profileImage: "", profileUsername: "", profileDescription: "")
+    @Published var colaboratorsList = [Amigo]()
     
     @Published var name = ""
     @Published var username = ""
@@ -564,6 +565,46 @@ final class UsuariosViewModel: ObservableObject {
                 print(error)
                 let resp = ResponseData(status: 500, message: "Error de conexion")
                 responseReturn(resp)
+            }
+        }
+    }
+    func getFriends(amigos:@escaping ([Amigo]) -> Void){
+        colaboratorsList = []
+        let token = UserDefaults.standard.string(forKey: "token") ?? ""
+        let id_user = UserDefaults.standard.string(forKey: "id") ?? ""
+        let url = "https://users-pgobuckofq-uc.a.run.app/users/\(id_user)"
+        let headers:HTTPHeaders = [
+            "Authorization": "Bearer \(token)"
+        ]
+        
+        Alamofire.request(url, headers: headers).responseJSON { success in
+            switch success.result {
+            case .success:
+                if let json = success.result.value as? [String:Any]{
+                    guard let status = json["status"] as? Int else {
+                        return
+                    }
+                    if status == 200 {
+                        guard let data = json["data"] as? NSDictionary else { return }
+                        guard let pinned_users = data["friends"] as? NSArray else{return}
+                        print(pinned_users)
+                        for pinned_user in pinned_users {
+                            guard let i = pinned_user as? NSDictionary else {
+                                return
+                            }
+                            let id = i["user_id"] as? String ?? ""
+                            let description = i["description"] as? String ?? ""
+                            let name = i["name"] as? String ?? ""
+                            let username = i["username"] as? String ?? ""
+                            let url = i["url"] as? String ?? ""
+                            
+                            self.colaboratorsList.append(Amigo(user_id: id, name: name, username: username, user_url: url, album_id: "", album_name: "", album_description: description, album_url: "", picture_id: "", picture_url: "", picture_created_date: ""))
+                        }
+                        amigos(self.colaboratorsList)
+                    }
+                }
+            case .failure(let error):
+                print(error)
             }
         }
     }
