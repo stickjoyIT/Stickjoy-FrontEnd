@@ -8,8 +8,11 @@
 //  ¿Qué falta?: Regresar error de información no válida. Proceso de Recuperación de contraseña. 
 
 import SwiftUI
+import SwiftUISnackbar
 
 struct LogInScreen: View {
+    @State private var showPassword = false
+    @ObservedObject var uvm = UsuariosViewModel()
     @State private var isShowingUserProfile = false
     @Environment(\.presentationMode) private var presentationMode:Binding<PresentationMode>
     // Para adapatación a dark y light mode
@@ -21,8 +24,14 @@ struct LogInScreen: View {
     @State private var isForgotPasswordMenuPresented = false // Add this state variable
     @State private var showAlert = false
     @State private var mensajeAlerta = ""
+    
+    @Binding var logueado:Bool
+    @State var shorSnack = false
+    
+    let lenguaje = UserDefaults.standard.string(forKey: "lenguaje") ?? "es"
     var body: some View {
         Spacer().navigationBarBackButtonHidden(true)
+        
         VStack(alignment: .center, spacing: 5) {
             HStack {
                 Button{
@@ -31,59 +40,56 @@ struct LogInScreen: View {
                     Image("btnBack")
                 }.padding()
                 
-                Text("Iniciar sesion")
+                Text(lenguaje == "es" ? "Iniciar sesión" : "Log In")
                     .font(.title)
                     .fontWeight(.medium)
                     .padding(.all, 30)
                 Spacer()
             }.padding(.trailing)
-            
-            UnderlineTextFieldView(text: $emailOrUsername, textFieldView: textView, placeholder: "@nombreusuario/correo electronico").padding(25)
-            
-            UnderlineTextFieldView(text: $password, textFieldView: passwordView, placeholder: "Contrasena").padding(25)
-            
-            HStack {
-                Spacer()
-                Button(action: {
-                    isForgotPasswordMenuPresented = true // Show the ForgotMyPasswordMenu
-                }) {
-                    Text("Olvide mi contrasena")
-                        .foregroundColor(.gray)
-                        .padding(.trailing) // Add trailing padding
+            ScrollView(.vertical) {
+                UnderlineTextFieldView(text: $emailOrUsername, textFieldView: textView, placeholder: lenguaje == "es" ? "@nombreusuario/correo electronico" : "@username/email").padding(25)
+                
+                UnderlineTextFieldView(text: $password, textFieldView: passwordView, placeholder: lenguaje == "es" ? "Contraseña" : "Password").padding(25).foregroundColor(.white)
+                
+                HStack {
+                    Spacer()
+                    Button(action: {
+                        isForgotPasswordMenuPresented = true // Show the ForgotMyPasswordMenu
+                    }) {
+                        Text(lenguaje == "es" ? "Olvidé mi contraseña" : "I forgot my password")
+                            .foregroundColor(.gray)
+                            .padding(.trailing) // Add trailing padding
+                    }
                 }
-            }
-            Button("Continuar") {
-                if emailOrUsername.isEmpty{
-                    showAlert = true
-                    mensajeAlerta = "Debe agregar un usuario"
-                    return
-                }
-                if password.isEmpty{
-                    mensajeAlerta = "Debe gregar una contrasena"
-                    showAlert = true
+                if uvm.loading{
+                    ProgressView().frame(width: 60,height: 60)
+                } else {
+                    Button(action: {
+                        uvm.loginUser(email: emailOrUsername, pass: password, compation: { success in
+                            logueado = success
+                            shorSnack = !success
+                        })
+                    }, label: {
+                        Text(lenguaje == "es" ? "Continuar" : "Continue")
+                            .foregroundColor(scheme == .dark ? Color.black : Color.white)
+                            .frame(width: 250)
+                            .padding()
+                            .background(scheme == .dark ? Color.white : Color.black)
+                            .cornerRadius(80)
+                            .padding(.top,100)
+                            .disabled(uvm.loading)
+                    })
                     
-                    return
                 }
-                isShowingUserProfile = true
+                Spacer()
             }
-            .alert(isPresented: $showAlert, content: {
-                getAlert()
+            .padding(.top)
+            .fullScreenCover(isPresented: $isForgotPasswordMenuPresented) {
+                ForgotMyPasswordMenu(isPresented: $isForgotPasswordMenuPresented)
+            }
+            .alert(isPresented: $shorSnack, content: {
+                Alert(title: Text("Mensaje"), message:Text(uvm.mensaje))
             })
-            .foregroundColor(scheme == .dark ? Color.black : Color.white)
-            .frame(width: 250)
-            .padding()
-            .background(scheme == .dark ? Color.white : Color.black)
-            .cornerRadius(80)
-            .padding(.top,100)
-            .fullScreenCover(isPresented: $isShowingUserProfile, content: {
-                ProfileScreen()
-            })
-            
-            Spacer()
-        }
-        .padding(.top)
-        .sheet(isPresented: $isForgotPasswordMenuPresented) {
-            ForgotMyPasswordMenu(isPresented: $isForgotPasswordMenuPresented)
         }
     }
     
@@ -93,21 +99,39 @@ struct LogInScreen: View {
 }
 
 extension LogInScreen {
+    
     private var textView: some View {
-            TextField("", text: $emailOrUsername)
-                .foregroundColor(.black)
-                .keyboardType(.emailAddress)
-                .autocapitalization(.none)
+        TextField("", text: $emailOrUsername)
+            .foregroundColor(scheme == .dark ? .white : .black)
+            .keyboardType(.emailAddress)
+            .autocapitalization(.none)
+    }
+    
+    private var passwordView: some View {
+        HStack {
+            if showPassword {
+                TextField("",
+                          text: $password)
+                .foregroundColor(scheme == .dark ? .white : .black)
+                .colorScheme(.dark)
+            } else {
+                SecureField("", text: $password)
+                    .foregroundColor(scheme == .dark ? .white : .black)
+                    .colorScheme(.dark)
+            }
+            Button(action: {
+                self.showPassword.toggle()
+            }){
+                Image(systemName: showPassword ? "eye" : "eye.slash")
+                    .foregroundColor(.secondary)
+            }
+            
         }
-        
-        private var passwordView: some View {
-            SecureField("", text: $password)
-                .foregroundColor(.black)
-        }
+    }
 }
 
 struct LogInScreen_Previews: PreviewProvider {
     static var previews: some View {
-        LogInScreen()
+        LogInScreen(logueado: .constant(false))
     }
 }

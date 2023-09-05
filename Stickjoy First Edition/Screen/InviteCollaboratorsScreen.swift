@@ -11,12 +11,23 @@
 import SwiftUI
 
 struct InviteCollaboratorsScreen: View {
+    
+    @Binding var id_album:String
+    @Environment (\.dismiss) var dismiss
+    
+    @ObservedObject var uvm = UsuariosViewModel()
+    @State var amigosList = [Amigo]()
+    @State var inviteUser = [String]()
+    @State var showSnackBar = false
+    @State var mensaje = ""
+    @State var id_user = ""
     var body: some View {
         NavigationView {
             ScrollView{
                 VStack(alignment: .leading, spacing: 16) {
                     Button(action: {
                         // Añadir ir hacia atrás. Te lleva de vuelta al AdminPanelScreen.
+                        dismiss()
                     }) {
                         Image(systemName: "arrow.left.circle.fill")
                             .font(.title)
@@ -32,40 +43,44 @@ struct InviteCollaboratorsScreen: View {
                             .padding()
                     }
                     
-                    SearchBarView()
+                    SearchBarView(amigos: $amigosList)
                         .padding(.horizontal)
-                    Spacer()
-                    Divider()
                     
-                    //Sección de Solicitudes pendientes.
-                    Section(header: Text("Pending Requests")
-                        .font(.title2)
-                        .bold()
-                            
-                    ) {
-                        //Este texto manda a llamar el archivo ProfileInfo.Swift
-                        ForEach(ProfileFriendsAndRequests.pendingCollabRequests, id: \.self) { request in
-                            InviteCollaboratorRow(name: request, isRequest: true)
+                    if inviteUser.count > 0 {
+                        Spacer()
+                        Divider()
+                        //Sección de Solicitudes pendientes.
+                        Section(header: Text("Pending Requests")
+                            .font(.title2)
+                            .bold()
+                                
+                        ) {
+                            //Este texto manda a llamar el archivo ProfileInfo.Swift
+                            ForEach(ProfileFriendsAndRequests.pendingCollabRequests, id: \.self) { request in
+                                InviteCollaboratorRow(name: request, isRequest: true, id_user: $id_user, id_album:$id_album ,showSnackBar: $showSnackBar, mensaje: $mensaje )
+                            }
                         }
+                        Divider()
                     }
-                    
-                    Divider()
                     
                     //Sección de Lista de amigos.
                     Section(header: Text("Friends List")
                         .font(.title2)
                         .bold()
-                            
                     ) {
                         //Este texto manda a llamar el archivo ProfileInfo.Swift
-                        ForEach(ProfileFriendsAndRequests.friendsList, id: \.self) { friend in
-                            InviteCollaboratorRow(name: friend, isRequest: false)
+                        ForEach(amigosList, id: \.id) { friend in
+                            InviteCollaboratorRow(name: friend.name, isRequest: false, id_user: .constant(friend.user_id), id_album: $id_album, showSnackBar: $showSnackBar, mensaje: $mensaje)
                         }
                     }
                     Spacer()
                 }
                 .padding()
                 .navigationBarTitleDisplayMode(.inline)
+                .onAppear{
+                    
+                }
+                .snackbar(isShowing: $showSnackBar, title: mensaje, style: .default)
             }
         }
     }
@@ -73,20 +88,26 @@ struct InviteCollaboratorsScreen: View {
 
 struct InviteCollaboratorsScreen_Previews: PreviewProvider {
     static var previews: some View {
-        InviteCollaboratorsScreen()
+        InviteCollaboratorsScreen(id_album: .constant(""))
     }
 }
 
 struct SearchBarView: View {
+    @ObservedObject var uvm = UsuariosViewModel()
     @State private var searchText: String = ""
-    
+    @Binding var amigos:[Amigo]
     var body: some View {
         HStack {
-            Image(systemName: "magnifyingglass")
+            Image(systemName: "stickjoyLogoBlue")
                 .foregroundColor(.gray)
             
-            TextField("Search", text: $searchText)
+            TextField("Search", text: $searchText, onCommit: {
+                uvm.searchUser(search: searchText, compation:  { amiList in
+                    amigos = amiList
+                })
+            })
                 .foregroundColor(.black)
+                
         }
         .padding()
         .background(Color.white)
@@ -95,9 +116,13 @@ struct SearchBarView: View {
 }
 
 struct InviteCollaboratorRow: View {
+    @ObservedObject var avm = AlbumViewModel()
     var name: String
     var isRequest: Bool
-    
+    @Binding var id_user:String
+    @Binding var id_album:String
+    @Binding var showSnackBar:Bool
+    @Binding var mensaje:String
     var body: some View {
         HStack {
             Image("profilePicture")
@@ -108,10 +133,10 @@ struct InviteCollaboratorRow: View {
             
             VStack(alignment: .leading) {
                 //Este texto manda a llamar el archivo ProfileInfo.Swift
-                Text(ProfileInfo.profileName)
+                Text(name)
                     .font(.headline)
                 //Este texto manda a llamar el archivo ProfileInfo.Swift
-                Text(ProfileInfo.profileUsername)
+                Text("@"+(name.replacingOccurrences(of: " ", with: "")))
                     .font(.subheadline)
                     .foregroundColor(.secondary)
             }
@@ -119,13 +144,13 @@ struct InviteCollaboratorRow: View {
             Spacer()
             
             Button(action: {
-                if isRequest {
-                    // Acción de "Cancelar" invitación va aquí
-                } else {
-                    // Acción de "Invitar"  a album va aquí
-                }
+                avm.sendAlbumRequest(id_album:id_album , user: id_user, responseData: { resp in
+                    
+                    showSnackBar = true
+                    mensaje = resp.message
+                })
             }) {
-                Text(isRequest ? "Cancel" : "Invite")
+                Text("Invite")
                     .padding(.horizontal, 12)
                     .padding(.vertical, 4)
                     .background(isRequest ? Color.red : Color.green)

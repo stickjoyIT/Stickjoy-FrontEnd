@@ -16,11 +16,11 @@ enum AlbumTab: String, CaseIterable {
 
 struct AlbumView: View {
     @State private var selectedAlbumTab: AlbumTab = .myAlbum
-    
+    @State var listaFotos = [String]()
     var body: some View {
         TabView(selection: $selectedAlbumTab) {
             
-            NewAlbumScreen()
+            NewAlbumScreen(isEdit:.constant(false), editor: .constant(false), nameAlbum: .constant(""), descripAlbum: .constant(""), id_albumSelected: .constant(""), imgPortadaBind: .constant(""), pickturesList: $listaFotos)
                 .tabItem {
                     Image(systemName: "photo.on.rectangle")
                     Text("My Album")

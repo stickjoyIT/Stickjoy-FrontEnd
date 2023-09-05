@@ -1,0 +1,5 @@
+#import <Foundation/Foundation.h>
+@interface PodsDummy_Pods_Stickjoy_First_Edition_Stickjoy_First_EditionUITests : NSObject
+@end
+@implementation PodsDummy_Pods_Stickjoy_First_Edition_Stickjoy_First_EditionUITests
+@end

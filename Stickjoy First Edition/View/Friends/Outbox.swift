@@ -132,6 +132,6 @@ struct collaborationRequestSentRow: View {
 }
 struct Outbox_Previews: PreviewProvider {
     static var previews: some View {
-        FriendsScreen()
+        FriendsScreen(lenguaje:.constant("es"))
     }
 }

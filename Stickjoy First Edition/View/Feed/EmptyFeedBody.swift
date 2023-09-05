@@ -8,38 +8,39 @@
 import SwiftUI
 
 struct EmptyFeedBody: View {
+    @Binding var lenguaje:String
     var body: some View {
         ZStack (alignment: .top){
             VStack(alignment: .center, spacing: 18) {
-                Text("¡Hey!")
+                Text(lenguaje == "es" ? "¡Hola!" : "¡Hey!")
                     .font(.largeTitle)
                     .multilineTextAlignment(.center)
                 
-                Text("You are now on Feed")
+                Text(lenguaje == "es" ? "Estás en Amigos" : "You are now on Feed")
                     .font(.title)
                     .multilineTextAlignment(.center)
                 
-                Text("Here you'll see:")
+                Text(lenguaje == "es" ? "Aquí podrás ver:" : "Here you'll see:")
                     .font(.headline)
                     .multilineTextAlignment(.center)
                 
-                Text("Photos and videos from your friends' albums ('public' and 'friends only')")
+                Text(lenguaje == "es" ? "Fotos y vídeos de los álbumes de tus amigos ('públicos' y 'solo amigos')" : "Photos and videos from your friend's albums ('public' and 'friends only')")
                     .font(.body)
                     .foregroundColor(.secondary)
                     .multilineTextAlignment(.center)
                 
-                Text("Photos and videos from albums you've collaborated in")
+                Text(lenguaje == "es" ? "Fotos y vídeos de álbumes en los que has colaborado" : "Photos and videos from albums you've collaborated in")
                     .font(.body)
                     .foregroundColor(.secondary)
                     .multilineTextAlignment(.center)
                 
-                Text("If the most cherished corner of memories is our mind, why not create a real refuge for them?")
+                Text(lenguaje == "es" ? "Los momentos más preciados cobran vida cuando los experimentamos a través de los ojos de quienes más queremos" : "If the most cherished corner of memories is our mind, why not create a real refuge for them?")
                     .bold()
                     .font(.body)
                     .foregroundColor(.primary)
                     .multilineTextAlignment(.center)
                 
-                Text("Start by creating albums and following your friends!")
+                Text(lenguaje == "es" ? "¡Empieza por crear álbumes y seguir a sus amigos!" : "Start by creating albums and following your friends!")
                     .font(.headline)
                     .foregroundColor(.secondary)
                     .multilineTextAlignment(.center)
@@ -52,6 +53,6 @@ struct EmptyFeedBody: View {
 
 struct EmptyFeedBody_Previews: PreviewProvider {
     static var previews: some View {
-        EmptyFeedBody()
+        EmptyFeedBody(lenguaje: .constant("es"))
     }
 }

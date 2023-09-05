@@ -8,7 +8,11 @@
 import SwiftUI
 
 struct SearchBar: View {
-    @State private var searchText = ""
+    @Binding var searchText:String
+    @Binding var amigos:[Amigo]
+    @Binding var loagin:Bool
+    
+    @ObservedObject var uvm = UsuariosViewModel()
     
     var body: some View {
         HStack {
@@ -16,11 +20,19 @@ struct SearchBar: View {
                 .foregroundColor(.secondary)
                 .padding(.leading, 8)
             
-            TextField("Search", text: $searchText)
+            TextField("Search", text: $searchText, onEditingChanged: { input in
+                
+            }, onCommit: {
+                loagin = true
+                uvm.searchUser(search: searchText){ result in
+                    amigos = result
+                    loagin = false
+                }
+            })
                 .foregroundColor(.primary)
-                .frame(width: .infinity) // Set the width
                 .padding(.horizontal, 8)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
+                .submitLabel(.search)
                 
             Button(action: {
                 searchText = ""
@@ -36,7 +48,7 @@ struct SearchBar: View {
 
 struct SearchBar_Previews: PreviewProvider {
     static var previews: some View {
-        SearchBar()
+        SearchBar(searchText: .constant(""), amigos: .constant([]), loagin: .constant(false))
             .previewLayout(.sizeThatFits)
     }
 }

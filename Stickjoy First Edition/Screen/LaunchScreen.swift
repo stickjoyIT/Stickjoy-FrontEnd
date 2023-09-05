@@ -13,10 +13,12 @@ import SwiftUI
 struct LaunchScreen: View {
     @State private var selectedLanguage: String?
     
-    //Idioma seleccionado por default, en este caso, español.
-    init() {
-        _selectedLanguage = State(initialValue: "Español")
-    }
+    @Binding var logueado: Bool
+    @Binding var lenguaje:String
+    
+    @State var loginView = false
+    
+    @State var registerView = false
     
     var body: some View {
         NavigationView {
@@ -26,46 +28,50 @@ struct LaunchScreen: View {
                 VStack {
                     Spacer() // Para empujar título a centro de pantalla
                     
-                    Text("Stickjoy")
+                    /*Text("Stickjoy")
                         .font(.largeTitle)
                         .fontWeight(.bold)
                         .padding()
+                        .foregroundColor(.black)*/
+                    Image("Logo_Stick")
                     
                     Spacer() // Para añadir espacio entre botones y título
                     
-                    NavigationLink(destination: SignInScreen()) {
-                        Text("First Time")
+                    Button(action:  {
+                        registerView = true
+                        
+                    }, label: {
+                        Text(lenguaje == "es" ? "Primera vez" : "First Time")
                             .foregroundColor(.white)
                             .frame(width: 250)
                             .padding()
                             .background(Color.black)
                             .cornerRadius(10)
-                    }
-                    .padding(.bottom, 20)
+                    })
                     
-                    NavigationLink(destination: LogInScreen()) {
-                        Text("Log In")
+                    Button(action: {
+                        loginView = true
+                    }, label: {
+                        Text(lenguaje == "es" ? "Iniciar Sesión" : "Log In")
                             .foregroundColor(.black) // Set foreground color to black
                             .frame(width: 250)
                             .padding()
                             .background(Color.white) // Set background color to white
                             .cornerRadius(10)
-                    }
-                    .padding(.bottom, 16) // Add more spacing at the bottom
-                    
-                
+                    }) // Add more spacing at the bottom
                     
                     //Layout horizontal de botones de idioma
                     HStack {
                         //Botón idioma inglés
                         Button(action: {
-                            selectedLanguage = "Español"
+                            lenguaje = "es"
+                            UserDefaults.standard.set("es", forKey: "lenguaje")
                         }) {
-                            Text("Español")
-                                .fontWeight(selectedLanguage == "Español" ? .bold : .regular)
+                            Text(lenguaje == "es" ? "Español" : "Spanish")
+                                .fontWeight(lenguaje == "es" ? .bold : .regular)
                                 .frame(width: 80)
                                 .padding()
-                                .background(selectedLanguage == "Español" ? Color.white : Color.clear)
+                                .background(lenguaje == "es" ? Color.white : Color.clear)
                                 .cornerRadius(10)
                         }
                         .foregroundColor(.black)
@@ -76,19 +82,26 @@ struct LaunchScreen: View {
                         
                         //Botón idioma inglés
                         Button(action: {
-                            selectedLanguage = "English"
+                            lenguaje = "en"
+                            UserDefaults.standard.set("en", forKey: "lenguaje")
                         }) {
-                            Text("English")
-                                .fontWeight(selectedLanguage == "English" ? .bold : .regular)
+                            Text(lenguaje == "es" ? "Ingles" : "English")
+                                .fontWeight(lenguaje == "en" ? .bold : .regular)
                                 .frame(width: 80)
                                 .padding()
-                                .background(selectedLanguage == "English" ? Color.white : Color.clear)
+                                .background(lenguaje == "en" ? Color.white : Color.clear)
                                 .cornerRadius(10)
                         }
                         .foregroundColor(.black)
                     }
                     .frame(width: 280)
                     .padding()
+                }
+                .fullScreenCover(isPresented: $loginView){
+                    LogInScreen(logueado:self.$logueado)
+                }
+                .fullScreenCover(isPresented: $registerView){
+                    SignInScreen(logueado: self.$logueado)
                 }
             }
         }
@@ -97,6 +110,6 @@ struct LaunchScreen: View {
 
 struct LaunchScreen_Previews: PreviewProvider {
     static var previews: some View {
-        LaunchScreen()
+        LaunchScreen(logueado: .constant(false), lenguaje: .constant("es"))
     }
 }

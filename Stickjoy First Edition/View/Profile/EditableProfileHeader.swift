@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+@available(iOS 16.0, *)
 struct EditableProfileHeader: View {
     //Adopción de Modo claro oscuro
     @Environment (\.colorScheme) var scheme

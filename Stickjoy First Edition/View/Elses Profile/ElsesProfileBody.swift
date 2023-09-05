@@ -10,9 +10,7 @@ import SwiftUI
 struct ElsesProfileBody: View {
     var elsesalbumsinfo: ElsesAlbumInfo
     var body: some View {
-        
         HStack {
-            
             VStack(alignment: .leading, spacing: 16, content: {
                 
                 Text(elsesalbumsinfo.albumTitle)
@@ -59,17 +57,28 @@ struct ElsesProfileBody: View {
                     Text("|")
                         .foregroundColor(.secondary)
                     
-                    Text(elsesalbumsinfo.albumPrivacy)
-                        .font(.footnote)
+                    switch elsesalbumsinfo.albumPrivacy {
+                    case 0:
+                        Text("Privado")
+                            .font(.footnote)
+                    case 1:
+                        Text("Amigos")
+                            .font(.footnote)
+                    case 2:
+                        Text("Publico")
+                            .font(.footnote)
+                    default:
+                        Text("")
+                            .font(.footnote)
+                    }
                 }
             })
         }
         .frame(maxWidth: .infinity)
     }
 }
-
 struct ElsesProfileBody_Previews: PreviewProvider {
     static var previews: some View {
-        ElsesProfileScreen()
+        ElsesProfileScreen(id_usuario: .constant(""), isPinet: .constant(false), isFriend: .constant(false), pend: .constant(false), name: .constant(""), username: .constant(""), descrip: .constant(""))
     }
 }

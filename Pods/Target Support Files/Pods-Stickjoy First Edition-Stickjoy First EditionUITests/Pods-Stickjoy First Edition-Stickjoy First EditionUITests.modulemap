@@ -1,0 +1,6 @@
+framework module Pods_Stickjoy_First_Edition_Stickjoy_First_EditionUITests {
+  umbrella header "Pods-Stickjoy First Edition-Stickjoy First EditionUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

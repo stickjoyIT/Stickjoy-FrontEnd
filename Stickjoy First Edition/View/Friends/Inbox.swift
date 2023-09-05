@@ -155,6 +155,6 @@ struct CollaborationRequestRow: View {
 }
 struct Inbox_Previews: PreviewProvider {
     static var previews: some View {
-        FriendsScreen()
+        FriendsScreen(lenguaje: .constant("es"))
     }
 }

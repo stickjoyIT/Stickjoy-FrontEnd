@@ -64,8 +64,20 @@ struct EditableProfileBody: View {
                     Text("|")
                         .foregroundColor(.secondary)
                     
-                    Text(albumsinfo.albumPrivacy)
-                        .font(.footnote)
+                    switch albumsinfo.albumPrivacy {
+                    case 0:
+                        Text("Privado")
+                            .font(.footnote)
+                    case 1:
+                        Text("Amigos")
+                            .font(.footnote)
+                    case 2:
+                        Text("Publico")
+                            .font(.footnote)
+                    default:
+                        Text("")
+                            .font(.footnote)
+                    }
                 }
             })
         }

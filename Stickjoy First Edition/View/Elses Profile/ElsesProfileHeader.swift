@@ -11,11 +11,28 @@ struct ElsesProfileHeader: View {
     //Adopción de Modo claro oscuro
     @Environment (\.colorScheme) var scheme
     
+    @ObservedObject var uvm = UsuariosViewModel()
+    
     //Para que el botón de agregar o cancelar solicitud cambie de estado
-    @State private var isAddedButtonClicked = false
+    @Binding var isFriend:Bool
     
     //Para que el botón de anclar perfil cambie de estado. Debe leer si se ha anclado anteriormente el perfil, en este caso sería "true"
-    @State private var isPinProfileButtonClicked = false
+    @Binding var isPinned:Bool
+    
+    @Binding var pend:Bool
+    
+    @Binding var userInfo:ElsesProfileInfo
+    
+    @Binding var id_usuario:String
+    
+    @State var isSnack = false
+    @State var message = ""
+    
+    @Binding var name:String
+    @Binding var descrip:String
+    @Binding var username:String
+    
+    @Environment (\.dismiss) var dismiss
 
     var body: some View {
         ZStack(alignment: .leading) {
@@ -27,6 +44,7 @@ struct ElsesProfileHeader: View {
                     //Botón para Regresar
                     Button(action: {
                         //Acción de regresar
+                        dismiss()
                     }) {
                         Image(systemName: "arrow.left.circle.fill")
                             .font(.largeTitle)
@@ -35,10 +53,33 @@ struct ElsesProfileHeader: View {
                     Spacer()
                     //Botón para anclar perfil
                     Button(action: {
-                        isPinProfileButtonClicked.toggle()
+                        if isPinned {
+                            uvm.unPinUser(id_usuario: id_usuario, responseReturn: { resp in
+                                if resp.status == 200 {
+                                    isPinned = false
+                                    message = resp.message
+                                    isSnack = true
+                                } else {
+                                    message = resp.message
+                                    isSnack = false
+                                }
+                            })
+                        } else {
+                            uvm.pinUser(id_usuario: id_usuario, responseReturn: { resp in
+                                if resp.status == 200 {
+                                    isPinned = true
+                                    message = resp.message
+                                    isSnack = true
+                                } else {
+                                    message = resp.message
+                                    isSnack = false
+                                }
+                            })
+                        }
                         //Añadir acción de anclar perfil
+                        uvm.getUserDetails(user_id: id_usuario)
                     }) {
-                        Image(systemName: isPinProfileButtonClicked ? "pin.fill" : "pin.slash.fill")
+                        Image(systemName: isPinned ? "pin.fill" : "pin.slash.fill")
                             .font(.title)
                             .foregroundColor(.secondary)
                     }
@@ -46,46 +87,82 @@ struct ElsesProfileHeader: View {
                     
                     //Botón para entrar a editor de perfil
                     Button(action: {
-                        isAddedButtonClicked.toggle()
+                        if isFriend{
+                            uvm.sendFriendReply(id_usuario: id_usuario, responseReturn: { resp in
+                                if resp.status == 200 {
+                                    pend = false
+                                    isFriend = false
+                                    message = resp.message
+                                    isSnack = true
+                                } else {
+                                    message = resp.message
+                                    isSnack = false
+                                }
+                            })
+                        } else {
+                            uvm.sendFriendReq(id_usuario: id_usuario, responseReturn: { resp in
+                                if resp.status == 200 {
+                                    pend = true
+                                    message = resp.message
+                                    isSnack = true
+                                } else {
+                                    message = resp.message
+                                    isSnack = false
+                                }
+                            })
+                        }
                         // Add your action here
                     
                     }) {
-                        Image(systemName: isAddedButtonClicked ? "person.badge.plus" : "clock")
-                            .foregroundColor(.black)
-                            .font(.title3)
-                        Text(isAddedButtonClicked ? "Add" : "Pend")
-                            .foregroundColor(.black)
-                            .font(.headline)
+                        if pend {
+                            Image(systemName:"clock")
+                                .foregroundColor(.black)
+                                .font(.title3)
+                            Text("Pend")
+                                .foregroundColor(.black)
+                                .font(.headline)
+                        } else {
+                            Image(systemName: isFriend ? "trash" : "person.badge.plus")
+                                .foregroundColor(.black)
+                                .font(.title3)
+                            Text(isFriend ? "Delete" : "Add")
+                                .foregroundColor(.black)
+                                .font(.headline)
+                        }
+                        
                     }
                     .padding(.vertical, 8)
                     .padding(.horizontal, 16)
-                    .background(isAddedButtonClicked ? Color.customYellow : Color.customBlue)
+                    .background(isFriend ? Color.customYellow : Color.customBlue)
                     .cornerRadius(16)
                     
                     //Si es amigo el botón debe tener las siguiente caracterísitcas: Image(systemName: "check.mark.circle") del mismo tamaño que los que ya existen, y el texto diría Text("Friend")
                     
                 }
                 HStack {
-                    Text(ElsesProfileInfo.profileName)
+                    Text(name)
                         .font(.largeTitle)
                         .bold()
                     Spacer()
                 }
-                Text(ElsesProfileInfo.profileUsername)
+                Text(username)
                     .font(.headline)
                 
-                Text(ElsesProfileInfo.profileDescription)
+                Text(descrip)
                     .font(.body)
                     .foregroundColor(.secondary)
             }
             .padding(24)
         }
         .edgesIgnoringSafeArea(.horizontal) // Extend the header to the screen edges
+        .alert(isPresented: $isSnack, content: {
+            Alert(title: Text("Mensaje"), message: Text(message))
+        })
     }
 }
 
 struct ElsesProfileHeader_Previews: PreviewProvider {
     static var previews: some View {
-        ElsesProfileScreen()
+        ElsesProfileScreen(id_usuario: .constant(""), isPinet: .constant(false), isFriend: .constant(false), pend: .constant(false), name: .constant(""), username: .constant(""), descrip: .constant(""))
     }
 }

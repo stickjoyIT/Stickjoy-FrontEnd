@@ -11,15 +11,10 @@ import SwiftUI
 struct EmptyFriendsScreen: View {
     var body: some View {
         ZStack(alignment: .top){
-            VStack(alignment: .center) {
-                //Contenido en View/Friends/FriendsHeader
-                FriendsHeader()
-            }
             VStack{
                 //Contenido en View/Friends/EmptyFriendsBody.swift
                 EmptyFriendsBody()
             }
-            .padding(.vertical, 120)
         }
     }
 }

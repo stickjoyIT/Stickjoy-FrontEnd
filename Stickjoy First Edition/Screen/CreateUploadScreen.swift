@@ -9,11 +9,19 @@
 
 import SwiftUI
 
+@available(iOS 16.0, *)
 struct CreateUploadScreen: View {
+    @ObservedObject var editorB = SetEditor()
+    @ObservedObject var avm = AlbumViewModel()
+    @State var isActive = false
+    @State var isUploadPick = false
+    @State var pickturesList = [String]()
+    @State var id_album = ""
+    @Binding var lenguaje:String
     var body: some View {
         NavigationView {
             VStack(alignment: .center, spacing: 24) {
-                Text("Create / Upload")
+                Text(lenguaje == "es" ? "Crear / Subir" : "Create / Upload")
                     .font(.largeTitle)
                     .padding(32)
                     .bold()
@@ -24,8 +32,9 @@ struct CreateUploadScreen: View {
                 
                 Button(action: {
                     // Debe mandar a pantalla ChooseAlbumScreen para elegir en qué álbum quiere subirlo
+                    isUploadPick = true
                 }) {
-                    Text("Upload picture/video")
+                    Text(lenguaje == "es" ? "Subir foto/video" : "Upload picture/video")
                         .font(.headline)
                         .frame(width: 250)
                         .padding()
@@ -37,8 +46,12 @@ struct CreateUploadScreen: View {
                 //Botón de crear álbum
                 Button(action: {
                     //Debe crear un álbum y enviarte a esa pantalla.
+                    editorB.editor = true
+                    editorB.nameAlbum = lenguaje == "es" ? "Nombre del Álbum" : "Album name"
+                    editorB.descripAlbum = lenguaje == "es" ? "Bienvenid@ a mi nuevo álbum" : "Welcome to mi new album"
+                    isActive = true
                 }) {
-                    Text("Create new album")
+                    Text(lenguaje == "es" ? "Crear un nuevo álbum" : "Create new album")
                         .font(.headline)
                         .frame(width: 250)
                         .padding()
@@ -50,6 +63,14 @@ struct CreateUploadScreen: View {
                 Spacer()
             }
             .padding()
+            .fullScreenCover(isPresented: $isActive, content: {
+                NewAlbumScreen(isEdit: .constant(false), editor: $editorB.editor, nameAlbum: $editorB.nameAlbum, descripAlbum: $editorB.descripAlbum, id_albumSelected: $id_album, imgPortadaBind: $editorB.imgPortada, pickturesList: $avm.urlImagesAlbum)
+            })
+            .fullScreenCover(isPresented: $isUploadPick, onDismiss: {
+                
+            },content: {
+                ChooseAlbumScreen(lenguaje: $lenguaje)
+            })
         }
     }
 }
@@ -57,6 +78,6 @@ struct CreateUploadScreen: View {
 
 struct CreateUploadScreen_Previews: PreviewProvider {
     static var previews: some View {
-        CreateUploadScreen()
+        CreateUploadScreen(lenguaje: .constant("es"))
     }
 }

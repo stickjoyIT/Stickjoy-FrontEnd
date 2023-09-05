@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct AnchoredProfiles: View {
-    var anchoredprofile: ProfileAnchoredProfiles
+    var anchoredprofile: Amigo
     var body: some View {
             CustomVStack {
                 Button(action: {
                     //Añadir acción de ir a perfil si se da click
                 }) {
-                    Image(anchoredprofile.anchoredProfilePicture)
+                    Image("stickjoyLogoBlue")
                         .resizable()
                         .aspectRatio(contentMode: .fill)
                         .frame(width: 152, height: 152)
@@ -23,7 +23,7 @@ struct AnchoredProfiles: View {
                 
                 VStack(alignment: .leading, spacing: 4) {
                     Spacer(minLength: 0)
-                    Text(anchoredprofile.anchoredProfileName)
+                    Text(anchoredprofile.name)
                         .font(.headline)
                         .fixedSize(horizontal: false, vertical: true)
                         .frame(maxWidth: 152, alignment: .leading)
@@ -52,6 +52,6 @@ struct CustomVStack<Content: View>: View {
 
 struct AnchoredProfiles_Previews: PreviewProvider {
     static var previews: some View {
-        FriendsScreen()
+        FriendsScreen(lenguaje: .constant("es"))
     }
 }

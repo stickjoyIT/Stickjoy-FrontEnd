@@ -11,30 +11,42 @@ import SwiftUI
 
 struct ForgotMyPasswordMenu: View {
     @Binding var isPresented: Bool // Add this binding
-    
+    @State var password = ""
+    @State var confirm_pass = ""
     var body: some View {
-        VStack {
+        VStack(spacing: 8) {
             HStack {
+                Text("Recuperar contraseña")
+                    .font(.subheadline)
+                    .fontWeight(.medium)
+                    .padding(.top, 8)
                 Spacer()
-                Button("Close") {
+                Button(action: {
                     isPresented = false
-                }
+                }, label: {
+                    Image(systemName: "multiply")
+                }).font(.system(size: 18)).foregroundColor(Color(hex: "616161"))
             }
             .padding(.horizontal)
-            .padding(.top, 20)
+            .padding(.top, 8)
+            .padding(.bottom, 20)
             
-            Text("Forgot My Password")
-                .font(.title)
-                .fontWeight(.bold)
-                .padding(.top, 10)
+            UnderlineTextFieldView(text: $password, textFieldView: passwordView, placeholder: "Nueva contraseña").padding(.bottom, 16)
             
-            Spacer()
+            UnderlineTextFieldView(text: $confirm_pass, textFieldView: passwordConfirmView, placeholder: "Confirmar nueva contraseña").padding(.bottom, 16)
+            
+            Button("Enviar"){
+                
+            }
+            .frame(maxWidth: .infinity).padding(.all, 8)
+            .background(.yellow).foregroundColor(.white).cornerRadius(4)
+            .padding(.horizontal, 16)
         }
         .padding(.vertical, 20)
         .background(.white)
-        .cornerRadius(12)
-        .shadow(radius: 10)
-        
+        .cornerRadius(8)
+        .padding(.leading, 4)
+        .padding(.trailing, 4)
         //Aquí va proceso de recuperación de contraseña.
     }
 }
@@ -42,5 +54,15 @@ struct ForgotMyPasswordMenu: View {
 struct ForgotMyPasswordMenu_Previews: PreviewProvider {
     static var previews: some View {
         ForgotMyPasswordMenu(isPresented: .constant(true))
+    }
+}
+extension ForgotMyPasswordMenu {
+    private var passwordView: some View {
+        SecureField("", text: $password)
+            .foregroundColor(.black)
+    }
+    private var passwordConfirmView: some View {
+        SecureField("", text: $confirm_pass)
+            .foregroundColor(.black)
     }
 }

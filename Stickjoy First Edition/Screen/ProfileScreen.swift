@@ -9,18 +9,27 @@
 
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct ProfileScreen: View {
     //Esto se manda a llamar para que la imagen del encabezado ignore las safe areas de arriba
     @StateObject var homeData = ProfileViewModel()
+    @State var isActive = false
+    @State var editorP = false
+    @State var id_album = ""
+    @State var changeUpdates = false
+    @State var Albums = [AlbumInfo]()
+    @ObservedObject var avm = AlbumViewModel()
+    @ObservedObject var editorB = SetEditor()
     @Environment (\.colorScheme) var scheme
-    
+    @Environment (\.dismiss) var dismiss
+    @Binding var lenguaje:String
+    @State var pickturesList = [String]()
     var body: some View {
+        
         ScrollView {
-            
             //Header pinneado
-            LazyVStack(alignment: .leading, spacing: 16, pinnedViews: [.sectionHeaders], content: {
-                
+            LazyVStack(alignment: .leading, spacing: 0, pinnedViews: [.sectionHeaders], content: {
                 //Imagen de Encabezado retractil al dar scroll
                 GeometryReader{reader -> AnyView in
                     
@@ -35,29 +44,59 @@ struct ProfileScreen: View {
                     
                     //Imagen de encabezado
                     return AnyView(
-                        Image(ProfileInfo.profileImage) //En documento: ProfileInfo
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                    //Esto es para que al dar scroll se vaya la imagen y se quede el encabezado
-                        .frame(width: UIScreen.main.bounds.width, height: 250 + (offset > 0 ? offset: 0))
-                        .cornerRadius(2)
-                    //Esto es para que la imagen no se salga del header cuando se de scroll hacia arriba y tope. para eso es el "-" en offset
+                        
+                        ZStack(alignment:.top) {
+                            Image(ProfileInfo.profileImage) //En documento: ProfileInfo
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                        //Esto es para que al dar scroll se vaya la imagen y se quede el encabezado
+                            .frame(width: UIScreen.main.bounds.width, height: 250 + (offset > 0 ? offset: 0))
+                            .cornerRadius(2)
+                        //Esto es para que la imagen no se salga del header cuando se de scroll hacia arriba y tope. para eso es el "-" en offset
                         .offset(y:(offset > 0 ? -offset: 0))
+
+                        }
                     )
                 }
                 .frame(height: 250)
-                
-                
               // Albums
-                Section(header: ProfileHeader()) {
+                Section(header: ProfileHeader(editor: $editorP)) {
                     //For each para que aparezcan los álbumes del usuario
-                    ForEach(albumsinfo){albums in
-                        // El albums se repite aquí:
-                        ProfileBody(albumsinfo: albums)
+                    if Albums.count > 0 {
+                        ForEach(Albums){albums in
+                            // El albums se repite aquí:
+                            ProfileBody(albumsinfo: albums, albumName: $editorB.nameAlbum, albumDecripcion: $editorB.descripAlbum, imgPortada: $editorB.imgPortada, editor: $editorB.editor, albums: $Albums ).padding(.all, 10)
+                        }
+                    } else {
+                        HStack {
+                            Spacer()
+                            VStack(alignment: .center, spacing: 10) {
+                                Text(lenguaje == "es" ? "Crear un álbum" : "Create an Album")
+                                Button(action: {
+                                    editorB.editor = true
+                                    editorB.nameAlbum = lenguaje == "es" ? "Nombre del Álbum" : "Album name"
+                                    editorB.descripAlbum = lenguaje == "es" ? "Bienvenid@ a mi nuevo álbum" : "Welcome to my new album"
+                                    isActive = true
+                                }, label: {
+                                   Text("+")
+                                        .navigationBarBackButtonHidden(true)
+                                            .frame(width: 150,height: 150)
+                                            .background(.gray)
+                                            .opacity(0.2)
+                                            .cornerRadius(10)
+                                })
+                                .fullScreenCover(isPresented: $isActive, onDismiss: {
+                                    print("Obten la lista de albums perfil")
+                                }, content: {
+                                    NewAlbumScreen(isEdit: .constant(false), editor: $editorB.editor, nameAlbum: $editorB.nameAlbum, descripAlbum: $editorB.descripAlbum, id_albumSelected: $id_album, imgPortadaBind: $editorB.imgPortada, pickturesList: $pickturesList)
+                                })
+                            }
+                            Spacer()
+                        }.padding(50)
+                        
                     }
+                    
                 }
-                
-                
             })
         }
         .overlay(
@@ -68,12 +107,20 @@ struct ProfileScreen: View {
             //Esto es para que ignore la parte de arriba de la pantalla.
                 .opacity(homeData.offset > 250 ? 1 : 0)
             , alignment: .top
-        )
+        ).onAppear{
+            avm.getAlbumList(){
+                result in
+                Albums = result
+            }
+        }
     }
+    
+    
+    
 }
 
 struct ProfileScreen_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileScreen()
+        ProfileScreen(lenguaje:.constant("es"))
     }
 }

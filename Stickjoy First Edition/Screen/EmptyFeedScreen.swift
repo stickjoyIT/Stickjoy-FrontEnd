@@ -13,15 +13,16 @@ import SwiftUI
 var Empty: Bool = true
 
 struct EmptyFeedScreen: View {
+    @Binding var lenguaje:String
     var body: some View {
         ZStack (alignment: .top) {
             VStack {
                 //Encabezado
-                FeedHeader()
+                FeedHeader(lenguaje: $lenguaje)
             }
             VStack(alignment: .center){
                 //Contenido
-                EmptyFeedBody()
+                EmptyFeedBody(lenguaje: $lenguaje)
                 }
             .padding(.vertical, 120)
             }
@@ -30,6 +31,6 @@ struct EmptyFeedScreen: View {
 
 struct EmptyFeedScreen_Previews: PreviewProvider {
     static var previews: some View {
-        EmptyFeedScreen()
+        EmptyFeedScreen(lenguaje: .constant("es"))
     }
 }

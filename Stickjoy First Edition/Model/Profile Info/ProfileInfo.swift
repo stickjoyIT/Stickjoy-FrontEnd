@@ -9,7 +9,7 @@ import Foundation
 
 struct ProfileInfo {
     static var profileName: String = "John" // Replace with actual profile name
-    static var profileImage: String = "profilePicture" // Reemplazar por imagen de perfil real
+    static var profileImage: String = "Contenedor" // Reemplazar por imagen de perfil real
     static var profileUsername: String = "@johndoe" // Reemplazar por nombre de usuario real
     static var profileDescription: String = "Welcome to my Stickjoy Profile, enjoy it." //Reemplazar por la descripción de perfil real
 }

@@ -9,82 +9,115 @@
 
 import SwiftUI
 
+@available(iOS 16.0, *)
 struct SettingsScreen: View {
     @State private var isNotificationsEnabled = true
     @State private var selectedLanguage = "English"
     @State private var isTermsAndConditionsMenuPresented = false // Add this state variable
-    
+    @Binding var logueado:Bool
+    @Binding var lenguaje:String
+    @State var isAlert = false
     var body: some View {
-        VStack(alignment: .leading, spacing: 24) {
-            
-            Text("Settings")
-                .font(.largeTitle)
-                .padding(.top, 32)
-            
-            Toggle("Notifications", isOn: $isNotificationsEnabled)
-                .font(.title3)
-                .bold()
-                .cornerRadius(8)
-                .frame(maxWidth: .infinity, alignment: .leading) // Set frame width to infinity
-                .padding()
-            
-            
-            Button(action: {
+        
+        ScrollView {
+            VStack(alignment: .leading, spacing: 24) {
                 
-                // Añadir acción de abrir pantalla de Suscripción
-                
-            }) {
-                Text("My Subscription")
-                    .frame(maxWidth: .infinity, alignment: .center) // Set frame width to infinity
-                    .padding()
-                    .foregroundColor(Color.white)
+                Text(lenguaje == "es" ? "Configuraciones" : "Settings")
+                    .font(.largeTitle)
+                    .padding(.top, 32)
+                Toggle(lenguaje == "es" ? "Notificaciones" : "Notifications", isOn: $isNotificationsEnabled)
+                    .font(.title3)
                     .bold()
-                    .background(Color.blue)
-                    .cornerRadius(16)
-            }
-            
-            
-            
-            Button(action: {
-                
-                // Añadir acción de abrir pantalla de Suscripción
-                
-            }) {
-                Text("Copy Stickjoy Link")
-                    .frame(maxWidth: .infinity, alignment: .center) // Set frame width to infinity
+                    .frame(maxWidth: .infinity, alignment: .leading) // Set frame width to infinity
                     .padding()
-                    .foregroundColor(Color.black)
-                    .bold()
-                    .background(Color.yellow)
-                    .cornerRadius(16)
-            }
-            
-            
-            Text("Language")
-                .font(.title3)
-                .bold()
-                .frame(maxWidth: .infinity, alignment: .leading) // Set frame width to infinity
-                .padding()
-                .cornerRadius(16)
-            
-            
-            
-            HStack {
                 Button(action: {
-                    selectedLanguage = "Español"
+                    
+                    // Añadir acción de abrir pantalla de Suscripción
+                    
                 }) {
-                    HStack {
-                        Text("Español")
-                            .fontWeight(selectedLanguage == "Español" ? .bold : .regular)
-                            .background(.thinMaterial)
-                            .cornerRadius(8)
-                            .padding()
-                        Spacer()
-                        if selectedLanguage == "Español" {
-                            Image(systemName: "checkmark.circle.fill")
-                                .foregroundColor(.blue)
+                    Text(lenguaje == "es" ? "Mi subscripcion" : "My subscription")
+                        .frame(maxWidth: .infinity, alignment: .center) // Set frame width to infinity
+                        .padding()
+                        .foregroundColor(Color.white)
+                        .bold()
+                        .background(Color.blue)
+                        .cornerRadius(16)
+                }
+                
+                Button(action: {
+                    
+                    // Añadir acción de abrir pantalla de Suscripción
+                    
+                }) {
+                    Text(lenguaje == "es" ? "Copiar enlace de Stickjoy" : "Copy Stickjoy Link")
+                        .frame(maxWidth: .infinity, alignment: .center) // Set frame width to infinity
+                        .padding()
+                        .foregroundColor(Color.black)
+                        .bold()
+                        .background(Color.yellow)
+                        .cornerRadius(16)
+                }
+                
+                
+                Text(lenguaje == "es" ? "Lenguaje" : "Language")
+                    .font(.title3)
+                    .bold()
+                    .frame(maxWidth: .infinity, alignment: .leading) // Set frame width to infinity
+                    .padding()
+                    .cornerRadius(16)
+                
+                HStack {
+                    Button(action: {
+                        lenguaje = "es"
+                        UserDefaults.standard.set(lenguaje, forKey: "lenguaje")
+                    }) {
+                        HStack {
+                            Text("Español")
+                                .fontWeight(lenguaje == "es" ? .bold : .regular)
+                                .background(.thinMaterial)
+                                .cornerRadius(8)
+                                .padding()
+                            Spacer()
+                            if lenguaje == "es" {
+                                Image(systemName: "checkmark.circle.fill")
+                                    .foregroundColor(.blue)
+                            }
                         }
                     }
+                    .frame(maxWidth: .infinity, alignment: .leading) // Set frame width to infinity
+                    .padding()
+                    .background(.thinMaterial)
+                    .cornerRadius(16)
+                    
+                    
+                    
+                    Button(action: {
+                        lenguaje = "en"
+                        UserDefaults.standard.set(lenguaje, forKey: "lenguaje")
+                    }) {
+                        HStack {
+                            Text("English")
+                                .fontWeight(lenguaje == "en" ? .bold : .regular)
+                                .background(.thinMaterial)
+                                .cornerRadius(8)
+                                .padding()
+                            Spacer()
+                            if lenguaje == "en" {
+                                Image(systemName: "checkmark.circle.fill")
+                                    .foregroundColor(.blue)
+                            }
+                        }
+                    }
+                    .frame(maxWidth: .infinity, alignment: .leading) // Set frame width to infinity
+                    .padding()
+                    .background(.thinMaterial)
+                    .cornerRadius(16)
+                    
+                    
+                }
+                
+                Button(lenguaje == "es" ? "Términos, Condiciones y Políticas de Privacidad" : "Terms, Conditions and Privacy Policies") {
+                    isTermsAndConditionsMenuPresented = true
                 }
                 .frame(maxWidth: .infinity, alignment: .leading) // Set frame width to infinity
                 .padding()
@@ -94,75 +127,56 @@ struct SettingsScreen: View {
                 
                 
                 Button(action: {
-                    selectedLanguage = "English"
+                    //Añadir acción de abrir popover: LogOutMenu para cerrar sesión
+                    //logueado = false
+                    isAlert = true
                 }) {
-                    HStack {
-                        Text("English")
-                            .fontWeight(selectedLanguage == "English" ? .bold : .regular)
-                            .background(.thinMaterial)
-                            .cornerRadius(8)
-                            .padding()
-                        Spacer()
-                        if selectedLanguage == "English" {
-                            Image(systemName: "checkmark.circle.fill")
-                                .foregroundColor(.blue)
-                        }
+                    Text(lenguaje == "es" ? "Cerrar sesion" : "Log Out")
+                    .frame(maxWidth: .infinity, alignment: .center) // Set frame width to infinity
+                    .padding()
+                    .background(.thinMaterial)
+                    .cornerRadius(16)
+                }.confirmationDialog(lenguaje == "es" ? "Cerrar sesion" : "Log Out", isPresented: $isAlert){
+                    Button("Aceptar", role: .destructive) {
+                        UserDefaults.standard.set(false,forKey: "login")
+                        logueado = false
                     }
+                    Button("Cancel", role: .cancel) {
+                    }
+                } message : {
+                    Text("Esta seguro de cerrar sesion").font(.largeTitle)
                 }
-                .frame(maxWidth: .infinity, alignment: .leading) // Set frame width to infinity
-                .padding()
-                .background(.thinMaterial)
-                .cornerRadius(16)
                 
+                Button(action: {
+                    //Añadir acción de abrir popover: LogOutMenu para cerrar sesión
+                }) {
+                    Text(lenguaje == "es" ? "Eliminar cuenta" : "Delete account")
+                    .frame(maxWidth: .infinity, alignment: .center) // Set frame width to infinity
+                    .padding()
+                    .background(.thinMaterial)
+                    .cornerRadius(16)
+                }
+
+
+
                 
+                Spacer()
             }
-            
-            Button("Terms, Conditions and Privacy Policies") {
-                isTermsAndConditionsMenuPresented = true
-            }
-            .frame(maxWidth: .infinity, alignment: .leading) // Set frame width to infinity
-            .padding()
-            .background(.thinMaterial)
-            .cornerRadius(16)
-            
-            
-            
-            Button(action: {
-                //Añadir acción de abrir popover: LogOutMenu para cerrar sesión
-            }) {
-                Text("Log out")
-                .frame(maxWidth: .infinity, alignment: .center) // Set frame width to infinity
-                .padding()
-                .background(.thinMaterial)
-                .cornerRadius(16)
-            }
-
-            
-            Button(action: {
-                //Añadir acción de abrir popover: LogOutMenu para cerrar sesión
-            }) {
-                Text("Delete account")
-                .frame(maxWidth: .infinity, alignment: .center) // Set frame width to infinity
-                .padding()
-                .background(.thinMaterial)
-                .cornerRadius(16)
-            }
-
-
-
-            
-            Spacer()
+            .padding(24)
+            .navigationBarTitle(lenguaje == "es" ? "Configuraciones" : "Settings")
+            .sheet(isPresented: $isTermsAndConditionsMenuPresented) {
+                TermsAndConditionsMenu(isPresented: $isTermsAndConditionsMenuPresented)
         }
-        .padding(24)
-        .navigationBarTitle("Settings")
-        .sheet(isPresented: $isTermsAndConditionsMenuPresented) {
-            TermsAndConditionsMenu(isPresented: $isTermsAndConditionsMenuPresented)
         }
     }
 }
 
 struct SettingsScreen_Previews: PreviewProvider {
     static var previews: some View {
-        SettingsScreen()
+        if #available(iOS 16.0, *) {
+            SettingsScreen(logueado: .constant(false), lenguaje: .constant("es"))
+        } else {
+            // Fallback on earlier versions
+        }
     }
 }

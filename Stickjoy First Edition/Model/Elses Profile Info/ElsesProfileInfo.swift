@@ -8,8 +8,8 @@
 import Foundation
 
 struct ElsesProfileInfo {
-    static var profileName: String = "Paul" // Replace with actual profile name
-    static var profileImage: String = "profilePicture2" // Reemplazar por imagen de perfil real
-    static var profileUsername: String = "@paulsmith" // Reemplazar por nombre de usuario real
-    static var profileDescription: String = "Welcome to my Stickjoy Profile, enjoy it." //Reemplazar por la descripción de perfil real
+     var profileName: String = "User name" // Replace with actual profile name
+     var profileImage: String = "" // Reemplazar por imagen de perfil real
+     var profileUsername: String = "@username" // Reemplazar por nombre de usuario real
+     var profileDescription: String = "Bienvenido" //Reemplazar por la descripción de perfil real
 }

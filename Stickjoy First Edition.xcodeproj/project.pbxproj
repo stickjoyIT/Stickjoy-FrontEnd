@@ -7,7 +7,50 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D90B11C97729DF4F4A7C0E2 /* Pods_Stickjoy_First_Edition_Stickjoy_First_EditionUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9BCF81897CBD96086682396 /* Pods_Stickjoy_First_Edition_Stickjoy_First_EditionUITests.framework */; };
+		8D313D7E2A96757700BA30FD /* SwiftUISnackbar in Frameworks */ = {isa = PBXBuildFile; productRef = 8D313D7D2A96757700BA30FD /* SwiftUISnackbar */; };
+		8D42BD9F2A95679C0071E1C0 /* UsuariosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D42BD9E2A95679C0071E1C0 /* UsuariosViewModel.swift */; };
+		8D42BDA22A956E1A0071E1C0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D42BDA12A956E1A0071E1C0 /* User.swift */; };
+		8D4E4D2D2A9A905500DBAE99 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8D4E4D2C2A9A905300DBAE99 /* GoogleService-Info.plist */; };
+		8D6363D02A950ED700DE66C5 /* MainTabbedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6363CF2A950ED700DE66C5 /* MainTabbedView.swift */; };
+		8D80CCC02A9959EE000541A3 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 8D80CCBF2A9959EE000541A3 /* FirebaseAnalytics */; };
+		8D80CCC22A9959EE000541A3 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = 8D80CCC12A9959EE000541A3 /* FirebaseAnalyticsOnDeviceConversion */; };
+		8D80CCC42A9959EE000541A3 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8D80CCC32A9959EE000541A3 /* FirebaseAnalyticsSwift */; };
+		8D80CCC62A9959EE000541A3 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 8D80CCC52A9959EE000541A3 /* FirebaseAnalyticsWithoutAdIdSupport */; };
+		8D80CCC82A9959EE000541A3 /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = 8D80CCC72A9959EE000541A3 /* FirebaseAppCheck */; };
+		8D80CCCA2A9959EE000541A3 /* FirebaseAppDistribution-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 8D80CCC92A9959EE000541A3 /* FirebaseAppDistribution-Beta */; };
+		8D80CCCC2A9959EE000541A3 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 8D80CCCB2A9959EE000541A3 /* FirebaseAuth */; };
+		8D80CCCE2A9959EE000541A3 /* FirebaseAuthCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 8D80CCCD2A9959EE000541A3 /* FirebaseAuthCombine-Community */; };
+		8D80CCD02A9959EE000541A3 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 8D80CCCF2A9959EE000541A3 /* FirebaseCrashlytics */; };
+		8D80CCD22A9959EE000541A3 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 8D80CCD12A9959EE000541A3 /* FirebaseDatabase */; };
+		8D80CCD42A9959EE000541A3 /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8D80CCD32A9959EE000541A3 /* FirebaseDatabaseSwift */; };
+		8D80CCD62A9959EE000541A3 /* FirebaseDynamicLinks in Frameworks */ = {isa = PBXBuildFile; productRef = 8D80CCD52A9959EE000541A3 /* FirebaseDynamicLinks */; };
+		8D80CCD82A9959EE000541A3 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 8D80CCD72A9959EE000541A3 /* FirebaseFirestore */; };
+		8D80CCDA2A9959EE000541A3 /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 8D80CCD92A9959EE000541A3 /* FirebaseFirestoreCombine-Community */; };
+		8D80CCDC2A9959EE000541A3 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8D80CCDB2A9959EE000541A3 /* FirebaseFirestoreSwift */; };
+		8D80CCDE2A9959EE000541A3 /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = 8D80CCDD2A9959EE000541A3 /* FirebaseFunctions */; };
+		8D80CCE02A9959EE000541A3 /* FirebaseFunctionsCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 8D80CCDF2A9959EE000541A3 /* FirebaseFunctionsCombine-Community */; };
+		8D80CCE22A9959EE000541A3 /* FirebaseInAppMessaging-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 8D80CCE12A9959EE000541A3 /* FirebaseInAppMessaging-Beta */; };
+		8D80CCE42A9959EE000541A3 /* FirebaseInAppMessagingSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 8D80CCE32A9959EE000541A3 /* FirebaseInAppMessagingSwift-Beta */; };
+		8D80CCE62A9959EE000541A3 /* FirebaseInstallations in Frameworks */ = {isa = PBXBuildFile; productRef = 8D80CCE52A9959EE000541A3 /* FirebaseInstallations */; };
+		8D80CCE82A9959EE000541A3 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 8D80CCE72A9959EE000541A3 /* FirebaseMessaging */; };
+		8D80CCEA2A9959EE000541A3 /* FirebaseMLModelDownloader in Frameworks */ = {isa = PBXBuildFile; productRef = 8D80CCE92A9959EE000541A3 /* FirebaseMLModelDownloader */; };
+		8D80CCEC2A9959EE000541A3 /* FirebasePerformance in Frameworks */ = {isa = PBXBuildFile; productRef = 8D80CCEB2A9959EE000541A3 /* FirebasePerformance */; };
+		8D80CCEE2A9959EE000541A3 /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = 8D80CCED2A9959EE000541A3 /* FirebaseRemoteConfig */; };
+		8D80CCF02A9959EE000541A3 /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8D80CCEF2A9959EE000541A3 /* FirebaseRemoteConfigSwift */; };
+		8D80CCF22A9959EE000541A3 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 8D80CCF12A9959EE000541A3 /* FirebaseStorage */; };
+		8D80CCF42A9959EE000541A3 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 8D80CCF32A9959EE000541A3 /* FirebaseStorageCombine-Community */; };
+		8D80CCF62A996979000541A3 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D80CCF52A996979000541A3 /* StorageManager.swift */; };
+		8D8EFAED2A981ED1000A086D /* SetEditorAlbum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8EFAEC2A981ED1000A086D /* SetEditorAlbum.swift */; };
+		8D8EFAF02A9828C1000A086D /* MediaPicker in Frameworks */ = {isa = PBXBuildFile; productRef = 8D8EFAEF2A9828C1000A086D /* MediaPicker */; };
 		8DC534172A94266800D680B8 /* UnderlineTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC534162A94266800D680B8 /* UnderlineTextFieldView.swift */; };
+		8DE0018A2A96A9D20043C184 /* AlbumViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE001892A96A9D20043C184 /* AlbumViewModel.swift */; };
+		8DE0018C2A96AC330043C184 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE0018B2A96AC330043C184 /* Album.swift */; };
+		8DE0018E2A96BF820043C184 /* AmigosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE0018D2A96BF820043C184 /* AmigosViewModel.swift */; };
+		8DE001902A96C0C40043C184 /* Amigo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE0018F2A96C0C40043C184 /* Amigo.swift */; };
+		8DE001932A96E9BF0043C184 /* ModalView in Frameworks */ = {isa = PBXBuildFile; productRef = 8DE001922A96E9BF0043C184 /* ModalView */; };
+		8DE41A4C2A95DA4500896369 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE41A4B2A95DA4500896369 /* HomeView.swift */; };
+		94E92CBC48599BA37766ACD1 /* Pods_Stickjoy_First_EditionTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 187C8809A2414082A8F20736 /* Pods_Stickjoy_First_EditionTests.framework */; };
 		BD01BACC2A8D1E8500134DEA /* FeedScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD01BACB2A8D1E8500134DEA /* FeedScreen.swift */; };
 		BD01BAD32A8D35AE00134DEA /* NewAlbumHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD01BAD22A8D35AE00134DEA /* NewAlbumHeader.swift */; };
 		BD01BAD62A8D360400134DEA /* DefaultAlbumContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD01BAD52A8D360400134DEA /* DefaultAlbumContent.swift */; };
@@ -91,6 +134,7 @@
 		BDC40B682A8ED71800ED74E1 /* AlbumScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC40B672A8ED71800ED74E1 /* AlbumScreen.swift */; };
 		BDC40B6A2A8ED78D00ED74E1 /* ElsesAlbumScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC40B692A8ED78D00ED74E1 /* ElsesAlbumScreen.swift */; };
 		BDC40B6C2A8ED88C00ED74E1 /* ElsesEditableCollabAlbumScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC40B6B2A8ED88C00ED74E1 /* ElsesEditableCollabAlbumScreen.swift */; };
+		CBBEB5E7154518770D30F12A /* Pods_Stickjoy_First_Edition.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E33E9992A415BA6C74151222 /* Pods_Stickjoy_First_Edition.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,7 +155,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		187C8809A2414082A8F20736 /* Pods_Stickjoy_First_EditionTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Stickjoy_First_EditionTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		773DB90E5BC0EE1FDA262FAA /* Pods-Stickjoy First EditionTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stickjoy First EditionTests.release.xcconfig"; path = "Target Support Files/Pods-Stickjoy First EditionTests/Pods-Stickjoy First EditionTests.release.xcconfig"; sourceTree = "<group>"; };
+		78EF68B48C9503F058884C04 /* Pods-Stickjoy First Edition.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stickjoy First Edition.debug.xcconfig"; path = "Target Support Files/Pods-Stickjoy First Edition/Pods-Stickjoy First Edition.debug.xcconfig"; sourceTree = "<group>"; };
+		8D42BD9E2A95679C0071E1C0 /* UsuariosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsuariosViewModel.swift; sourceTree = "<group>"; };
+		8D42BDA12A956E1A0071E1C0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		8D4E4D2C2A9A905300DBAE99 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8D6363CF2A950ED700DE66C5 /* MainTabbedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabbedView.swift; sourceTree = "<group>"; };
+		8D80CCF52A996979000541A3 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		8D8EFAEC2A981ED1000A086D /* SetEditorAlbum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetEditorAlbum.swift; sourceTree = "<group>"; };
 		8DC534162A94266800D680B8 /* UnderlineTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlineTextFieldView.swift; sourceTree = "<group>"; };
+		8DE001892A96A9D20043C184 /* AlbumViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewModel.swift; sourceTree = "<group>"; };
+		8DE0018B2A96AC330043C184 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		8DE0018D2A96BF820043C184 /* AmigosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmigosViewModel.swift; sourceTree = "<group>"; };
+		8DE0018F2A96C0C40043C184 /* Amigo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Amigo.swift; sourceTree = "<group>"; };
+		8DE41A4B2A95DA4500896369 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		A3509C1ADDACF820B03DAB9F /* Pods-Stickjoy First Edition.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stickjoy First Edition.release.xcconfig"; path = "Target Support Files/Pods-Stickjoy First Edition/Pods-Stickjoy First Edition.release.xcconfig"; sourceTree = "<group>"; };
+		A571213274A6A41321822BD1 /* Pods-Stickjoy First Edition-Stickjoy First EditionUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stickjoy First Edition-Stickjoy First EditionUITests.debug.xcconfig"; path = "Target Support Files/Pods-Stickjoy First Edition-Stickjoy First EditionUITests/Pods-Stickjoy First Edition-Stickjoy First EditionUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		BC77FC967D060453FF3FCE32 /* Pods-Stickjoy First EditionTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stickjoy First EditionTests.debug.xcconfig"; path = "Target Support Files/Pods-Stickjoy First EditionTests/Pods-Stickjoy First EditionTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BD01BACB2A8D1E8500134DEA /* FeedScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedScreen.swift; sourceTree = "<group>"; };
 		BD01BAD22A8D35AE00134DEA /* NewAlbumHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAlbumHeader.swift; sourceTree = "<group>"; };
 		BD01BAD52A8D360400134DEA /* DefaultAlbumContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultAlbumContent.swift; sourceTree = "<group>"; };
@@ -198,6 +259,9 @@
 		BDC40B672A8ED71800ED74E1 /* AlbumScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumScreen.swift; sourceTree = "<group>"; };
 		BDC40B692A8ED78D00ED74E1 /* ElsesAlbumScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElsesAlbumScreen.swift; sourceTree = "<group>"; };
 		BDC40B6B2A8ED88C00ED74E1 /* ElsesEditableCollabAlbumScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElsesEditableCollabAlbumScreen.swift; sourceTree = "<group>"; };
+		D9BCF81897CBD96086682396 /* Pods_Stickjoy_First_Edition_Stickjoy_First_EditionUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Stickjoy_First_Edition_Stickjoy_First_EditionUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E33E9992A415BA6C74151222 /* Pods_Stickjoy_First_Edition.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Stickjoy_First_Edition.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC316AD65625F463D7B8D2A8 /* Pods-Stickjoy First Edition-Stickjoy First EditionUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stickjoy First Edition-Stickjoy First EditionUITests.release.xcconfig"; path = "Target Support Files/Pods-Stickjoy First Edition-Stickjoy First EditionUITests/Pods-Stickjoy First Edition-Stickjoy First EditionUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +269,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D80CCD42A9959EE000541A3 /* FirebaseDatabaseSwift in Frameworks */,
+				8DE001932A96E9BF0043C184 /* ModalView in Frameworks */,
+				8D80CCEC2A9959EE000541A3 /* FirebasePerformance in Frameworks */,
+				8D80CCEE2A9959EE000541A3 /* FirebaseRemoteConfig in Frameworks */,
+				8D80CCC22A9959EE000541A3 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
+				8D80CCE62A9959EE000541A3 /* FirebaseInstallations in Frameworks */,
+				8D80CCDA2A9959EE000541A3 /* FirebaseFirestoreCombine-Community in Frameworks */,
+				8D80CCE42A9959EE000541A3 /* FirebaseInAppMessagingSwift-Beta in Frameworks */,
+				8D8EFAF02A9828C1000A086D /* MediaPicker in Frameworks */,
+				8D80CCE82A9959EE000541A3 /* FirebaseMessaging in Frameworks */,
+				8D80CCDC2A9959EE000541A3 /* FirebaseFirestoreSwift in Frameworks */,
+				8D80CCD82A9959EE000541A3 /* FirebaseFirestore in Frameworks */,
+				8D80CCDE2A9959EE000541A3 /* FirebaseFunctions in Frameworks */,
+				8D80CCEA2A9959EE000541A3 /* FirebaseMLModelDownloader in Frameworks */,
+				CBBEB5E7154518770D30F12A /* Pods_Stickjoy_First_Edition.framework in Frameworks */,
+				8D80CCC42A9959EE000541A3 /* FirebaseAnalyticsSwift in Frameworks */,
+				8D80CCC02A9959EE000541A3 /* FirebaseAnalytics in Frameworks */,
+				8D313D7E2A96757700BA30FD /* SwiftUISnackbar in Frameworks */,
+				8D80CCCE2A9959EE000541A3 /* FirebaseAuthCombine-Community in Frameworks */,
+				8D80CCCC2A9959EE000541A3 /* FirebaseAuth in Frameworks */,
+				8D80CCE02A9959EE000541A3 /* FirebaseFunctionsCombine-Community in Frameworks */,
+				8D80CCD02A9959EE000541A3 /* FirebaseCrashlytics in Frameworks */,
+				8D80CCD62A9959EE000541A3 /* FirebaseDynamicLinks in Frameworks */,
+				8D80CCF22A9959EE000541A3 /* FirebaseStorage in Frameworks */,
+				8D80CCE22A9959EE000541A3 /* FirebaseInAppMessaging-Beta in Frameworks */,
+				8D80CCF02A9959EE000541A3 /* FirebaseRemoteConfigSwift in Frameworks */,
+				8D80CCCA2A9959EE000541A3 /* FirebaseAppDistribution-Beta in Frameworks */,
+				8D80CCF42A9959EE000541A3 /* FirebaseStorageCombine-Community in Frameworks */,
+				8D80CCC82A9959EE000541A3 /* FirebaseAppCheck in Frameworks */,
+				8D80CCD22A9959EE000541A3 /* FirebaseDatabase in Frameworks */,
+				8D80CCC62A9959EE000541A3 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,6 +307,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94E92CBC48599BA37766ACD1 /* Pods_Stickjoy_First_EditionTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,12 +315,63 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D90B11C97729DF4F4A7C0E2 /* Pods_Stickjoy_First_Edition_Stickjoy_First_EditionUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4DA34984E05DEA1DA9C0154C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E33E9992A415BA6C74151222 /* Pods_Stickjoy_First_Edition.framework */,
+				D9BCF81897CBD96086682396 /* Pods_Stickjoy_First_Edition_Stickjoy_First_EditionUITests.framework */,
+				187C8809A2414082A8F20736 /* Pods_Stickjoy_First_EditionTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		59440F48F0CA5D7CDF6A6B37 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				78EF68B48C9503F058884C04 /* Pods-Stickjoy First Edition.debug.xcconfig */,
+				A3509C1ADDACF820B03DAB9F /* Pods-Stickjoy First Edition.release.xcconfig */,
+				A571213274A6A41321822BD1 /* Pods-Stickjoy First Edition-Stickjoy First EditionUITests.debug.xcconfig */,
+				EC316AD65625F463D7B8D2A8 /* Pods-Stickjoy First Edition-Stickjoy First EditionUITests.release.xcconfig */,
+				BC77FC967D060453FF3FCE32 /* Pods-Stickjoy First EditionTests.debug.xcconfig */,
+				773DB90E5BC0EE1FDA262FAA /* Pods-Stickjoy First EditionTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		8D42BDA02A956DD90071E1C0 /* Decodeable */ = {
+			isa = PBXGroup;
+			children = (
+				8D42BDA12A956E1A0071E1C0 /* User.swift */,
+				8DE0018B2A96AC330043C184 /* Album.swift */,
+				8DE0018F2A96C0C40043C184 /* Amigo.swift */,
+			);
+			path = Decodeable;
+			sourceTree = "<group>";
+		};
+		8D6363CE2A950E9700DE66C5 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				8D6363CF2A950ED700DE66C5 /* MainTabbedView.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		8D8EFAEB2A981EAE000A086D /* Observable */ = {
+			isa = PBXGroup;
+			children = (
+				8D8EFAEC2A981ED1000A086D /* SetEditorAlbum.swift */,
+				8D80CCF52A996979000541A3 /* StorageManager.swift */,
+			);
+			path = Observable;
+			sourceTree = "<group>";
+		};
 		8DC534152A94263100D680B8 /* Componentes */ = {
 			isa = PBXGroup;
 			children = (
@@ -306,6 +453,8 @@
 				BD3494B02A82930500D5395D /* Stickjoy First EditionTests */,
 				BD3494BA2A82930500D5395D /* Stickjoy First EditionUITests */,
 				BD34949E2A82930500D5395D /* Products */,
+				59440F48F0CA5D7CDF6A6B37 /* Pods */,
+				4DA34984E05DEA1DA9C0154C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -322,6 +471,10 @@
 		BD34949F2A82930500D5395D /* Stickjoy First Edition */ = {
 			isa = PBXGroup;
 			children = (
+				8D4E4D2C2A9A905300DBAE99 /* GoogleService-Info.plist */,
+				8D8EFAEB2A981EAE000A086D /* Observable */,
+				8D42BDA02A956DD90071E1C0 /* Decodeable */,
+				8D6363CE2A950E9700DE66C5 /* Base */,
 				8DC534152A94263100D680B8 /* Componentes */,
 				BD3494CD2A82935600D5395D /* View Model */,
 				BD3494D02A82939500D5395D /* Menu */,
@@ -392,6 +545,7 @@
 				BD8828612A868229001F619A /* AdminPanelScreen.swift */,
 				BD9ADC0A2A8E784A0055B3A4 /* AlbumInfoPanelScreen.swift */,
 				BD9ADC0C2A8E7D0A0055B3A4 /* InviteCollaboratorsScreen.swift */,
+				8DE41A4B2A95DA4500896369 /* HomeView.swift */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -431,6 +585,9 @@
 				BD42C62E2A8C1F0D001E7A18 /* DefaultProfileViewModel.swift */,
 				BD42C6322A8C2435001E7A18 /* EditableProfileViewModel.swift */,
 				BDC40B5D2A8ECF9F00ED74E1 /* ElsesProfileViewModel.swift */,
+				8D42BD9E2A95679C0071E1C0 /* UsuariosViewModel.swift */,
+				8DE001892A96A9D20043C184 /* AlbumViewModel.swift */,
+				8DE0018D2A96BF820043C184 /* AmigosViewModel.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -501,9 +658,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BD3494C12A82930500D5395D /* Build configuration list for PBXNativeTarget "Stickjoy First Edition" */;
 			buildPhases = (
+				48105F992D4438106AF9E447 /* [CP] Check Pods Manifest.lock */,
 				BD3494992A82930500D5395D /* Sources */,
 				BD34949A2A82930500D5395D /* Frameworks */,
 				BD34949B2A82930500D5395D /* Resources */,
+				228754A3FD60423D6977154B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -511,6 +670,36 @@
 			);
 			name = "Stickjoy First Edition";
 			packageProductDependencies = (
+				8D313D7D2A96757700BA30FD /* SwiftUISnackbar */,
+				8DE001922A96E9BF0043C184 /* ModalView */,
+				8D8EFAEF2A9828C1000A086D /* MediaPicker */,
+				8D80CCBF2A9959EE000541A3 /* FirebaseAnalytics */,
+				8D80CCC12A9959EE000541A3 /* FirebaseAnalyticsOnDeviceConversion */,
+				8D80CCC32A9959EE000541A3 /* FirebaseAnalyticsSwift */,
+				8D80CCC52A9959EE000541A3 /* FirebaseAnalyticsWithoutAdIdSupport */,
+				8D80CCC72A9959EE000541A3 /* FirebaseAppCheck */,
+				8D80CCC92A9959EE000541A3 /* FirebaseAppDistribution-Beta */,
+				8D80CCCB2A9959EE000541A3 /* FirebaseAuth */,
+				8D80CCCD2A9959EE000541A3 /* FirebaseAuthCombine-Community */,
+				8D80CCCF2A9959EE000541A3 /* FirebaseCrashlytics */,
+				8D80CCD12A9959EE000541A3 /* FirebaseDatabase */,
+				8D80CCD32A9959EE000541A3 /* FirebaseDatabaseSwift */,
+				8D80CCD52A9959EE000541A3 /* FirebaseDynamicLinks */,
+				8D80CCD72A9959EE000541A3 /* FirebaseFirestore */,
+				8D80CCD92A9959EE000541A3 /* FirebaseFirestoreCombine-Community */,
+				8D80CCDB2A9959EE000541A3 /* FirebaseFirestoreSwift */,
+				8D80CCDD2A9959EE000541A3 /* FirebaseFunctions */,
+				8D80CCDF2A9959EE000541A3 /* FirebaseFunctionsCombine-Community */,
+				8D80CCE12A9959EE000541A3 /* FirebaseInAppMessaging-Beta */,
+				8D80CCE32A9959EE000541A3 /* FirebaseInAppMessagingSwift-Beta */,
+				8D80CCE52A9959EE000541A3 /* FirebaseInstallations */,
+				8D80CCE72A9959EE000541A3 /* FirebaseMessaging */,
+				8D80CCE92A9959EE000541A3 /* FirebaseMLModelDownloader */,
+				8D80CCEB2A9959EE000541A3 /* FirebasePerformance */,
+				8D80CCED2A9959EE000541A3 /* FirebaseRemoteConfig */,
+				8D80CCEF2A9959EE000541A3 /* FirebaseRemoteConfigSwift */,
+				8D80CCF12A9959EE000541A3 /* FirebaseStorage */,
+				8D80CCF32A9959EE000541A3 /* FirebaseStorageCombine-Community */,
 			);
 			productName = "Stickjoy First Edition";
 			productReference = BD34949D2A82930500D5395D /* Stickjoy First Edition.app */;
@@ -520,6 +709,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BD3494C42A82930500D5395D /* Build configuration list for PBXNativeTarget "Stickjoy First EditionTests" */;
 			buildPhases = (
+				A97D4290309BDAD2041C62FD /* [CP] Check Pods Manifest.lock */,
 				BD3494A92A82930500D5395D /* Sources */,
 				BD3494AA2A82930500D5395D /* Frameworks */,
 				BD3494AB2A82930500D5395D /* Resources */,
@@ -538,9 +728,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BD3494C72A82930500D5395D /* Build configuration list for PBXNativeTarget "Stickjoy First EditionUITests" */;
 			buildPhases = (
+				4391E020BCF9B43A6972AE25 /* [CP] Check Pods Manifest.lock */,
 				BD3494B32A82930500D5395D /* Sources */,
 				BD3494B42A82930500D5395D /* Frameworks */,
 				BD3494B52A82930500D5395D /* Resources */,
+				FB5DD835415D9529AF336D85 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -586,6 +778,9 @@
 			mainGroup = BD3494942A82930500D5395D;
 			packageReferences = (
 				BD7B69F22A893B6200F5A3A4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				8D313D7C2A96757700BA30FD /* XCRemoteSwiftPackageReference "SwiftUISnackbar" */,
+				8DE001912A96E9BF0043C184 /* XCRemoteSwiftPackageReference "modal-view" */,
+				8D8EFAEE2A9828C1000A086D /* XCRemoteSwiftPackageReference "SwiftUI-MediaPicker" */,
 			);
 			productRefGroup = BD34949E2A82930500D5395D /* Products */;
 			projectDirPath = "";
@@ -605,6 +800,7 @@
 			files = (
 				BD3494A82A82930500D5395D /* Preview Assets.xcassets in Resources */,
 				BD3494A52A82930500D5395D /* Assets.xcassets in Resources */,
+				8D4E4D2D2A9A905500DBAE99 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -624,12 +820,117 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		228754A3FD60423D6977154B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Stickjoy First Edition/Pods-Stickjoy First Edition-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Stickjoy First Edition/Pods-Stickjoy First Edition-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Stickjoy First Edition/Pods-Stickjoy First Edition-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4391E020BCF9B43A6972AE25 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Stickjoy First Edition-Stickjoy First EditionUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		48105F992D4438106AF9E447 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Stickjoy First Edition-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A97D4290309BDAD2041C62FD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Stickjoy First EditionTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FB5DD835415D9529AF336D85 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Stickjoy First Edition-Stickjoy First EditionUITests/Pods-Stickjoy First Edition-Stickjoy First EditionUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Stickjoy First Edition-Stickjoy First EditionUITests/Pods-Stickjoy First Edition-Stickjoy First EditionUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Stickjoy First Edition-Stickjoy First EditionUITests/Pods-Stickjoy First Edition-Stickjoy First EditionUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BD3494992A82930500D5395D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D42BD9F2A95679C0071E1C0 /* UsuariosViewModel.swift in Sources */,
 				BD3494D42A82940900D5395D /* LogInScreen.swift in Sources */,
+				8D6363D02A950ED700DE66C5 /* MainTabbedView.swift in Sources */,
 				BD01BAD32A8D35AE00134DEA /* NewAlbumHeader.swift in Sources */,
 				BDC40B662A8ED6B000ED74E1 /* EditableAlbumScreen.swift in Sources */,
 				BD42C62B2A8BEF46001E7A18 /* DefaultProfileInfo.swift in Sources */,
@@ -645,6 +946,7 @@
 				BDAA45702A83034B0074CB87 /* SearchBar.swift in Sources */,
 				BD42C62D2A8BFB3F001E7A18 /* AlbumInfo.swift in Sources */,
 				BD3494EA2A82B38D00D5395D /* ForgotMyPasswordMenu.swift in Sources */,
+				8D42BDA22A956E1A0071E1C0 /* User.swift in Sources */,
 				BD3494F82A82E08600D5395D /* DefaultProfileHeaderInfo.swift in Sources */,
 				BDC40B6C2A8ED88C00ED74E1 /* ElsesEditableCollabAlbumScreen.swift in Sources */,
 				BD8828622A868229001F619A /* AdminPanelScreen.swift in Sources */,
@@ -665,6 +967,7 @@
 				BD3494E82A82B24000D5395D /* TermsAndConditionsMenu.swift in Sources */,
 				BD9ADC0B2A8E784A0055B3A4 /* AlbumInfoPanelScreen.swift in Sources */,
 				BD42C6242A8BE49F001E7A18 /* ProfileBody.swift in Sources */,
+				8DE001902A96C0C40043C184 /* Amigo.swift in Sources */,
 				BD42C6312A8C1F33001E7A18 /* DefaultProfileScreen.swift in Sources */,
 				BD3494DC2A829C5700D5395D /* EmptyFriendsScreen.swift in Sources */,
 				BD9ADC1D2A8EB3370055B3A4 /* ElsesProfileHeader.swift in Sources */,
@@ -677,20 +980,25 @@
 				BD06A7AF2A8D7CAA00DFB4A7 /* DeleteFriendMenu.swift in Sources */,
 				BD9ADC1B2A8EB2D40055B3A4 /* ElsesProfileScreen.swift in Sources */,
 				BDC40B5E2A8ECF9F00ED74E1 /* ElsesProfileViewModel.swift in Sources */,
+				8D80CCF62A996979000541A3 /* StorageManager.swift in Sources */,
 				BD9ADC152A8E93DF0055B3A4 /* Outbox.swift in Sources */,
 				BD9ADC0D2A8E7D0A0055B3A4 /* InviteCollaboratorsScreen.swift in Sources */,
 				BDAA456C2A82FF1B0074CB87 /* EmptyFeedBody.swift in Sources */,
+				8DE0018C2A96AC330043C184 /* Album.swift in Sources */,
 				BDC40B682A8ED71800ED74E1 /* AlbumScreen.swift in Sources */,
 				BD3494A12A82930500D5395D /* Stickjoy_First_EditionApp.swift in Sources */,
 				BD01BAE32A8D622900134DEA /* LogOutMenu.swift in Sources */,
 				BD42C62F2A8C1F0D001E7A18 /* DefaultProfileViewModel.swift in Sources */,
 				BD01BAE12A8D508200134DEA /* FullSizeInfo.swift in Sources */,
+				8DE0018E2A96BF820043C184 /* AmigosViewModel.swift in Sources */,
 				BDC26FFE2A8554CD004A91CF /* CreateUploadScreen.swift in Sources */,
 				BD3494CF2A82939000D5395D /* LaunchScreen.swift in Sources */,
 				BD42C6272A8BEEC0001E7A18 /* DefaultProfileBody.swift in Sources */,
 				BD42C61D2A8BD48C001E7A18 /* TermsAndConditions.swift in Sources */,
 				BD9ADC192A8EA5090055B3A4 /* SubscriptionTermsMenu.swift in Sources */,
+				8D8EFAED2A981ED1000A086D /* SetEditorAlbum.swift in Sources */,
 				BDC40B642A8ED4D400ED74E1 /* SubscriptionTerms.swift in Sources */,
+				8DE0018A2A96A9D20043C184 /* AlbumViewModel.swift in Sources */,
 				BD06A7BA2A8D963F00DFB4A7 /* DeleteCollaboratorMenu.swift in Sources */,
 				BD9EDF2B2A83062100401967 /* EmptyFriendsBody.swift in Sources */,
 				BD9ADC172A8E947C0055B3A4 /* FriendsList.swift in Sources */,
@@ -703,6 +1011,7 @@
 				BDC26FFC2A853EDC004A91CF /* SettingsScreen.swift in Sources */,
 				BD01BAD62A8D360400134DEA /* DefaultAlbumContent.swift in Sources */,
 				BD06A7B42A8D81D900DFB4A7 /* SelectAlbumScreen.swift in Sources */,
+				8DE41A4C2A95DA4500896369 /* HomeView.swift in Sources */,
 				BDC270002A8564F3004A91CF /* EditableProfileHeader.swift in Sources */,
 				BD42C6222A8BDC11001E7A18 /* ProfileViewModel.swift in Sources */,
 				BD06A7B62A8D87FF00DFB4A7 /* UploadPictureOrVideoScreen.swift in Sources */,
@@ -794,7 +1103,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -848,7 +1157,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -860,15 +1169,19 @@
 		};
 		BD3494C22A82930500D5395D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78EF68B48C9503F058884C04 /* Pods-Stickjoy First Edition.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_ASSET_PATHS = "\"Stickjoy First Edition/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 35B5HBW633;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = StickjoyApp;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.photography";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "La app requiere accesos a la galeria de fotos";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -880,7 +1193,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Stickjoy.Stickjoy-First-Edition";
+				PRODUCT_BUNDLE_IDENTIFIER = com.stickjoy.stickjoyapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -890,15 +1203,19 @@
 		};
 		BD3494C32A82930500D5395D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A3509C1ADDACF820B03DAB9F /* Pods-Stickjoy First Edition.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_ASSET_PATHS = "\"Stickjoy First Edition/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 35B5HBW633;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = StickjoyApp;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.photography";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "La app requiere accesos a la galeria de fotos";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -910,7 +1227,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Stickjoy.Stickjoy-First-Edition";
+				PRODUCT_BUNDLE_IDENTIFIER = com.stickjoy.stickjoyapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -920,12 +1237,13 @@
 		};
 		BD3494C52A82930500D5395D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC77FC967D060453FF3FCE32 /* Pods-Stickjoy First EditionTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 35B5HBW633;
+				DEVELOPMENT_TEAM = YA35T96587;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MARKETING_VERSION = 1.0;
@@ -940,12 +1258,13 @@
 		};
 		BD3494C62A82930500D5395D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 773DB90E5BC0EE1FDA262FAA /* Pods-Stickjoy First EditionTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 35B5HBW633;
+				DEVELOPMENT_TEAM = YA35T96587;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MARKETING_VERSION = 1.0;
@@ -960,11 +1279,12 @@
 		};
 		BD3494C82A82930500D5395D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A571213274A6A41321822BD1 /* Pods-Stickjoy First Edition-Stickjoy First EditionUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 35B5HBW633;
+				DEVELOPMENT_TEAM = YA35T96587;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Stickjoy.Stickjoy-First-EditionUITests";
@@ -978,11 +1298,12 @@
 		};
 		BD3494C92A82930500D5395D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC316AD65625F463D7B8D2A8 /* Pods-Stickjoy First Edition-Stickjoy First EditionUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 35B5HBW633;
+				DEVELOPMENT_TEAM = YA35T96587;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Stickjoy.Stickjoy-First-EditionUITests";
@@ -1036,6 +1357,30 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		8D313D7C2A96757700BA30FD /* XCRemoteSwiftPackageReference "SwiftUISnackbar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/zaniluca/SwiftUISnackbar";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		8D8EFAEE2A9828C1000A086D /* XCRemoteSwiftPackageReference "SwiftUI-MediaPicker" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/UWAppDev/SwiftUI-MediaPicker";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.0;
+			};
+		};
+		8DE001912A96E9BF0043C184 /* XCRemoteSwiftPackageReference "modal-view" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/diniska/modal-view";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		BD7B69F22A893B6200F5A3A4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -1045,6 +1390,159 @@
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8D313D7D2A96757700BA30FD /* SwiftUISnackbar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8D313D7C2A96757700BA30FD /* XCRemoteSwiftPackageReference "SwiftUISnackbar" */;
+			productName = SwiftUISnackbar;
+		};
+		8D80CCBF2A9959EE000541A3 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD7B69F22A893B6200F5A3A4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		8D80CCC12A9959EE000541A3 /* FirebaseAnalyticsOnDeviceConversion */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD7B69F22A893B6200F5A3A4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsOnDeviceConversion;
+		};
+		8D80CCC32A9959EE000541A3 /* FirebaseAnalyticsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD7B69F22A893B6200F5A3A4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsSwift;
+		};
+		8D80CCC52A9959EE000541A3 /* FirebaseAnalyticsWithoutAdIdSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD7B69F22A893B6200F5A3A4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsWithoutAdIdSupport;
+		};
+		8D80CCC72A9959EE000541A3 /* FirebaseAppCheck */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD7B69F22A893B6200F5A3A4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAppCheck;
+		};
+		8D80CCC92A9959EE000541A3 /* FirebaseAppDistribution-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD7B69F22A893B6200F5A3A4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseAppDistribution-Beta";
+		};
+		8D80CCCB2A9959EE000541A3 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD7B69F22A893B6200F5A3A4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		8D80CCCD2A9959EE000541A3 /* FirebaseAuthCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD7B69F22A893B6200F5A3A4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseAuthCombine-Community";
+		};
+		8D80CCCF2A9959EE000541A3 /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD7B69F22A893B6200F5A3A4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+		8D80CCD12A9959EE000541A3 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD7B69F22A893B6200F5A3A4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		8D80CCD32A9959EE000541A3 /* FirebaseDatabaseSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD7B69F22A893B6200F5A3A4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabaseSwift;
+		};
+		8D80CCD52A9959EE000541A3 /* FirebaseDynamicLinks */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD7B69F22A893B6200F5A3A4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDynamicLinks;
+		};
+		8D80CCD72A9959EE000541A3 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD7B69F22A893B6200F5A3A4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		8D80CCD92A9959EE000541A3 /* FirebaseFirestoreCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD7B69F22A893B6200F5A3A4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFirestoreCombine-Community";
+		};
+		8D80CCDB2A9959EE000541A3 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD7B69F22A893B6200F5A3A4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+		8D80CCDD2A9959EE000541A3 /* FirebaseFunctions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD7B69F22A893B6200F5A3A4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFunctions;
+		};
+		8D80CCDF2A9959EE000541A3 /* FirebaseFunctionsCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD7B69F22A893B6200F5A3A4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFunctionsCombine-Community";
+		};
+		8D80CCE12A9959EE000541A3 /* FirebaseInAppMessaging-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD7B69F22A893B6200F5A3A4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseInAppMessaging-Beta";
+		};
+		8D80CCE32A9959EE000541A3 /* FirebaseInAppMessagingSwift-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD7B69F22A893B6200F5A3A4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseInAppMessagingSwift-Beta";
+		};
+		8D80CCE52A9959EE000541A3 /* FirebaseInstallations */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD7B69F22A893B6200F5A3A4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseInstallations;
+		};
+		8D80CCE72A9959EE000541A3 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD7B69F22A893B6200F5A3A4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+		8D80CCE92A9959EE000541A3 /* FirebaseMLModelDownloader */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD7B69F22A893B6200F5A3A4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMLModelDownloader;
+		};
+		8D80CCEB2A9959EE000541A3 /* FirebasePerformance */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD7B69F22A893B6200F5A3A4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebasePerformance;
+		};
+		8D80CCED2A9959EE000541A3 /* FirebaseRemoteConfig */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD7B69F22A893B6200F5A3A4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseRemoteConfig;
+		};
+		8D80CCEF2A9959EE000541A3 /* FirebaseRemoteConfigSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD7B69F22A893B6200F5A3A4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseRemoteConfigSwift;
+		};
+		8D80CCF12A9959EE000541A3 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD7B69F22A893B6200F5A3A4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		8D80CCF32A9959EE000541A3 /* FirebaseStorageCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD7B69F22A893B6200F5A3A4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseStorageCombine-Community";
+		};
+		8D8EFAEF2A9828C1000A086D /* MediaPicker */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8D8EFAEE2A9828C1000A086D /* XCRemoteSwiftPackageReference "SwiftUI-MediaPicker" */;
+			productName = MediaPicker;
+		};
+		8DE001922A96E9BF0043C184 /* ModalView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8DE001912A96E9BF0043C184 /* XCRemoteSwiftPackageReference "modal-view" */;
+			productName = ModalView;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BD3494952A82930500D5395D /* Project object */;
 }

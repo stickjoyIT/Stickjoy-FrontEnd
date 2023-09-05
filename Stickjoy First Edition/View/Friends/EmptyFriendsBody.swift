@@ -11,7 +11,7 @@ struct EmptyFriendsBody: View {
     var body: some View {
         ZStack(alignment: .top){
             VStack(alignment: .center, spacing: 16) {
-                Text("¡Hey!")
+                Text("Hey!")
                     .font(.largeTitle)
                     .multilineTextAlignment(.center)
                 

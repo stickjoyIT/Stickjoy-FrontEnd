@@ -12,6 +12,7 @@ struct UnderlineTextFieldView<TextFieldView>: View where TextFieldView: View {
     let textFieldView:TextFieldView
     let placeholder:String
     var imageName:String? = nil
+    @Environment (\.colorScheme) var scheme
     
     private var isTextFieldWithIcon:Bool {
         return imageName != nil
@@ -55,14 +56,14 @@ struct UnderlineTextFieldView<TextFieldView>: View where TextFieldView: View {
         
         private var placeholderView: some View {
             Text(placeholder)
-                .foregroundColor(.black)
+                .foregroundColor(scheme == .dark ? .white : .black)
                 .padding(.leading, isTextFieldWithIcon ? 0 : 16)
                 .opacity(0.5)
         }
         
         private var underlineView: some View {
             Rectangle().frame(height: 1)
-                .foregroundColor(.black)
+                .foregroundColor(scheme == .dark ? .white : .black)
                 .padding(.trailing, 16)
                 .padding(.leading, isTextFieldWithIcon ? 0 : 16)
         }
