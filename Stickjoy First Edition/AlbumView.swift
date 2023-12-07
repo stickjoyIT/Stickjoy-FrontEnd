@@ -14,34 +14,37 @@ enum AlbumTab: String, CaseIterable {
     case panel
 }
 
+@available(iOS 16.0, *)
 struct AlbumView: View {
     @State private var selectedAlbumTab: AlbumTab = .myAlbum
-    @State var listaFotos = [String]()
+    @ObservedObject var avm = AlbumViewModel()
+    @ObservedObject var uvm = UsuariosViewModel()
+    @State var listaFotos = [pickture]()
     var body: some View {
         TabView(selection: $selectedAlbumTab) {
             
-            NewAlbumScreen(isEdit:.constant(false), editor: .constant(false), nameAlbum: .constant(""), descripAlbum: .constant(""), id_albumSelected: .constant(""), imgPortadaBind: .constant(""), pickturesList: $listaFotos)
-                .tabItem {
-                    Image(systemName: "photo.on.rectangle")
-                    Text("My Album")
-                }
-                .tag(AlbumTab.myAlbum)
+            //NewAlbumScreen(avm: avm, uvm: uvm, isEdit:.constant(false), editor: .constant(false), nameAlbum: .constant(""), descripAlbum: .constant(""), id_albumSelected: .constant(""), imgPortadaBind: .constant(""), pickturesList: $listaFotos, lenguaje: .constant("es"), privacy: .constant(2), proceso: .constant(false), userOwner: "")
+                //.tabItem {
+                  //  Image(systemName: "photo.on.rectangle")
+                    //Text("My Album")
+                //}
+                //.tag(AlbumTab.myAlbum)
             
-            AlbumPrivacyScreen()
+            /*AlbumPrivacyScreen(lenguaje: .constant("es"), privacy: .constant(2), id_album: .constant(""))
                 .tabItem {
                     Image(systemName: "lock")
                     Text("Privacy")
                 }
-                .tag(AlbumTab.privacy)
+                .tag(AlbumTab.privacy)*/
             
             //Poner la pantalla de  subir()
-                .tabItem {
-                    Image(systemName: "square.and.arrow.up")
-                    Text("Upload")
-                }
-                .tag(AlbumTab.upload)
+                //.tabItem {
+                  //  Image(systemName: "square.and.arrow.up")
+                    //Text("Upload")
+                //}
+                //.tag(AlbumTab.upload)
             
-            AdminPanelScreen()
+            AdminPanelScreen(avm:AlbumViewModel(), uvm: UsuariosViewModel(), id_album: .constant(""), lenguaje: .constant("es"))
             //Poner la pantalla de admin()
                 .tabItem {
                     Image(systemName: "slider.horizontal.3")
@@ -54,6 +57,7 @@ struct AlbumView: View {
 
 
 
+@available(iOS 16.0, *)
 struct AlbumView_Previews: PreviewProvider {
     static var previews: some View {
         AlbumView()

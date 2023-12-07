@@ -6,20 +6,19 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct AnchoredProfiles: View {
     var anchoredprofile: Amigo
     var body: some View {
-            CustomVStack {
-                Button(action: {
-                    //Añadir acción de ir a perfil si se da click
-                }) {
-                    Image("stickjoyLogoBlue")
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .frame(width: 152, height: 152)
-                        .cornerRadius(10)
-                }
+            VStack {
+                AnimatedImage(url: URL(string: anchoredprofile.user_url))
+                    .resizable()
+                    .indicator(SDWebImageActivityIndicator.medium)
+                    .placeholder(UIImage(named: "stickjoyLogoBlue"))
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: 152, height: 152)
+                    .cornerRadius(10)
                 
                 VStack(alignment: .leading, spacing: 4) {
                     Spacer(minLength: 0)
@@ -52,6 +51,6 @@ struct CustomVStack<Content: View>: View {
 
 struct AnchoredProfiles_Previews: PreviewProvider {
     static var previews: some View {
-        FriendsScreen(lenguaje: .constant("es"))
+        AnchoredProfiles(anchoredprofile: Amigo(user_id: "", name: "Ignacio tun moo", username: "@ignacios", user_url: "https://firebasestorage.googleapis.com:443/v0/b/stickjoy-swiftui.appspot.com/o/AJVuYmOk0AUCNNuMY9le%2FIMG_0672.heic?alt=media&token=c9bd3a54-09f5-46c1-91c6-b0ad37a4c8c0", album_id: "", album_name: "", album_description: "", album_url: "", picture_id: "", picture_url: "", picture_created_date: ""))
     }
 }

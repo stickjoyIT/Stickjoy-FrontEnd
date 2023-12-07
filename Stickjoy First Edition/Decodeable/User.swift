@@ -10,11 +10,11 @@ import Foundation
 struct Response:Decodable, Identifiable {
     let id: Int
     let status:String
-    let data:Data
+    let data:DataUser
     let message:String
 }
 
-struct Data:Codable {
+struct DataUser:Codable {
     let id: String
     let alt_id: Int
     let name: String

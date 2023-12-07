@@ -22,6 +22,8 @@ struct AlbumInfo: Identifiable {
     var id_album:String
     var owner_id:String
     var description: String
+    var userOwner:String
+    var isCollap:Bool
 }
 
 

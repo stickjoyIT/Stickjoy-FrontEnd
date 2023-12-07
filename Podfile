@@ -6,8 +6,9 @@ target 'Stickjoy First Edition' do
   use_frameworks!
 	
 	pod 'SwiftyJSON'
-  	pod 'Alamofire', '~> 4.9.1' 
-  	pod 'SDWebImageSwiftUI'
+  pod 'Alamofire', '~> 4.9.1'
+  pod 'SDWebImageSwiftUI'
+	pod 'Google-Mobile-Ads-SDK'
 
   # Pods for Stickjoy First Edition
 

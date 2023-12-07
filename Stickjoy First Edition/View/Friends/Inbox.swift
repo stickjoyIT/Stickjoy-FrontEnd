@@ -7,38 +7,6 @@
 
 import SwiftUI
 
-struct Inbox: View {
-    var body: some View {
-        VStack(alignment: .leading) {
-            Text("Inbox")
-                .font(.title)
-                .padding(.horizontal)
-
-            ScrollView {
-                LazyVStack(spacing: 16) {
-                    ForEach(inboxNotifications) { notification in
-                        NotificationRow(notification: notification)
-                    }
-                    .padding(.horizontal)
-                }
-            }
-        }
-    }
-}
-
-struct NotificationRow: View {
-    var notification: Notification
-
-    var body: some View {
-        switch notification.type {
-        case let .friendRequest(profilename, username, image):
-            FriendRequestRow(profilename: profilename, username: username, image: image)
-
-        case let .collaborationRequest(albumAdmin, albumName, image):
-            CollaborationRequestRow(albumAdmin: albumAdmin, albumName: albumName, image: image)
-        }
-    }
-}
 
 //Notificaciones de Solicitudes de Amistad Recibidas
 struct FriendRequestRow: View {

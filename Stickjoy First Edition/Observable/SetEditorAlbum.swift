@@ -14,4 +14,5 @@ class SetEditor: ObservableObject {
     @Published var nameAlbum: String = "Nombre del Álbum"
     @Published var descripAlbum:String = "Bienvenid@ a mi nuevo álbum"
     @Published var imgPortada = ""
+    @Published var imgPortadaP = UserDefaults.standard.string(forKey: "portada") ?? ""
 }

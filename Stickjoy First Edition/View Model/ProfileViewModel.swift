@@ -7,10 +7,11 @@
 
 import SwiftUI
 import Alamofire
+import Firebase
 
 class ProfileViewModel: ObservableObject{
     @Published var offset: CGFloat = 0
-    
+
     func updateProfile(name:String, descrip:String, urlImg:String){
         let id = UserDefaults.standard.string(forKey: "id") ?? ""
         let url = "https://users-pgobuckofq-uc.a.run.app/users/:id"
@@ -35,5 +36,9 @@ class ProfileViewModel: ObservableObject{
                 print(error)
             }
         }
+    }
+    
+    func observedObject(){
+        
     }
 }

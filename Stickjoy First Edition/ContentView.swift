@@ -18,30 +18,38 @@ enum Tab: String, CaseIterable {
     case friends
 }
 
+@available(iOS 16.0, *)
 struct ContentView: View {
     @State var selectedTab = 0
     @Binding var logueado:Bool
+    @Binding var proceso:Bool
     @Binding var lenguaje:String
+    @Binding var porcent:Float
+    @State var badge = 0
+    @State var badge_p = 0
     var body: some View {
         ZStack(alignment: .bottom) {
             TabView(selection: $selectedTab){
-                ProfileScreen(lenguaje: $lenguaje)
+                ProfileScreen(logueado:$logueado, lenguaje: $lenguaje, proceso: $proceso, porcentaje: $porcent)
                     .tag(0)
                     .tabItem {
                         Label("", systemImage: "person")
                     }
+                    //.environmentObject(stm)
                 
-                FeedScreen(lenguaje: $lenguaje)
+                FeedScreen(lenguaje: $lenguaje, logueado: $logueado)
                     .tag(1)
                     .tabItem {
                         Label("", systemImage: "house")
                     }
-                
-                CreateUploadScreen(lenguaje: $lenguaje)
+                //SharedScreen()
+                CreateUploadScreen(/*stm: stm*/lenguaje: $lenguaje, proceso: $proceso, porcentaje: $porcent)
                     .tag(2)
                     .tabItem {
                         Label("", systemImage: "plus.circle.fill")
                     }
+                    .badge(badge_p)
+                    //.environmentObject(stm)
                 
                 SettingsScreen(logueado: $logueado, lenguaje: $lenguaje)
                     .tag(3)
@@ -54,32 +62,24 @@ struct ContentView: View {
                     .tabItem {
                         Label("", systemImage: "person.2")
                     }
+                    .badge(badge)
             }
-            
-            /*ZStack {
-                HStack {
-                    ForEach((TabbedItems.allCases), id: \.self){ item in
-                        Button {
-                            selectedTab = item.rawValue
-                        } label: {
-                            
-                            //CustomTabItem(imageName: item.iconName, title: item.title, isActive: (selectedTab == item.rawValue))
-                            UITabBarItem(title: "", image: <#T##UIImage?#>, tag: <#T##Int#>)
-                        }
+            .onReceive(NotificationCenter.default.publisher(for: Notification.Name("PushNotificationTapped"))) { notification in
+                // Cambia el tab cuando se toca la notificación
+                if let tabNumber = notification.userInfo?["tabNumber"] as? Int {
+                    if tabNumber == 4 {
+                        self.selectedTab = tabNumber
+                        badge = 1
+                    } else {
+                       // badge_p = 1
                     }
                 }
-                .padding(6)
-            }*/
+            }
         }
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView(logueado: .constant(false), lenguaje: .constant("es"))
-    }
-}
-
+@available(iOS 16.0, *)
 extension ContentView {
     func CustomTabItem(imageName:String, title:String, isActive:Bool) -> some View {
         HStack(spacing: 10){

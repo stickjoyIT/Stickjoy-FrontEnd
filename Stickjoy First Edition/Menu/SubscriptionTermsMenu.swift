@@ -11,31 +11,44 @@ import SwiftUI
 
 struct SubscriptionTermsMenu: View {
     @Binding var isPresented: Bool // Add this binding
-    
+    @State var lenguaje = "es"
     var body: some View {
         VStack {
             HStack {
-                Spacer()
-                Button("Close") {
+                Button {
                     isPresented = false
+                } label : {
+                    Image(systemName: "arrow.left.circle.fill")
                 }
+                .font(.title)
+                .foregroundColor(.gray)
+                //.padding(.horizontal, 10)
+                //.padding(.top, 10)
+                Spacer()
             }
             .padding(.horizontal)
             .padding(.top, 20)
             
-            Text("Terms and Conditions")
+            Text(lenguaje == "es" ? "Términos de Suscripción" : "Subscription Terms")
                 .font(.title)
                 .fontWeight(.bold)
                 .padding(.top, 10)
             
             // Add your content here
+            if lenguaje == "es" {
+                SubscriptionTermsEspaniol().edgesIgnoringSafeArea(.all)
+            } else {
+                SubscriptionTermsIngles().edgesIgnoringSafeArea(.all)
+            }
             
-            Spacer()
         }
         .padding(.vertical, 20)
-        .background(Color.white)
+        //.background(Color.white)
         .cornerRadius(12)
-        .shadow(radius: 10)
+        //.shadow(radius: 10)
+        .onAppear {
+            lenguaje = UserDefaults.standard.string(forKey: "lenguaje") ?? "es"
+        }
     }
 }
 
@@ -45,3 +58,27 @@ struct SubscriptionTermsMenu_Previews: PreviewProvider {
     }
 }
 
+struct SubscriptionTermsEspaniol:UIViewControllerRepresentable {
+    func makeUIViewController(context: Context) -> some UIViewController {
+        let story = UIStoryboard(name: "Politicas", bundle: Bundle.main)
+        let controller = story.instantiateViewController(identifier: "politicasSuscrip")
+        return controller
+    }
+    
+    func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
+        
+    }
+}
+//suscripEng
+
+struct SubscriptionTermsIngles:UIViewControllerRepresentable {
+    func makeUIViewController(context: Context) -> some UIViewController {
+        let story = UIStoryboard(name: "Politicas", bundle: Bundle.main)
+        let controller = story.instantiateViewController(identifier: "suscripEng")
+        return controller
+    }
+    
+    func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
+        
+    }
+}

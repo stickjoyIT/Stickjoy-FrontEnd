@@ -15,19 +15,15 @@ var Empty: Bool = true
 struct EmptyFeedScreen: View {
     @Binding var lenguaje:String
     var body: some View {
-        ZStack (alignment: .top) {
-            VStack {
-                //Encabezado
-                FeedHeader(lenguaje: $lenguaje)
-            }
-            VStack(alignment: .center){
-                //Contenido
+        VStack {
+            FeedHeader(lenguaje: $lenguaje).frame(height:80)
+            ScrollView {
                 EmptyFeedBody(lenguaje: $lenguaje)
-                }
-            .padding(.vertical, 120)
+                Spacer()
             }
         }
     }
+}
 
 struct EmptyFeedScreen_Previews: PreviewProvider {
     static var previews: some View {

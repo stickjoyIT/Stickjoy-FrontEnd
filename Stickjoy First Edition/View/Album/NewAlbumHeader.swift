@@ -6,162 +6,163 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
+import Combine
 
-
-
+@available(iOS 16.0, *)
 struct NewAlbumHeader: View {
     //Adopción de Modo claro oscuro
     @Environment (\.colorScheme) var scheme
     @ObservedObject var editorVal = SetEditor()
-    @State var nombreAlbum = "Nombre del album"
+    @State var nombreAlbum = "Nombre del álbum"
     @ObservedObject var avm = AlbumViewModel()
     
     @Binding var editorB:Bool
     @Binding var nameAlbum:String
     @Binding var imgPortda:String
     @Binding var descripAlbum:String
-    @Binding var imges:[String]
+    @Binding var imges:[pickture]
     @Binding var id_album:String
     
-    let nameUser = UserDefaults.standard.string(forKey: "nombre") ?? "Name User"
+    var userOwner:String
     
     @State var editNameAlbum = true
     
+    @Environment(\.dismiss) var dismiss
     @Environment(\.presentationMode) var presentationMode
     
+    let limitNameAlbum = 20 //Your limit
+    let limitDescripAlbum = 250
+    @Binding var isActive:Bool
+    @Binding var seeIt : Bool
     var body: some View {
         ZStack(alignment: .top) {
             (scheme == .dark ? Color.black : Color.white)
-            
             VStack(alignment: .leading, spacing: 8) {
-                
-                AsyncImage(url: URL(string: imgPortda)) { image in
-                    image
-                        .resizable()
-                        .scaledToFit()
+                HStack {
+                    //if !editorB {
+                        //Botón de regresar
+                        Button(action: {
+                            // Add your action here
+                            if !editorB {
+                                presentationMode.wrappedValue.dismiss()
+                                isActive = false
+                                nameAlbum = ""
+                            }
+                        }) {
+                            if editorB {
+                                Image(systemName: "arrow.backward.circle.fill")
+                                    .font(.title)
+                                    .foregroundColor(scheme == .dark ? .black : .white)
+                                    .cornerRadius(20)
+                            } else {
+                                Image(systemName: "arrow.backward.circle.fill")
+                                    .font(.title)
+                                    .foregroundColor(.gray)
+                                    .cornerRadius(20)
+                            }
+                            
+                        }
+                        //Añadí este frame para que el nombre de album quepa
+                        .frame(width: 20, height: 20)
+                        .padding()
+                        .disabled(editorB)
                     
-                    .aspectRatio(contentMode: .fill)
-                } placeholder: {
-                    Image("ProfilePic")
-                        .resizable()
-                        .scaledToFit()
-                        .aspectRatio(contentMode: .fill).background(Color(hex: "9dc3e6"))
+                        Spacer()
+                        //Botón para entrar a editor de album
+                    if !seeIt {
+                        Button(action: {
+                            // Add your action here
+                            editorB = true
+                        }) {
+                            if editorB {
+                                Image(systemName: "pencil.circle.fill")
+                                    .font(.title)
+                                    .foregroundColor(scheme == .dark ? .black : .white)
+                                    .cornerRadius(20)
+                            } else {
+                                Image(systemName: "pencil.circle.fill")
+                                    .font(.title)
+                                    //.foregroundColor(.gray)
+                                    .cornerRadius(20)
+                            }
+                            
+                        }
+                        //Añadí este frame para que el nombre de album quepa
+                        .frame(width: 20, height: 20)
+                        .padding()
+                        .disabled(editorB)
+                    }
+                        
+                    //}
                 }
-            //Esto es para que al dar scroll se vaya la imagen y se quede el encabezado
-                .frame(width: UIScreen.main.bounds.width, height: 250)
-                .cornerRadius(2)
-            //Esto es para que la imagen no se salga del header cuando se de scroll hacia arriba y tope. para eso es el "-" en offset
-                
-                //Título de álbum
                 
                 HStack {
                     //Busca el título default del álbum
                     if editorB {
                         TextField("Nombre del Album",text: $nameAlbum)
-                            .font(.system(size: 24))
-                            .fontWeight(.light)
+                            .font(.largeTitle)
                             .autocorrectionDisabled(true)
                             .textInputAutocapitalization(.none)
+                            .bold()
+                            .onReceive(Just(nameAlbum)) { _ in limitText(limitNameAlbum) }
                     } else {
                         Text(nameAlbum)
-                            .font(.system(size: 24))
-                            .fontWeight(.light)
+                            .font(.largeTitle)
+                            .bold()
+                        Spacer()
                     }
                     
                 }.padding(.leading,10)
                 .padding(.trailing, 10)
-                
                 //Muestra administrador del álbum
-                Text("@"+(nameUser.replacingOccurrences(of: " ", with: "")))
-                    .font(.system(size: 12))
+                Text((userOwner.replacingOccurrences(of: " ", with: "")))
+                    .font(.headline)
                     .foregroundColor(.secondary)
-                    .fontWeight(.light)
                     .padding(.leading, 10)
                     .padding(.trailing, 10)
                 
                 if editorB {
                     TextField("Descripcion del Album",text: $descripAlbum)
                         .autocorrectionDisabled(true)
-                        .font(.system(size: 12))
+                        .font(.body)
+                        .foregroundColor(.secondary)
                         .textInputAutocapitalization(.none)
                         .padding(.leading,10)
                         .padding(.trailing, 10)
+                        .onReceive(Just(descripAlbum)) { _ in limitDescripAlbum(limitDescripAlbum) }
                 } else {
                     Text(descripAlbum)
-                        .font(.system(size: 12))
+                        .font(.body)
                         .foregroundColor(.secondary)
-                        .fontWeight(.light)
                         .padding(.leading, 10)
                         .padding(.trailing, 10)
                 }
             }
             .padding(0)
             .edgesIgnoringSafeArea(.top)
-            //Layout de botones de regresar y editar
-            
-            if !editorB {
-                HStack {
-                    //Botón de regresar
-                    Button(action: {
-                        
-                        // Add your action here
-                        self.presentationMode.wrappedValue.dismiss()
-                        
-                        nameAlbum = ""
-                        
-                    }) {
-                        Image(systemName: "arrow.backward.circle.fill")
-                            .font(.title)
-                            .foregroundColor(.white)
-                            .background(
-                                            LinearGradient(
-                                                colors: [.customBlue, .blue],
-                                                startPoint: .topLeading,
-                                                endPoint: .bottomTrailing
-                                                
-                                            )
-                                        )
-                            .cornerRadius(20)
-                    }
-                    //Añadí este frame para que el nombre de album quepa
-                    .frame(width: 20, height: 20)
-                    
-                    Spacer()
-                    
-                    //Botón para entrar a editor de album
-                    Button(action: {
-                        // Add your action here
-                        editorB = true
-                    }) {
-                        Image(systemName: "pencil.circle.fill")
-                            .font(.title).foregroundColor(.white)
-                            .background(
-                                            LinearGradient(
-                                                colors: [.customBlue, .blue],
-                                                startPoint: .topLeading,
-                                                endPoint: .bottomTrailing
-                                            )
-                                        )
-                            .cornerRadius(20)
-                    }
-                    //Añadí este frame para que el nombre de album quepa
-                    .frame(width: 20, height: 20)
-                }
-                .padding(.leading, 10)
-                .padding(.trailing, 10)
-                .padding(.top, 20)
-            }
-            
         }
         .edgesIgnoringSafeArea(.horizontal) // Extend the header to the screen edges
         .onAppear{
-            
+            let lenguaje = UserDefaults.standard.string(forKey: "lenguaje") ?? "es"
+            if descripAlbum == "" {
+                
+            }
+            //descripAlbum = lenguaje == "es" ? "¡Bienvenid@ a mi nuevo álbum!" : "Welcome to my new album!"
+        }
+    }
+    
+    //Function to keep text length in limits
+        func limitText(_ upper: Int) {
+            if nameAlbum.count > upper {
+                nameAlbum = String(nameAlbum.prefix(upper))
+            }
+        }
+    
+    func limitDescripAlbum(_ upper:Int){
+        if descripAlbum.count > upper {
+            descripAlbum = String(descripAlbum.prefix(upper))
         }
     }
 }
 
-struct NewAlbumHeader_Previews: PreviewProvider {
-    static var previews: some View {
-        NewAlbumHeader(editorB:.constant(false), nameAlbum: .constant(""), imgPortda: .constant(""), descripAlbum: .constant(""), imges: .constant([]), id_album: .constant(""))
-    }
-}

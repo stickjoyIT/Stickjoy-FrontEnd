@@ -45,6 +45,7 @@ enum NotificationType {
     case friendRequest(profilename: String, username: String, image: String)
     case collaborationRequest(albumAdmin: String, albumName: String, image: String)
 }
+/*
 
 struct Notification: Identifiable {
     var id = UUID()
@@ -62,7 +63,7 @@ let inboxNotifications: [Notification] = [
     // Add more notifications here...
 ]
 
-
+*/
 
 //Solicitudes enviadas de este usuario (Outbox)
 enum RequestType {

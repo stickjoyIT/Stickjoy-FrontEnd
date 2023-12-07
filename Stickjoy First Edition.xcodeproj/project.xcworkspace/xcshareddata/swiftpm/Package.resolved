@@ -73,6 +73,15 @@
       }
     },
     {
+      "identity" : "modal-view",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/diniska/modal-view",
+      "state" : {
+        "revision" : "3f1a97297112770677b507556f581f7ed561593a",
+        "version" : "1.0.1"
+      }
+    },
+    {
       "identity" : "nanopb",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/firebase/nanopb.git",
@@ -91,12 +100,57 @@
       }
     },
     {
+      "identity" : "sqlite.swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/stephencelis/SQLite.swift.git",
+      "state" : {
+        "revision" : "7a2e3cd27de56f6d396e84f63beefd0267b55ccb",
+        "version" : "0.14.1"
+      }
+    },
+    {
+      "identity" : "swift-package-manager-google-mobile-ads",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/googleads/swift-package-manager-google-mobile-ads.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "2f5f0ad9aa6e7c2084f95b29ab882330569c5cdc"
+      }
+    },
+    {
+      "identity" : "swift-package-manager-google-user-messaging-platform",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/googleads/swift-package-manager-google-user-messaging-platform.git",
+      "state" : {
+        "revision" : "129fa838520cd02174f890ae0cfe0242e60714ae",
+        "version" : "2.1.0"
+      }
+    },
+    {
       "identity" : "swift-protobuf",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-protobuf.git",
       "state" : {
         "revision" : "ce20dc083ee485524b802669890291c0d8090170",
         "version" : "1.22.1"
+      }
+    },
+    {
+      "identity" : "swiftui-mediapicker",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/UWAppDev/SwiftUI-MediaPicker",
+      "state" : {
+        "revision" : "96f18b1350873dec0a76355c7060cd0a06100901",
+        "version" : "0.2.0"
+      }
+    },
+    {
+      "identity" : "swiftuisnackbar",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/zaniluca/SwiftUISnackbar",
+      "state" : {
+        "branch" : "main",
+        "revision" : "ff5132c91e3a3855af679e648b95c8ab60c5eeb1"
       }
     }
   ],

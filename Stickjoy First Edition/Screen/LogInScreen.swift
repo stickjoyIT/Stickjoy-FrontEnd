@@ -9,8 +9,15 @@
 
 import SwiftUI
 import SwiftUISnackbar
+import FirebaseMessaging
+import Firebase
 
 struct LogInScreen: View {
+    
+    enum FocusedField {
+        case password, securePass
+    }
+    
     @State private var showPassword = false
     @ObservedObject var uvm = UsuariosViewModel()
     @State private var isShowingUserProfile = false
@@ -28,7 +35,8 @@ struct LogInScreen: View {
     @Binding var logueado:Bool
     @State var shorSnack = false
     
-    let lenguaje = UserDefaults.standard.string(forKey: "lenguaje") ?? "es"
+    @State var lenguaje = UserDefaults.standard.string(forKey: "lenguaje") ?? "es"
+    @FocusState private var focusedField: FocusedField?
     var body: some View {
         Spacer().navigationBarBackButtonHidden(true)
         
@@ -37,17 +45,20 @@ struct LogInScreen: View {
                 Button{
                     presentationMode.wrappedValue.dismiss()
                 }label: {
-                    Image("btnBack")
+                    Image(systemName: "arrow.left.circle.fill")
+                        .foregroundColor(.gray)
+                        .font(.largeTitle)
                 }.padding()
                 
-                Text(lenguaje == "es" ? "Iniciar sesión" : "Log In")
+                Text(lenguaje == "es" ? "Iniciar sesión" : "Log in")
                     .font(.title)
                     .fontWeight(.medium)
                     .padding(.all, 30)
                 Spacer()
             }.padding(.trailing)
             ScrollView(.vertical) {
-                UnderlineTextFieldView(text: $emailOrUsername, textFieldView: textView, placeholder: lenguaje == "es" ? "@nombreusuario/correo electronico" : "@username/email").padding(25)
+                
+                UnderlineTextFieldView(text: $emailOrUsername, textFieldView: textView, placeholder: lenguaje == "es" ? "Correo electrónico" : "Email").padding(25)
                 
                 UnderlineTextFieldView(text: $password, textFieldView: passwordView, placeholder: lenguaje == "es" ? "Contraseña" : "Password").padding(25).foregroundColor(.white)
                 
@@ -66,6 +77,12 @@ struct LogInScreen: View {
                 } else {
                     Button(action: {
                         uvm.loginUser(email: emailOrUsername, pass: password, compation: { success in
+                            if success {
+                                let tokenPush = Messaging.messaging().fcmToken ?? ""
+                                print("token Uni:", tokenPush)
+                                let idUser = UserDefaults.standard.string(forKey: "id") ?? ""
+                                saveIdDevice(id_device: tokenPush, id_user: idUser)
+                            }
                             logueado = success
                             shorSnack = !success
                         })
@@ -85,7 +102,7 @@ struct LogInScreen: View {
             }
             .padding(.top)
             .fullScreenCover(isPresented: $isForgotPasswordMenuPresented) {
-                ForgotMyPasswordMenu(isPresented: $isForgotPasswordMenuPresented)
+                ForgotMyPasswordMenu(isPresented: $isForgotPasswordMenuPresented, lenguaje: $lenguaje)
             }
             .alert(isPresented: $shorSnack, content: {
                 Alert(title: Text("Mensaje"), message:Text(uvm.mensaje))
@@ -95,6 +112,10 @@ struct LogInScreen: View {
     
     func getAlert() -> Alert {
         return  Alert(title: Text("Mensaje"), message: Text(mensajeAlerta), dismissButton: .default(Text("ok")))
+    }
+    
+    func saveIdDevice(id_device:String, id_user:String){
+        uvm.saveIdNotification(id_device: id_device, id_user: id_user)
     }
 }
 
@@ -114,13 +135,22 @@ extension LogInScreen {
                           text: $password)
                 .foregroundColor(scheme == .dark ? .white : .black)
                 .colorScheme(.dark)
+                .focused($focusedField, equals: .password)
             } else {
                 SecureField("", text: $password)
                     .foregroundColor(scheme == .dark ? .white : .black)
                     .colorScheme(.dark)
+                    .focused($focusedField, equals: .securePass)
             }
             Button(action: {
                 self.showPassword.toggle()
+                if showPassword {
+                    focusedField = .password
+                } else {
+                    focusedField = .securePass
+                }
+                
+                UIApplication.shared.endEditing()
             }){
                 Image(systemName: showPassword ? "eye" : "eye.slash")
                     .foregroundColor(.secondary)
@@ -133,5 +163,16 @@ extension LogInScreen {
 struct LogInScreen_Previews: PreviewProvider {
     static var previews: some View {
         LogInScreen(logueado: .constant(false))
+    }
+}
+// Esta extensión te permite ocultar el teclado
+extension UIApplication {
+    func endEditing() {
+        sendAction(
+            #selector(UIResponder.resignFirstResponder),
+            to: nil,
+            from: nil,
+            for: nil
+        )
     }
 }

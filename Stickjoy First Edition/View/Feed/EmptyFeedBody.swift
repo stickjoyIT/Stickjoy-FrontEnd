@@ -16,7 +16,7 @@ struct EmptyFeedBody: View {
                     .font(.largeTitle)
                     .multilineTextAlignment(.center)
                 
-                Text(lenguaje == "es" ? "Estás en Amigos" : "You are now on Feed")
+                Text(lenguaje == "es" ? "Estás en Feed" : "You are now on Feed")
                     .font(.title)
                     .multilineTextAlignment(.center)
                 

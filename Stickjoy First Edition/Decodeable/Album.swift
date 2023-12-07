@@ -14,4 +14,5 @@ struct Album:Identifiable {
     var id = UUID().uuidString
     let id_alb:String
     let url: String
+    var user_id:String
 }

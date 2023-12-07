@@ -10,7 +10,7 @@ import SwiftUI
 struct FeedHeader: View {
     //Adopción de Modo claro oscuro
     @Environment (\.colorScheme) var scheme
-    let nameUser = UserDefaults.standard.string(forKey: "nombre") ?? ""
+    let nameUser = UserDefaults.standard.string(forKey: "username") ?? ""
     @Binding var lenguaje:String
     var body: some View {
         ZStack(alignment: .top) {
@@ -27,7 +27,7 @@ struct FeedHeader: View {
                         .frame(width: 40, height: 40)
                         .cornerRadius(32)
                 }
-                Text(lenguaje == "es" ? "Hola, @\(nameUser.replacingOccurrences(of: " ", with: ""))!" : "Hi, @\(nameUser.replacingOccurrences(of: " ", with: ""))!")
+                Text(lenguaje == "es" ? "¡Hola, \(nameUser.replacingOccurrences(of: " ", with: ""))!" : "Hi, \(nameUser.replacingOccurrences(of: " ", with: ""))!")
                     .font(.headline)
             }
             .padding(24)

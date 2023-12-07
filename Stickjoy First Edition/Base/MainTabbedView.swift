@@ -21,7 +21,7 @@ enum TabbedItems: Int, CaseIterable {
         case .feed:
             return "Feed"
         case .new:
-            return "Nuevo album"
+            return "Nuevo álbum"
         case .settings:
             return "Configuracion"
         case .friends:
@@ -45,20 +45,21 @@ enum TabbedItems: Int, CaseIterable {
     }
 }
 
+@available(iOS 16.0, *)
 struct MainTabbedView: View {
     @State var selectedTab = 0
     @Binding var logueado:Bool
     var body: some View {
         ZStack(alignment: .bottom) {
             TabView(selection: $selectedTab){
-                ProfileScreen(lenguaje: .constant("es"))
-                    .tag(0)
+                //ProfileScreen(logueado: $logueado, lenguaje: .constant("es"), proceso: .constant(false))
+                  //  .tag(0)
                 
-                FeedScreen(lenguaje: .constant("es"))
+                FeedScreen(lenguaje: .constant("es"), logueado: $logueado)
                     .tag(1)
                 
-                NewAlbumScreen(isEdit: .constant(false), editor: .constant(false), nameAlbum: .constant(""), descripAlbum: .constant(""), id_albumSelected: .constant(""), imgPortadaBind: .constant("") , pickturesList: .constant([]))
-                    .tag(2)
+                //NewAlbumScreen(avm: AlbumViewModel(), uvm: UsuariosViewModel(), isEdit: .constant(false), editor: .constant(false), nameAlbum: .constant(""), descripAlbum: .constant(""), id_albumSelected: .constant(""), imgPortadaBind: .constant("") , pickturesList: .constant([]), lenguaje: .constant(""), privacy: .constant(0), proceso: .constant(false), userOwner: "")
+                    //.tag(2)
                 
                 SettingsScreen(logueado: $logueado, lenguaje: .constant("es"))
                     .tag(3)
@@ -88,12 +89,14 @@ struct MainTabbedView: View {
     }
 }
 
+@available(iOS 16.0, *)
 struct MainTabbedView_Previews: PreviewProvider {
     static var previews: some View {
         MainTabbedView(logueado: .constant(false))
     }
 }
 
+@available(iOS 16.0, *)
 extension MainTabbedView {
     func CustomTabItem(imageName:String, title:String, isActive:Bool) -> some View {
         HStack(spacing: 10){

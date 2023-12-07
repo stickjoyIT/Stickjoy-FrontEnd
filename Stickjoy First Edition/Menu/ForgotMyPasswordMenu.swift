@@ -11,12 +11,20 @@ import SwiftUI
 
 struct ForgotMyPasswordMenu: View {
     @Binding var isPresented: Bool // Add this binding
-    @State var password = ""
+    @ObservedObject var uvm = UsuariosViewModel()
+    @State var email = ""
     @State var confirm_pass = ""
+    @Binding var lenguaje:String
+    @State var isAlert = false
+    @State var message = ""
+    
+    // Para adapatación a dark y light mode
+    @Environment (\.colorScheme) var scheme
+    
     var body: some View {
         VStack(spacing: 8) {
             HStack {
-                Text("Recuperar contraseña")
+                Text(lenguaje == "es" ? "Recuperar contraseña" : "Forgot password")
                     .font(.subheadline)
                     .fontWeight(.medium)
                     .padding(.top, 8)
@@ -31,38 +39,50 @@ struct ForgotMyPasswordMenu: View {
             .padding(.top, 8)
             .padding(.bottom, 20)
             
-            UnderlineTextFieldView(text: $password, textFieldView: passwordView, placeholder: "Nueva contraseña").padding(.bottom, 16)
+            UnderlineTextFieldView(text: $email, textFieldView: passwordView, placeholder: lenguaje == "es" ? "Correo" : "Email").padding(.bottom, 16)
             
-            UnderlineTextFieldView(text: $confirm_pass, textFieldView: passwordConfirmView, placeholder: "Confirmar nueva contraseña").padding(.bottom, 16)
+            Button(action: {
+                uvm.forGotPassword(email: email, responseReturn: { resp in
+                    isAlert = true
+                    message = resp.message
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 2){
+                        isPresented = false
+                    }
+                })
+            }, label: {
+                Text(lenguaje == "es" ? "Enviar" : "Send")
+                    .foregroundColor(scheme == .dark ? Color.black : Color.white)
+                    .frame(width: 250)
+                    .padding()
+                    .background(scheme == .dark ? Color.white : Color.black)
+                    .cornerRadius(80)
+            })
             
-            Button("Enviar"){
-                
-            }
-            .frame(maxWidth: .infinity).padding(.all, 8)
-            .background(.yellow).foregroundColor(.white).cornerRadius(4)
-            .padding(.horizontal, 16)
         }
         .padding(.vertical, 20)
-        .background(.white)
+        //.background(.white)
         .cornerRadius(8)
         .padding(.leading, 4)
         .padding(.trailing, 4)
+        .alert(isPresented: $isAlert, content: {
+            Alert(title: Text("Mensaje"), message: Text(message))
+        })
         //Aquí va proceso de recuperación de contraseña.
     }
 }
 
 struct ForgotMyPasswordMenu_Previews: PreviewProvider {
     static var previews: some View {
-        ForgotMyPasswordMenu(isPresented: .constant(true))
+        ForgotMyPasswordMenu(isPresented: .constant(true), lenguaje: .constant(""))
     }
 }
 extension ForgotMyPasswordMenu {
     private var passwordView: some View {
-        SecureField("", text: $password)
-            .foregroundColor(.black)
+        TextField("", text: $email)
+            .foregroundColor(scheme == .dark ? .white : .black)
     }
     private var passwordConfirmView: some View {
         SecureField("", text: $confirm_pass)
-            .foregroundColor(.black)
+            .foregroundColor(scheme == .dark ? .white : .black)
     }
 }

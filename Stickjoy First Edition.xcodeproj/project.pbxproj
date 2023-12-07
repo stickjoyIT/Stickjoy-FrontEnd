@@ -8,11 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		6D90B11C97729DF4F4A7C0E2 /* Pods_Stickjoy_First_Edition_Stickjoy_First_EditionUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9BCF81897CBD96086682396 /* Pods_Stickjoy_First_Edition_Stickjoy_First_EditionUITests.framework */; };
+		8D01AB2D2B183D1400F8BFE7 /* SQlLiteDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D01AB2C2B183D1400F8BFE7 /* SQlLiteDataBase.swift */; };
+		8D0BF69B2AFEE93D00A3C776 /* ColaboratorAlbumBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0BF69A2AFEE93D00A3C776 /* ColaboratorAlbumBody.swift */; };
+		8D1188AF2B1DB7A000EDB299 /* ImageUrlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1188AE2B1DB7A000EDB299 /* ImageUrlView.swift */; };
+		8D1712012B1E605E005F7C4C /* ChangeAlbumScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1712002B1E605E005F7C4C /* ChangeAlbumScreen.swift */; };
+		8D1F260E2B02F45D00553E8E /* PoliticasEnController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1F260D2B02F45D00553E8E /* PoliticasEnController.swift */; };
+		8D20CE672AC6472F0003CC86 /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 8D20CE662AC6472F0003CC86 /* SQLite */; };
+		8D22F0612B196BAE00B9E43F /* ElementsCountUploadScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D22F0602B196BAE00B9E43F /* ElementsCountUploadScreen.swift */; };
 		8D313D7E2A96757700BA30FD /* SwiftUISnackbar in Frameworks */ = {isa = PBXBuildFile; productRef = 8D313D7D2A96757700BA30FD /* SwiftUISnackbar */; };
+		8D37387B2AFD311700595FE8 /* ElseAlbumBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D37387A2AFD311600595FE8 /* ElseAlbumBody.swift */; };
+		8D3F3B442ADDA51E005936EC /* PinCaptureScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3F3B432ADDA51E005936EC /* PinCaptureScreen.swift */; };
+		8D4128ED2AB4F8C200975586 /* TerminosCondiciones.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4128EC2AB4F8C100975586 /* TerminosCondiciones.swift */; };
 		8D42BD9F2A95679C0071E1C0 /* UsuariosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D42BD9E2A95679C0071E1C0 /* UsuariosViewModel.swift */; };
 		8D42BDA22A956E1A0071E1C0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D42BDA12A956E1A0071E1C0 /* User.swift */; };
+		8D4338092AFAE593005E99F9 /* PoliticasController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4338082AFAE593005E99F9 /* PoliticasController.swift */; };
+		8D43380B2AFAE5E6005E99F9 /* Politicas.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D43380A2AFAE5E6005E99F9 /* Politicas.storyboard */; };
 		8D4E4D2D2A9A905500DBAE99 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8D4E4D2C2A9A905300DBAE99 /* GoogleService-Info.plist */; };
+		8D5C18442B16A90D001C7E18 /* UploadingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5C18432B16A90D001C7E18 /* UploadingScreen.swift */; };
 		8D6363D02A950ED700DE66C5 /* MainTabbedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6363CF2A950ED700DE66C5 /* MainTabbedView.swift */; };
+		8D64B3332AA7BB03003FF67A /* TakeScreenShot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D64B3322AA7BB03003FF67A /* TakeScreenShot.swift */; };
+		8D7497B22AE23CA000C8D1B7 /* Suscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7497B12AE23CA000C8D1B7 /* Suscription.swift */; };
+		8D7497B42AE23CFE00C8D1B7 /* SuscriptionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7497B32AE23CFE00C8D1B7 /* SuscriptionItem.swift */; };
+		8D7497B62AE23D7000C8D1B7 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D7497B52AE23D7000C8D1B7 /* StoreKit.framework */; };
 		8D80CCC02A9959EE000541A3 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 8D80CCBF2A9959EE000541A3 /* FirebaseAnalytics */; };
 		8D80CCC22A9959EE000541A3 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = 8D80CCC12A9959EE000541A3 /* FirebaseAnalyticsOnDeviceConversion */; };
 		8D80CCC42A9959EE000541A3 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8D80CCC32A9959EE000541A3 /* FirebaseAnalyticsSwift */; };
@@ -43,6 +60,10 @@
 		8D80CCF62A996979000541A3 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D80CCF52A996979000541A3 /* StorageManager.swift */; };
 		8D8EFAED2A981ED1000A086D /* SetEditorAlbum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8EFAEC2A981ED1000A086D /* SetEditorAlbum.swift */; };
 		8D8EFAF02A9828C1000A086D /* MediaPicker in Frameworks */ = {isa = PBXBuildFile; productRef = 8D8EFAEF2A9828C1000A086D /* MediaPicker */; };
+		8DAABBC92B1764480059C098 /* ListoScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAABBC82B1764480059C098 /* ListoScreen.swift */; };
+		8DAABBCC2B17B72A0059C098 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 8DAABBCB2B17B72A0059C098 /* Lottie */; };
+		8DAABBCF2B17BBCE0059C098 /* loading_2.json in Resources */ = {isa = PBXBuildFile; fileRef = 8DAABBCE2B17BBCE0059C098 /* loading_2.json */; };
+		8DAE36532AFC84F500605F1F /* AlbumBannerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAE36522AFC84F500605F1F /* AlbumBannerScreen.swift */; };
 		8DC534172A94266800D680B8 /* UnderlineTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC534162A94266800D680B8 /* UnderlineTextFieldView.swift */; };
 		8DE0018A2A96A9D20043C184 /* AlbumViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE001892A96A9D20043C184 /* AlbumViewModel.swift */; };
 		8DE0018C2A96AC330043C184 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE0018B2A96AC330043C184 /* Album.swift */; };
@@ -50,6 +71,10 @@
 		8DE001902A96C0C40043C184 /* Amigo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE0018F2A96C0C40043C184 /* Amigo.swift */; };
 		8DE001932A96E9BF0043C184 /* ModalView in Frameworks */ = {isa = PBXBuildFile; productRef = 8DE001922A96E9BF0043C184 /* ModalView */; };
 		8DE41A4C2A95DA4500896369 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE41A4B2A95DA4500896369 /* HomeView.swift */; };
+		8DEEEA7C2AD5853700DB0A93 /* TerminosCondicionesIngles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEEEA7B2AD5853700DB0A93 /* TerminosCondicionesIngles.swift */; };
+		8DF633782B14FD5800DBD123 /* MySelectionScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF633772B14FD5800DBD123 /* MySelectionScreen.swift */; };
+		8DF6337A2B1515C300DBD123 /* DetailSelectionScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF633792B1515C300DBD123 /* DetailSelectionScreen.swift */; };
+		8DF8C64D2AB27F540087ABAF /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = 8DF8C64C2AB27F540087ABAF /* GoogleMobileAds */; };
 		94E92CBC48599BA37766ACD1 /* Pods_Stickjoy_First_EditionTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 187C8809A2414082A8F20736 /* Pods_Stickjoy_First_EditionTests.framework */; };
 		BD01BACC2A8D1E8500134DEA /* FeedScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD01BACB2A8D1E8500134DEA /* FeedScreen.swift */; };
 		BD01BAD32A8D35AE00134DEA /* NewAlbumHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD01BAD22A8D35AE00134DEA /* NewAlbumHeader.swift */; };
@@ -158,18 +183,44 @@
 		187C8809A2414082A8F20736 /* Pods_Stickjoy_First_EditionTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Stickjoy_First_EditionTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		773DB90E5BC0EE1FDA262FAA /* Pods-Stickjoy First EditionTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stickjoy First EditionTests.release.xcconfig"; path = "Target Support Files/Pods-Stickjoy First EditionTests/Pods-Stickjoy First EditionTests.release.xcconfig"; sourceTree = "<group>"; };
 		78EF68B48C9503F058884C04 /* Pods-Stickjoy First Edition.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stickjoy First Edition.debug.xcconfig"; path = "Target Support Files/Pods-Stickjoy First Edition/Pods-Stickjoy First Edition.debug.xcconfig"; sourceTree = "<group>"; };
+		8D01AB2C2B183D1400F8BFE7 /* SQlLiteDataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQlLiteDataBase.swift; sourceTree = "<group>"; };
+		8D0BF69A2AFEE93D00A3C776 /* ColaboratorAlbumBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColaboratorAlbumBody.swift; sourceTree = "<group>"; };
+		8D1188AE2B1DB7A000EDB299 /* ImageUrlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUrlView.swift; sourceTree = "<group>"; };
+		8D1712002B1E605E005F7C4C /* ChangeAlbumScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeAlbumScreen.swift; sourceTree = "<group>"; };
+		8D1F260D2B02F45D00553E8E /* PoliticasEnController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliticasEnController.swift; sourceTree = "<group>"; };
+		8D22F0602B196BAE00B9E43F /* ElementsCountUploadScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementsCountUploadScreen.swift; sourceTree = "<group>"; };
+		8D2AB35F2AE2CFC8007D121A /* Stickjoy First EditionRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Stickjoy First EditionRelease.entitlements"; sourceTree = "<group>"; };
+		8D2AB3602AE33B65007D121A /* Stickjoy First EditionDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Stickjoy First EditionDebug.entitlements"; sourceTree = "<group>"; };
+		8D37387A2AFD311600595FE8 /* ElseAlbumBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElseAlbumBody.swift; sourceTree = "<group>"; };
+		8D3F3B432ADDA51E005936EC /* PinCaptureScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinCaptureScreen.swift; sourceTree = "<group>"; };
+		8D4128EC2AB4F8C100975586 /* TerminosCondiciones.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TerminosCondiciones.swift; sourceTree = "<group>"; };
 		8D42BD9E2A95679C0071E1C0 /* UsuariosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsuariosViewModel.swift; sourceTree = "<group>"; };
 		8D42BDA12A956E1A0071E1C0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		8D4338082AFAE593005E99F9 /* PoliticasController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliticasController.swift; sourceTree = "<group>"; };
+		8D43380A2AFAE5E6005E99F9 /* Politicas.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Politicas.storyboard; sourceTree = "<group>"; };
 		8D4E4D2C2A9A905300DBAE99 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8D5C18432B16A90D001C7E18 /* UploadingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadingScreen.swift; sourceTree = "<group>"; };
 		8D6363CF2A950ED700DE66C5 /* MainTabbedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabbedView.swift; sourceTree = "<group>"; };
+		8D64B3322AA7BB03003FF67A /* TakeScreenShot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeScreenShot.swift; sourceTree = "<group>"; };
+		8D6E5BDF2AAB992100B689BD /* Stickjoy-First-Edition-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Stickjoy-First-Edition-Info.plist"; sourceTree = SOURCE_ROOT; };
+		8D7497B12AE23CA000C8D1B7 /* Suscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Suscription.swift; sourceTree = "<group>"; };
+		8D7497B32AE23CFE00C8D1B7 /* SuscriptionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuscriptionItem.swift; sourceTree = "<group>"; };
+		8D7497B52AE23D7000C8D1B7 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		8D7497B72AE245A800C8D1B7 /* Configuration.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Configuration.storekit; sourceTree = "<group>"; };
 		8D80CCF52A996979000541A3 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		8D8EFAEC2A981ED1000A086D /* SetEditorAlbum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetEditorAlbum.swift; sourceTree = "<group>"; };
+		8DAABBC82B1764480059C098 /* ListoScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListoScreen.swift; sourceTree = "<group>"; };
+		8DAABBCE2B17BBCE0059C098 /* loading_2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = loading_2.json; path = ../../../../../Downloads/loading_2.json; sourceTree = "<group>"; };
+		8DAE36522AFC84F500605F1F /* AlbumBannerScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumBannerScreen.swift; sourceTree = "<group>"; };
 		8DC534162A94266800D680B8 /* UnderlineTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlineTextFieldView.swift; sourceTree = "<group>"; };
 		8DE001892A96A9D20043C184 /* AlbumViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewModel.swift; sourceTree = "<group>"; };
 		8DE0018B2A96AC330043C184 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		8DE0018D2A96BF820043C184 /* AmigosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmigosViewModel.swift; sourceTree = "<group>"; };
 		8DE0018F2A96C0C40043C184 /* Amigo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Amigo.swift; sourceTree = "<group>"; };
 		8DE41A4B2A95DA4500896369 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		8DEEEA7B2AD5853700DB0A93 /* TerminosCondicionesIngles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TerminosCondicionesIngles.swift; sourceTree = "<group>"; };
+		8DF633772B14FD5800DBD123 /* MySelectionScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySelectionScreen.swift; sourceTree = "<group>"; };
+		8DF633792B1515C300DBD123 /* DetailSelectionScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailSelectionScreen.swift; sourceTree = "<group>"; };
 		A3509C1ADDACF820B03DAB9F /* Pods-Stickjoy First Edition.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stickjoy First Edition.release.xcconfig"; path = "Target Support Files/Pods-Stickjoy First Edition/Pods-Stickjoy First Edition.release.xcconfig"; sourceTree = "<group>"; };
 		A571213274A6A41321822BD1 /* Pods-Stickjoy First Edition-Stickjoy First EditionUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stickjoy First Edition-Stickjoy First EditionUITests.debug.xcconfig"; path = "Target Support Files/Pods-Stickjoy First Edition-Stickjoy First EditionUITests/Pods-Stickjoy First Edition-Stickjoy First EditionUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		BC77FC967D060453FF3FCE32 /* Pods-Stickjoy First EditionTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stickjoy First EditionTests.debug.xcconfig"; path = "Target Support Files/Pods-Stickjoy First EditionTests/Pods-Stickjoy First EditionTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -278,11 +329,13 @@
 				8D80CCDA2A9959EE000541A3 /* FirebaseFirestoreCombine-Community in Frameworks */,
 				8D80CCE42A9959EE000541A3 /* FirebaseInAppMessagingSwift-Beta in Frameworks */,
 				8D8EFAF02A9828C1000A086D /* MediaPicker in Frameworks */,
+				8D20CE672AC6472F0003CC86 /* SQLite in Frameworks */,
 				8D80CCE82A9959EE000541A3 /* FirebaseMessaging in Frameworks */,
 				8D80CCDC2A9959EE000541A3 /* FirebaseFirestoreSwift in Frameworks */,
 				8D80CCD82A9959EE000541A3 /* FirebaseFirestore in Frameworks */,
 				8D80CCDE2A9959EE000541A3 /* FirebaseFunctions in Frameworks */,
 				8D80CCEA2A9959EE000541A3 /* FirebaseMLModelDownloader in Frameworks */,
+				8DAABBCC2B17B72A0059C098 /* Lottie in Frameworks */,
 				CBBEB5E7154518770D30F12A /* Pods_Stickjoy_First_Edition.framework in Frameworks */,
 				8D80CCC42A9959EE000541A3 /* FirebaseAnalyticsSwift in Frameworks */,
 				8D80CCC02A9959EE000541A3 /* FirebaseAnalytics in Frameworks */,
@@ -297,7 +350,9 @@
 				8D80CCF02A9959EE000541A3 /* FirebaseRemoteConfigSwift in Frameworks */,
 				8D80CCCA2A9959EE000541A3 /* FirebaseAppDistribution-Beta in Frameworks */,
 				8D80CCF42A9959EE000541A3 /* FirebaseStorageCombine-Community in Frameworks */,
+				8DF8C64D2AB27F540087ABAF /* GoogleMobileAds in Frameworks */,
 				8D80CCC82A9959EE000541A3 /* FirebaseAppCheck in Frameworks */,
+				8D7497B62AE23D7000C8D1B7 /* StoreKit.framework in Frameworks */,
 				8D80CCD22A9959EE000541A3 /* FirebaseDatabase in Frameworks */,
 				8D80CCC62A9959EE000541A3 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
 			);
@@ -325,6 +380,7 @@
 		4DA34984E05DEA1DA9C0154C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8D7497B52AE23D7000C8D1B7 /* StoreKit.framework */,
 				E33E9992A415BA6C74151222 /* Pods_Stickjoy_First_Edition.framework */,
 				D9BCF81897CBD96086682396 /* Pods_Stickjoy_First_Edition_Stickjoy_First_EditionUITests.framework */,
 				187C8809A2414082A8F20736 /* Pods_Stickjoy_First_EditionTests.framework */,
@@ -355,6 +411,17 @@
 			path = Decodeable;
 			sourceTree = "<group>";
 		};
+		8D4338032AFAE4FB005E99F9 /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				8D4338082AFAE593005E99F9 /* PoliticasController.swift */,
+				8D43380A2AFAE5E6005E99F9 /* Politicas.storyboard */,
+				8D1F260D2B02F45D00553E8E /* PoliticasEnController.swift */,
+			);
+			name = StoryBoards;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		8D6363CE2A950E9700DE66C5 /* Base */ = {
 			isa = PBXGroup;
 			children = (
@@ -370,6 +437,14 @@
 				8D80CCF52A996979000541A3 /* StorageManager.swift */,
 			);
 			path = Observable;
+			sourceTree = "<group>";
+		};
+		8DAABBCD2B17BB8C0059C098 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				8DAABBCE2B17BBCE0059C098 /* loading_2.json */,
+			);
+			path = Animations;
 			sourceTree = "<group>";
 		};
 		8DC534152A94263100D680B8 /* Componentes */ = {
@@ -409,6 +484,9 @@
 			children = (
 				BD01BAD22A8D35AE00134DEA /* NewAlbumHeader.swift */,
 				BD01BAD72A8D399B00134DEA /* NewAlbumBody.swift */,
+				8D37387A2AFD311600595FE8 /* ElseAlbumBody.swift */,
+				8D0BF69A2AFEE93D00A3C776 /* ColaboratorAlbumBody.swift */,
+				8D1188AE2B1DB7A000EDB299 /* ImageUrlView.swift */,
 			);
 			path = Album;
 			sourceTree = "<group>";
@@ -471,6 +549,11 @@
 		BD34949F2A82930500D5395D /* Stickjoy First Edition */ = {
 			isa = PBXGroup;
 			children = (
+				8DAABBCD2B17BB8C0059C098 /* Animations */,
+				8D4338032AFAE4FB005E99F9 /* StoryBoards */,
+				8D2AB3602AE33B65007D121A /* Stickjoy First EditionDebug.entitlements */,
+				8D2AB35F2AE2CFC8007D121A /* Stickjoy First EditionRelease.entitlements */,
+				8D6E5BDF2AAB992100B689BD /* Stickjoy-First-Edition-Info.plist */,
 				8D4E4D2C2A9A905300DBAE99 /* GoogleService-Info.plist */,
 				8D8EFAEB2A981EAE000A086D /* Observable */,
 				8D42BDA02A956DD90071E1C0 /* Decodeable */,
@@ -486,6 +569,7 @@
 				BD56A34C2A8590F400FBC546 /* AlbumView.swift */,
 				BD3494A42A82930500D5395D /* Assets.xcassets */,
 				BD3494A62A82930500D5395D /* Preview Content */,
+				8D7497B72AE245A800C8D1B7 /* Configuration.storekit */,
 			);
 			path = "Stickjoy First Edition";
 			sourceTree = "<group>";
@@ -546,6 +630,16 @@
 				BD9ADC0A2A8E784A0055B3A4 /* AlbumInfoPanelScreen.swift */,
 				BD9ADC0C2A8E7D0A0055B3A4 /* InviteCollaboratorsScreen.swift */,
 				8DE41A4B2A95DA4500896369 /* HomeView.swift */,
+				8D64B3322AA7BB03003FF67A /* TakeScreenShot.swift */,
+				8D4128EC2AB4F8C100975586 /* TerminosCondiciones.swift */,
+				8DEEEA7B2AD5853700DB0A93 /* TerminosCondicionesIngles.swift */,
+				8D3F3B432ADDA51E005936EC /* PinCaptureScreen.swift */,
+				8DAE36522AFC84F500605F1F /* AlbumBannerScreen.swift */,
+				8DF633772B14FD5800DBD123 /* MySelectionScreen.swift */,
+				8DF633792B1515C300DBD123 /* DetailSelectionScreen.swift */,
+				8D5C18432B16A90D001C7E18 /* UploadingScreen.swift */,
+				8DAABBC82B1764480059C098 /* ListoScreen.swift */,
+				8D1712002B1E605E005F7C4C /* ChangeAlbumScreen.swift */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -559,6 +653,7 @@
 				BD42C6252A8BE4AE001E7A18 /* Profile */,
 				BD01BAC92A8D1B3400134DEA /* Feed */,
 				BD01BACA2A8D1BFD00134DEA /* Friends */,
+				8D22F0602B196BAE00B9E43F /* ElementsCountUploadScreen.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -574,6 +669,7 @@
 				BD01BAD42A8D35E800134DEA /* Album Info */,
 				BD42C6202A8BDA52001E7A18 /* Profile Info */,
 				BD01BADE2A8D503700134DEA /* Feed Info */,
+				8D7497B32AE23CFE00C8D1B7 /* SuscriptionItem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -588,6 +684,8 @@
 				8D42BD9E2A95679C0071E1C0 /* UsuariosViewModel.swift */,
 				8DE001892A96A9D20043C184 /* AlbumViewModel.swift */,
 				8DE0018D2A96BF820043C184 /* AmigosViewModel.swift */,
+				8D7497B12AE23CA000C8D1B7 /* Suscription.swift */,
+				8D01AB2C2B183D1400F8BFE7 /* SQlLiteDataBase.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -700,6 +798,9 @@
 				8D80CCEF2A9959EE000541A3 /* FirebaseRemoteConfigSwift */,
 				8D80CCF12A9959EE000541A3 /* FirebaseStorage */,
 				8D80CCF32A9959EE000541A3 /* FirebaseStorageCombine-Community */,
+				8DF8C64C2AB27F540087ABAF /* GoogleMobileAds */,
+				8D20CE662AC6472F0003CC86 /* SQLite */,
+				8DAABBCB2B17B72A0059C098 /* Lottie */,
 			);
 			productName = "Stickjoy First Edition";
 			productReference = BD34949D2A82930500D5395D /* Stickjoy First Edition.app */;
@@ -781,6 +882,9 @@
 				8D313D7C2A96757700BA30FD /* XCRemoteSwiftPackageReference "SwiftUISnackbar" */,
 				8DE001912A96E9BF0043C184 /* XCRemoteSwiftPackageReference "modal-view" */,
 				8D8EFAEE2A9828C1000A086D /* XCRemoteSwiftPackageReference "SwiftUI-MediaPicker" */,
+				8DF8C64B2AB27F540087ABAF /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
+				8D20CE652AC6472F0003CC86 /* XCRemoteSwiftPackageReference "SQLite.swift" */,
+				8DAABBCA2B17B72A0059C098 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = BD34949E2A82930500D5395D /* Products */;
 			projectDirPath = "";
@@ -798,8 +902,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D43380B2AFAE5E6005E99F9 /* Politicas.storyboard in Resources */,
 				BD3494A82A82930500D5395D /* Preview Assets.xcassets in Resources */,
 				BD3494A52A82930500D5395D /* Assets.xcassets in Resources */,
+				8DAABBCF2B17BBCE0059C098 /* loading_2.json in Resources */,
 				8D4E4D2D2A9A905500DBAE99 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -951,25 +1057,30 @@
 				BDC40B6C2A8ED88C00ED74E1 /* ElsesEditableCollabAlbumScreen.swift in Sources */,
 				BD8828622A868229001F619A /* AdminPanelScreen.swift in Sources */,
 				BD01BADD2A8D453D00134DEA /* FullSizeItem.swift in Sources */,
+				8DEEEA7C2AD5853700DB0A93 /* TerminosCondicionesIngles.swift in Sources */,
 				BDC40B602A8ED0BC00ED74E1 /* AddToAlbumScreen.swift in Sources */,
 				BD3494DA2A829BED00D5395D /* EmptyFeedScreen.swift in Sources */,
 				8DC534172A94266800D680B8 /* UnderlineTextFieldView.swift in Sources */,
 				BD3494E02A82A48300D5395D /* EditableProfileScreen.swift in Sources */,
 				BDC185D32A82F9DD0063E977 /* FeedHeader.swift in Sources */,
 				BD3494D22A8293C700D5395D /* SignInScreen.swift in Sources */,
+				8DF633782B14FD5800DBD123 /* MySelectionScreen.swift in Sources */,
 				BD01BAE52A8D631300134DEA /* DeleteAccountMenu.swift in Sources */,
 				BD9ADC112A8E93150055B3A4 /* FriendsScreen.swift in Sources */,
 				BD01BACC2A8D1E8500134DEA /* FeedScreen.swift in Sources */,
 				BD9ADC0F2A8E91050055B3A4 /* AnchoredProfiles.swift in Sources */,
 				BD3494FA2A82E6B200D5395D /* Color.swift in Sources */,
 				BD9ADC1F2A8EB3470055B3A4 /* ElsesProfileBody.swift in Sources */,
+				8D7497B42AE23CFE00C8D1B7 /* SuscriptionItem.swift in Sources */,
 				BD06A7B22A8D7FC400DFB4A7 /* DeletePictureOrVideoMenu.swift in Sources */,
+				8DAABBC92B1764480059C098 /* ListoScreen.swift in Sources */,
 				BD3494E82A82B24000D5395D /* TermsAndConditionsMenu.swift in Sources */,
 				BD9ADC0B2A8E784A0055B3A4 /* AlbumInfoPanelScreen.swift in Sources */,
 				BD42C6242A8BE49F001E7A18 /* ProfileBody.swift in Sources */,
 				8DE001902A96C0C40043C184 /* Amigo.swift in Sources */,
 				BD42C6312A8C1F33001E7A18 /* DefaultProfileScreen.swift in Sources */,
 				BD3494DC2A829C5700D5395D /* EmptyFriendsScreen.swift in Sources */,
+				8D7497B22AE23CA000C8D1B7 /* Suscription.swift in Sources */,
 				BD9ADC1D2A8EB3370055B3A4 /* ElsesProfileHeader.swift in Sources */,
 				BD56A34D2A8590F400FBC546 /* AlbumView.swift in Sources */,
 				BD42C6372A8C288E001E7A18 /* DeleteAlbumMenu.swift in Sources */,
@@ -977,10 +1088,12 @@
 				BD42C6292A8BEF1A001E7A18 /* DefaultProfileHeader.swift in Sources */,
 				BDC40B5C2A8ECE3500ED74E1 /* ElsesAlbumInfo.swift in Sources */,
 				BD9ADC132A8E93740055B3A4 /* Inbox.swift in Sources */,
+				8D37387B2AFD311700595FE8 /* ElseAlbumBody.swift in Sources */,
 				BD06A7AF2A8D7CAA00DFB4A7 /* DeleteFriendMenu.swift in Sources */,
 				BD9ADC1B2A8EB2D40055B3A4 /* ElsesProfileScreen.swift in Sources */,
 				BDC40B5E2A8ECF9F00ED74E1 /* ElsesProfileViewModel.swift in Sources */,
 				8D80CCF62A996979000541A3 /* StorageManager.swift in Sources */,
+				8D0BF69B2AFEE93D00A3C776 /* ColaboratorAlbumBody.swift in Sources */,
 				BD9ADC152A8E93DF0055B3A4 /* Outbox.swift in Sources */,
 				BD9ADC0D2A8E7D0A0055B3A4 /* InviteCollaboratorsScreen.swift in Sources */,
 				BDAA456C2A82FF1B0074CB87 /* EmptyFeedBody.swift in Sources */,
@@ -989,13 +1102,22 @@
 				BD3494A12A82930500D5395D /* Stickjoy_First_EditionApp.swift in Sources */,
 				BD01BAE32A8D622900134DEA /* LogOutMenu.swift in Sources */,
 				BD42C62F2A8C1F0D001E7A18 /* DefaultProfileViewModel.swift in Sources */,
+				8D1188AF2B1DB7A000EDB299 /* ImageUrlView.swift in Sources */,
+				8D4338092AFAE593005E99F9 /* PoliticasController.swift in Sources */,
 				BD01BAE12A8D508200134DEA /* FullSizeInfo.swift in Sources */,
 				8DE0018E2A96BF820043C184 /* AmigosViewModel.swift in Sources */,
 				BDC26FFE2A8554CD004A91CF /* CreateUploadScreen.swift in Sources */,
+				8D5C18442B16A90D001C7E18 /* UploadingScreen.swift in Sources */,
+				8D3F3B442ADDA51E005936EC /* PinCaptureScreen.swift in Sources */,
 				BD3494CF2A82939000D5395D /* LaunchScreen.swift in Sources */,
+				8D4128ED2AB4F8C200975586 /* TerminosCondiciones.swift in Sources */,
+				8D1712012B1E605E005F7C4C /* ChangeAlbumScreen.swift in Sources */,
 				BD42C6272A8BEEC0001E7A18 /* DefaultProfileBody.swift in Sources */,
 				BD42C61D2A8BD48C001E7A18 /* TermsAndConditions.swift in Sources */,
 				BD9ADC192A8EA5090055B3A4 /* SubscriptionTermsMenu.swift in Sources */,
+				8D64B3332AA7BB03003FF67A /* TakeScreenShot.swift in Sources */,
+				8D1F260E2B02F45D00553E8E /* PoliticasEnController.swift in Sources */,
+				8D22F0612B196BAE00B9E43F /* ElementsCountUploadScreen.swift in Sources */,
 				8D8EFAED2A981ED1000A086D /* SetEditorAlbum.swift in Sources */,
 				BDC40B642A8ED4D400ED74E1 /* SubscriptionTerms.swift in Sources */,
 				8DE0018A2A96A9D20043C184 /* AlbumViewModel.swift in Sources */,
@@ -1010,10 +1132,13 @@
 				BD56A34F2A8595B400FBC546 /* SubscriptionScreen.swift in Sources */,
 				BDC26FFC2A853EDC004A91CF /* SettingsScreen.swift in Sources */,
 				BD01BAD62A8D360400134DEA /* DefaultAlbumContent.swift in Sources */,
+				8DAE36532AFC84F500605F1F /* AlbumBannerScreen.swift in Sources */,
 				BD06A7B42A8D81D900DFB4A7 /* SelectAlbumScreen.swift in Sources */,
+				8DF6337A2B1515C300DBD123 /* DetailSelectionScreen.swift in Sources */,
 				8DE41A4C2A95DA4500896369 /* HomeView.swift in Sources */,
 				BDC270002A8564F3004A91CF /* EditableProfileHeader.swift in Sources */,
 				BD42C6222A8BDC11001E7A18 /* ProfileViewModel.swift in Sources */,
+				8D01AB2D2B183D1400F8BFE7 /* SQlLiteDataBase.swift in Sources */,
 				BD06A7B62A8D87FF00DFB4A7 /* UploadPictureOrVideoScreen.swift in Sources */,
 				BDC270022A857434004A91CF /* ProfileHeader.swift in Sources */,
 				BDAA456E2A8302B60074CB87 /* FriendsHeader.swift in Sources */,
@@ -1173,31 +1298,36 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Stickjoy First Edition/Stickjoy First EditionDebug.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 27;
 				DEVELOPMENT_ASSET_PATHS = "\"Stickjoy First Edition/Preview Content\"";
 				DEVELOPMENT_TEAM = 35B5HBW633;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Stickjoy-First-Edition-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = StickjoyApp;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.photography";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "La app requiere accesos a la galeria de fotos";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.stickjoy.stickjoyapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1207,31 +1337,36 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Stickjoy First Edition/Stickjoy First EditionRelease.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 27;
 				DEVELOPMENT_ASSET_PATHS = "\"Stickjoy First Edition/Preview Content\"";
 				DEVELOPMENT_TEAM = 35B5HBW633;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Stickjoy-First-Edition-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = StickjoyApp;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.photography";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "La app requiere accesos a la galeria de fotos";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.stickjoy.stickjoyapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -1357,6 +1492,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		8D20CE652AC6472F0003CC86 /* XCRemoteSwiftPackageReference "SQLite.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stephencelis/SQLite.swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.2;
+			};
+		};
 		8D313D7C2A96757700BA30FD /* XCRemoteSwiftPackageReference "SwiftUISnackbar" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/zaniluca/SwiftUISnackbar";
@@ -1373,12 +1516,28 @@
 				minimumVersion = 0.2.0;
 			};
 		};
+		8DAABBCA2B17B72A0059C098 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
 		8DE001912A96E9BF0043C184 /* XCRemoteSwiftPackageReference "modal-view" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/diniska/modal-view";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 1.0.0;
+			};
+		};
+		8DF8C64B2AB27F540087ABAF /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googleads/swift-package-manager-google-mobile-ads.git";
+			requirement = {
+				branch = main;
+				kind = branch;
 			};
 		};
 		BD7B69F22A893B6200F5A3A4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
@@ -1392,6 +1551,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		8D20CE662AC6472F0003CC86 /* SQLite */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8D20CE652AC6472F0003CC86 /* XCRemoteSwiftPackageReference "SQLite.swift" */;
+			productName = SQLite;
+		};
 		8D313D7D2A96757700BA30FD /* SwiftUISnackbar */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 8D313D7C2A96757700BA30FD /* XCRemoteSwiftPackageReference "SwiftUISnackbar" */;
@@ -1537,10 +1701,20 @@
 			package = 8D8EFAEE2A9828C1000A086D /* XCRemoteSwiftPackageReference "SwiftUI-MediaPicker" */;
 			productName = MediaPicker;
 		};
+		8DAABBCB2B17B72A0059C098 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8DAABBCA2B17B72A0059C098 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
 		8DE001922A96E9BF0043C184 /* ModalView */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 8DE001912A96E9BF0043C184 /* XCRemoteSwiftPackageReference "modal-view" */;
 			productName = ModalView;
+		};
+		8DF8C64C2AB27F540087ABAF /* GoogleMobileAds */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8DF8C64B2AB27F540087ABAF /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */;
+			productName = GoogleMobileAds;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

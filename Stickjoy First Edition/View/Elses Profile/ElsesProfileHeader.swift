@@ -6,8 +6,9 @@
 //  Paulo: Este es el header de perfil ajeno. El botón de Add tiene 3 variantes: Add, Pending y Friend. El de friend no está porque depende de back (es tu amigo o no). Dtm, el diseño lo pongo en comentario más abajo.
 
 import SwiftUI
-
+import Firebase
 struct ElsesProfileHeader: View {
+    @State var ref: DatabaseReference!
     //Adopción de Modo claro oscuro
     @Environment (\.colorScheme) var scheme
     
@@ -31,6 +32,8 @@ struct ElsesProfileHeader: View {
     @Binding var name:String
     @Binding var descrip:String
     @Binding var username:String
+    @Binding var devicesSend:[String]
+    @State var lenguaje = "es"
     
     @Environment (\.dismiss) var dismiss
 
@@ -77,22 +80,36 @@ struct ElsesProfileHeader: View {
                             })
                         }
                         //Añadir acción de anclar perfil
-                        uvm.getUserDetails(user_id: id_usuario)
+                        uvm.getUserDetails(user_id: id_usuario, imgP: { img in
+                            
+                        })
                     }) {
-                        Image(systemName: isPinned ? "pin.fill" : "pin.slash.fill")
+                        Image(systemName: isPinned ? "pin.slash.fill" : "pin.fill")
                             .font(.title)
                             .foregroundColor(.secondary)
                     }
-                    
-                    
                     //Botón para entrar a editor de perfil
                     Button(action: {
-                        if isFriend{
+                        if pend {
                             uvm.sendFriendReply(id_usuario: id_usuario, responseReturn: { resp in
                                 if resp.status == 200 {
                                     pend = false
                                     isFriend = false
+                                    message = lenguaje == "es" ? "Solicitud de amistad cancelada" : "Friend request canceled"
+                                    isSnack = true
+                                    
+                                } else {
                                     message = resp.message
+                                    isSnack = false
+                                }
+                            })
+                        }
+                        if isFriend{
+                            uvm.deleteFriend(friend_id: id_usuario, responseReturn: { resp in
+                                if resp.status == 200 {
+                                    pend = false
+                                    isFriend = false
+                                    message = lenguaje == "es" ? resp.message : "Friend deleted"
                                     isSnack = true
                                 } else {
                                     message = resp.message
@@ -103,8 +120,11 @@ struct ElsesProfileHeader: View {
                             uvm.sendFriendReq(id_usuario: id_usuario, responseReturn: { resp in
                                 if resp.status == 200 {
                                     pend = true
-                                    message = resp.message
+                                    message = lenguaje == "es" ? "Tu solicitud de amistad se ha enviado" : "Your friend request has been sent"
                                     isSnack = true
+                                    let userSend = UserDefaults.standard.string(forKey: "username") ?? ""
+                                    sendPushNotification(titulo: "Solicitud de amistad", body: "\(userSend) te ha enviado una solicitud de amistad", devices: devicesSend)
+                                    self.ref.child(id_usuario).setValue(["uuid": UUID().uuidString, "username": username, "evento":"invitar"])
                                 } else {
                                     message = resp.message
                                     isSnack = false
@@ -118,14 +138,16 @@ struct ElsesProfileHeader: View {
                             Image(systemName:"clock")
                                 .foregroundColor(.black)
                                 .font(.title3)
-                            Text("Pend")
+                            Text(lenguaje == "es" ? "Pendiente" : "Pend")
                                 .foregroundColor(.black)
                                 .font(.headline)
                         } else {
+                            let add = lenguaje == "es" ? "Agregar" : "Add"
+                            let del = lenguaje == "es" ? "Eliminar" : "Delete"
                             Image(systemName: isFriend ? "trash" : "person.badge.plus")
                                 .foregroundColor(.black)
                                 .font(.title3)
-                            Text(isFriend ? "Delete" : "Add")
+                            Text(isFriend ? del : add)
                                 .foregroundColor(.black)
                                 .font(.headline)
                         }
@@ -145,10 +167,10 @@ struct ElsesProfileHeader: View {
                         .bold()
                     Spacer()
                 }
-                Text("@"+name.replacingOccurrences(of: " ", with: ""))
+                Text(username.replacingOccurrences(of: " ", with: ""))
                     .font(.headline)
                 
-                Text(descrip)
+                Text(userInfo.profileDescription)
                     .font(.body)
                     .foregroundColor(.secondary)
             }
@@ -156,13 +178,30 @@ struct ElsesProfileHeader: View {
         }
         .edgesIgnoringSafeArea(.horizontal) // Extend the header to the screen edges
         .alert(isPresented: $isSnack, content: {
-            Alert(title: Text("Mensaje"), message: Text(message))
+            Alert(title: Text(lenguaje == "es" ? "Solicitud de amistad" : "Friend request"), message: Text(message))
         })
+        .onAppear{
+            self.ref = Database.database().reference()
+            self.lenguaje = UserDefaults.standard.string(forKey: "lenguaje") ?? "es"
+        }
+        .onDisappear{
+            stopListening()
+        }
+    }
+    
+    func sendPushNotification(titulo:String, body:String, devices:[String]){
+        for d in devices {
+            uvm.sendNotificationPush(titulo: titulo, body: body, token: d)
+        }
+    }
+    func stopListening() {
+        let user_id = UserDefaults.standard.string(forKey: "id") ?? ""
+        ref.child(user_id).removeAllObservers()
     }
 }
 
-struct ElsesProfileHeader_Previews: PreviewProvider {
+/*struct ElsesProfileHeader_Previews: PreviewProvider {
     static var previews: some View {
-        ElsesProfileScreen(id_usuario: .constant(""), isPinet: .constant(false), isFriend: .constant(false), pend: .constant(false), name: .constant(""), username: .constant(""), descrip: .constant(""))
+        ElsesProfileScreen(uvm: UsuariosViewModel(), id_usuario: .constant(""), isPinet: .constant(false), isFriend: .constant(false), pend: .constant(false), name: .constant(""), username: .constant(""), descrip: .constant(""), FriendAlbums: .constant([]), imgPortada: .constant(""))
     }
-}
+}*/

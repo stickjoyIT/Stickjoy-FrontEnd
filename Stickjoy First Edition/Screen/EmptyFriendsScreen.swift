@@ -9,12 +9,15 @@
 import SwiftUI
 
 struct EmptyFriendsScreen: View {
+    @State var lenguaje = "es"
     var body: some View {
         ZStack(alignment: .top){
             VStack{
                 //Contenido en View/Friends/EmptyFriendsBody.swift
-                EmptyFriendsBody()
+                EmptyFriendsBody(lenguaje: $lenguaje)
             }
+        }.onAppear{
+            lenguaje = UserDefaults.standard.string(forKey: "lenguaje") ?? "es"
         }
     }
 }

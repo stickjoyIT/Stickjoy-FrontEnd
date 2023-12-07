@@ -15,7 +15,7 @@ struct ElsesProfileBody: View {
     @Binding var nameAlbum:String
     @Binding var descrip:String
     @Binding var imgPortada:String
-    
+    @Binding var lenguaje:String
     var body: some View {
         HStack {
             VStack(alignment: .leading, spacing: 16, content: {
@@ -23,10 +23,13 @@ struct ElsesProfileBody: View {
                 Text(elsesalbumsinfo.albumTitle)
                     .font(.title)
                     .bold()
+                    .lineLimit(nil)
+                    .fixedSize(horizontal: false, vertical: true)
                 
                 //Botón de álbum para abrir la pantalla de álbum
                 Button(action: {
                     //Añadir acción de ir al álbum
+                    
                     isActive = true
                     id_album = elsesalbumsinfo.id_album
                     nameAlbum = elsesalbumsinfo.albumTitle
@@ -79,13 +82,13 @@ struct ElsesProfileBody: View {
                     
                     switch elsesalbumsinfo.albumPrivacy {
                     case 0:
-                        Text("Privado")
+                        Text(lenguaje == "es" ? "Privado" : "Private")
                             .font(.footnote)
                     case 1:
-                        Text("Amigos")
+                        Text(lenguaje == "es" ? "Amigos" : "Friends")
                             .font(.footnote)
                     case 2:
-                        Text("Publico")
+                        Text(lenguaje == "es" ? "Publico" : "Public")
                             .font(.footnote)
                     default:
                         Text("")
@@ -97,8 +100,8 @@ struct ElsesProfileBody: View {
         .frame(maxWidth: .infinity)
     }
 }
-struct ElsesProfileBody_Previews: PreviewProvider {
+/*struct ElsesProfileBody_Previews: PreviewProvider {
     static var previews: some View {
-        ElsesProfileScreen(id_usuario: .constant(""), isPinet: .constant(false), isFriend: .constant(false), pend: .constant(false), name: .constant(""), username: .constant(""), descrip: .constant(""))
+       // ElsesProfileScreen(uvm: UsuariosViewModel(), id_usuario: .constant(""), isPinet: .constant(false), isFriend: .constant(false), pend: .constant(false), name: .constant(""), username: .constant(""), descrip: .constant(""), FriendAlbums: .constant([]), imgPortada: .constant(""))
     }
-}
+}*/

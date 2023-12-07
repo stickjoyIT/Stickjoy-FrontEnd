@@ -8,11 +8,12 @@
 //  ¿Qué falta?: Conectar botón de regresar, el de anclar, el de Add, Pending, Friend. Falta conectar info. Las imagenes de los álbumes ya son botones, falta conectar para ingresar a cada álbum. 
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct ElsesProfileScreen: View {
     //Esto se manda a llamar para que la imagen del encabezado ignore las safe areas de arriba
     @StateObject var homeData = ElsesProfileViewModel()
-    @ObservedObject var uvm = UsuariosViewModel()
+    @ObservedObject var uvm:UsuariosViewModel
     @State var isActiveViewAlbum = false
     @Binding var id_usuario:String
     @Binding var isPinet:Bool
@@ -21,17 +22,24 @@ struct ElsesProfileScreen: View {
     @Binding var name:String
     @Binding var username:String
     @Binding var descrip:String
+    @Binding var FriendAlbums:[ElsesAlbumInfo]
     @State var id_album = ""
     @State var nameAlbum = ""
     @State var descripAlbum = ""
-    @State var imgPortada = ""
+    @Binding var imgPortada:String
+    @State var imgPortadaAlbum = ""
+    @State var devicesSend = [String]()
     
     @ObservedObject var avm = AlbumViewModel()
     
     @State var isActive = false
     
     @Environment (\.colorScheme) var scheme
-    
+    @Binding var proceso : Bool
+    @Binding var album_up : String
+    @Binding var porcentaje : Float
+    @Binding var items_up:Int
+    @State var lenguaje = "es"
     var body: some View {
         ScrollView {
             //Header pinneado
@@ -48,23 +56,22 @@ struct ElsesProfileScreen: View {
                     }
                     //Imagen de encabezado
                     return AnyView(
-                        Image("stickjoyLogo") //En documento: ProfileInfo
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                    //Esto es para que al dar scroll se vaya la imagen y se quede el encabezado
-                        .frame(width: UIScreen.main.bounds.width, height: 250 + (offset > 0 ? offset: 0))
-                        .cornerRadius(2)
-                    //Esto es para que la imagen no se salga del header cuando se de scroll hacia arriba y tope. para eso es el "-" en offset
-                        .offset(y:(offset > 0 ? -offset: 0))
+                        WebImage(url: URL(string: imgPortada))
+                            .resizable()
+                            .placeholder(Image("stickjoyLogo"))
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: UIScreen.main.bounds.width, height: 250 + (offset > 0 ? offset: 0))
+                            .cornerRadius(2)
+                            .offset(y:(offset > 0 ? -offset: 0))
                     )
                 }
-                .frame(height: 250)
+                .frame(height: 200)
               // Albums
-                Section(header: ElsesProfileHeader(scheme: _scheme, isFriend: $isFriend, isPinned: $isPinet, pend: $pend, userInfo: $uvm.UserElse, id_usuario: $id_usuario, name: $name, descrip: $descrip, username: $username)) {
+                Section(header: ElsesProfileHeader(scheme: _scheme, isFriend: $isFriend, isPinned: $isPinet, pend: $pend, userInfo: $uvm.UserElse, id_usuario: $id_usuario, name: $name, descrip: $descrip, username: $username, devicesSend: $devicesSend)) {
                     //For each para que aparezcan los álbumes del usuario
-                    ForEach(avm.albumsFriend){elsesalbums in
+                    ForEach(FriendAlbums, id: \.id){elsesalbums in
                         // El albums se repite aquí:
-                        ElsesProfileBody(elsesalbumsinfo: elsesalbums, isActive: $isActiveViewAlbum, id_album: $id_album, nameAlbum: $nameAlbum, descrip: $descripAlbum, imgPortada: $imgPortada)
+                        ElsesProfileBody(elsesalbumsinfo: elsesalbums, isActive: $isActiveViewAlbum, id_album: $id_album, nameAlbum: $nameAlbum, descrip: $descripAlbum, imgPortada: $imgPortadaAlbum, lenguaje: $lenguaje)
                     }
                 }
             })
@@ -75,22 +82,30 @@ struct ElsesProfileScreen: View {
                 .frame(height:UIApplication.shared.windows.first?.safeAreaInsets.top)
                 .ignoresSafeArea(.container, edges: .top)
             //Esto es para que ignore la parte de arriba de la pantalla.
-                .opacity(homeData.offset > 250 ? 1 : 0)
+                .opacity(homeData.offset > 200 ? 1 : 0)
             , alignment: .top
         )
         .onAppear{
-            print("apper")
-            uvm.getUserDetails(user_id: id_usuario)
-            avm.getAlbumListFriend(id_user: id_usuario)
+            lenguaje = UserDefaults.standard.string(forKey: "lenguaje") ?? "es"
+            uvm.getUserDetails(user_id: id_usuario, imgP: { img in })
+            avm.getAlbumListFriend(id_user: id_usuario, lenguaje:lenguaje, result: {
+                resp in
+                FriendAlbums = resp
+            })
+            uvm.getDevicesUser(id_user: id_usuario, devices: { devices in
+                print("devices: ", devices)
+                devicesSend = devices
+            })
+            
         }
         .fullScreenCover(isPresented: $isActiveViewAlbum, content: {
-            ElsesAlbumScreen(id_album: $id_album, nameAlbum: $nameAlbum, descripAlbum: $descripAlbum, username: $username, imgPortada: $imgPortada)
+            ElsesAlbumScreen(avm: avm, id_album: $id_album, nameAlbum: $nameAlbum, descripAlbum: $descripAlbum, username: $username, imgPortada: $imgPortadaAlbum, id_user: $id_usuario, pickturesList: $avm.picktureList, iColaborator: .constant(false), proceso: $proceso, album_up: $album_up, porcentaje: $porcentaje, items_up: $items_up, isCollaborator: $isActiveViewAlbum)
         })
     }
 }
 
-struct ElsesProfileScreen_Previews: PreviewProvider {
+/*struct ElsesProfileScreen_Previews: PreviewProvider {
     static var previews: some View {
-        ElsesProfileScreen(id_usuario: .constant(""), isPinet: .constant(false), isFriend: .constant(false), pend: .constant(false), name: .constant(""), username: .constant(""), descrip: .constant(""))
+        ElsesProfileScreen(uvm: UsuariosViewModel(), id_usuario: .constant(""), isPinet: .constant(false), isFriend: .constant(false), pend: .constant(false), name: .constant(""), username: .constant(""), descrip: .constant(""), FriendAlbums: .constant([]), imgPortada: .constant(""))
     }
-}
+}*/

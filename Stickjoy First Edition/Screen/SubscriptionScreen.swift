@@ -8,43 +8,44 @@
 //  ¿Qué falta?: Acción de botón de continuar. Llenar el menú de términos de suscripción.
 
 import SwiftUI
+import StoreKit
 
 struct SubscriptionScreen: View {
+    @EnvironmentObject private var store: Store
     @State private var isTermsMenuPresented = false
-    
+    @State var lenguaje = "es"
+    @Environment (\.dismiss) var dismiss
     var body: some View {
-        GeometryReader { geometry in
-            ZStack {
-                Color.customYellow // Replace with your desired background color
-                    .frame(width: geometry.size.width, height: geometry.size.height)
+        ZStack(alignment:.top) {
+            Color.yellow.ignoresSafeArea()
+            VStack(alignment:.center) {
+                HStack {
+                    Button(action: {
+                        dismiss()
+                    }, label: {
+                        Image(systemName: "arrow.left.circle.fill")
+                            .foregroundColor(.gray)
+                            .font(.title)
+                    })
+                    Spacer()
+                }
+                .padding()
+                
                 VStack(alignment: .center, spacing: 8) {
-                    Text("Subscription")
+                    Text(lenguaje == "es" ? "Suscripción" : "Subscription")
                         .font(.largeTitle)
                         .bold()
                         .padding(.horizontal)
                         .padding(.vertical)
                         .foregroundColor(.black)
                     
-                    SubscriptionBenefitsSection()
+                    SubscriptionBenefitsSection(lenguaje:$lenguaje)
                     
-                    
-                    Button(action: {
-                        //Añadir acción de abrir API de pago de App Store
-                    }) {
-                        Text("Continue")
-                            .frame(width: 250)
-                            .padding()
-                            .background(Color.customBlue)
-                            .foregroundColor(.black)
-                            .cornerRadius(12)
-                    }
-                    
-                    Text("By clicking continue you accept our subscription terms.")
+                    Text(lenguaje == "es" ? "Al suscribirte aceptas nuestros términos de suscripción." : "By clicking you accept our subscription terms.")
                         .foregroundColor(.gray)
                         .multilineTextAlignment(.center)
                     
-                    
-                    Text("Subscription Terms")
+                    Text(lenguaje == "es" ? "Términos de suscripción" : "Subscription Terms")
                         .foregroundColor(.black)
                         .onTapGesture {
                             isTermsMenuPresented.toggle()
@@ -53,18 +54,20 @@ struct SubscriptionScreen: View {
                             SubscriptionTermsMenu(isPresented: $isTermsMenuPresented)
                         }
                 }
-                .padding(.horizontal, 24)
             }
         }
-        .edgesIgnoringSafeArea(.all)
+        .onAppear {
+            lenguaje = UserDefaults.standard.string(forKey: "lenguaje") ?? "es"
+        }
     }
 }
 
-
 struct SubscriptionBenefitsSection: View {
+    @EnvironmentObject private var store: Store
+    @Binding var lenguaje:String
     var body: some View {
         VStack(alignment: .center, spacing: 0){
-            Text("Subscription Benefits")
+            Text(lenguaje == "es" ? "Beneficios de suscripción" : "Subscription Benefits")
                 .foregroundColor(.black)
                 .font(.headline)
             VStack(alignment: .leading, spacing: 24) {
@@ -74,35 +77,37 @@ struct SubscriptionBenefitsSection: View {
                         .aspectRatio(contentMode: .fill)
                         .frame(width: 30, height: 30)
                         .cornerRadius(32)
-                    Text("Higher quality of your album's content")
+                    Text(lenguaje == "es" ?"No más publicidad dentro de tus álbumes." : "No more adds inside your albums.")
                         .foregroundColor(.black)
                         .font(.title3)
                         .bold()
                 }
-                
                 HStack{
                     Image("stickjoyLogoBlue")
                         .resizable()
                         .aspectRatio(contentMode: .fill)
                         .frame(width: 30, height: 30)
                         .cornerRadius(32)
-                    Text("No more adds inside your albums")
+                    Text(lenguaje == "es" ?"Sube varias fotos/videos a la vez." : "Upload multiple photos/videos at once.")
                         .foregroundColor(.black)
                         .font(.title3)
                         .bold()
                 }
-                
                 HStack{
-                    Text("$3.90 USD")
-                        .foregroundColor(.black)
-                        .font(.title2)
-                        .bold()
-                    Text("monthly")
-                        .foregroundColor(.black)
-                        .font(.title3)
+                    ForEach(store.allBooks, id:\.self){ book in
+                        if !book.lock {
+                            
+                        }else{
+                            BookRow(book: book) {
+                                if let product = store.product(for: book.id){
+                                    store.purchaseProduct(product: product)
+                                }
+                            }
+                        }
+                    }
                 }
-                .frame(width: 250, height: 80)
-                .background(Color.white)
+                //.frame(width: 250, height: 80)
+                .background(Color.yellow)
                 .cornerRadius(64)
                 
             }

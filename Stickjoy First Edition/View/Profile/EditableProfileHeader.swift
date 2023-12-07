@@ -70,6 +70,7 @@ struct EditableProfileHeader: View {
     }
 }
 
+@available(iOS 16.0, *)
 struct EditableProfileHeader_Previews: PreviewProvider {
     static var previews: some View {
         EditableProfileScreen()

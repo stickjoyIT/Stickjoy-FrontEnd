@@ -10,21 +10,35 @@
 import SwiftUI
 
 struct FullSizeScreen: View {
+    @Binding var img:String
     var body: some View {
         ScrollView {
-            LazyVStack(spacing: 32) {
-                ForEach(0..<20) { index in
-                    NavigationLink(destination: FullSizeItem()) {
-                        FullSizeItem()
-                    }
-                }
+            ZStack(alignment: .top) {
+                    AsyncImage(url: URL(string: img), content: { img in
+                            img
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                    }, placeholder: {
+                            Image("")
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                    }).edgesIgnoringSafeArea(.all)
+                
+                Text("Hello, FullScreen!")
+                            .padding()
+                            .background(Color.blue)
+                            .foregroundColor(.green)
+                            .cornerRadius(8)
+                            
+                
             }
         }
+        
     }
 }
 
 struct FullSizeScreen_Previews: PreviewProvider {
     static var previews: some View {
-        FullSizeScreen()
+        FullSizeScreen(img:.constant("https://media.sproutsocial.com/uploads/2022/06/profile-picture.jpeg"))
     }
 }

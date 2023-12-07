@@ -1,0 +1,1473 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EoA-6N-9pw">
+            <objects>
+                <viewController storyboardIdentifier="politicasEN" useStoryboardIdentifierAsRestorationIdentifier="YES" id="mri-03-a89" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cRA-zg-Ldx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7ze-qH-uZb">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UWJ-z9-XOk">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1800"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QQK-pq-Xve">
+                                                <rect key="frame" x="8" y="8" width="397" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="2Wf-n5-9rp"/>
+                                                </constraints>
+                                                <string key="text">Privacy Policies
+</string>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="justified" selectable="NO" findInteractionEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JGW-Fp-wOn">
+                                                <rect key="frame" x="4" y="32" width="406" height="110"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="110" id="TxR-x5-i32"/>
+                                                </constraints>
+                                                <string key="text">Privacy and security of our users are of utmost importance to us. Therefore, we have developed this Privacy Policy to explain how we collect, use, disclose, and protect personal information on our social network with personal content. By using our services, you agree to the terms of this policy and consent to our practices of collecting and using information.</string>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sHG-fP-bIx">
+                                                <rect key="frame" x="8" y="150" width="398" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="eEG-zC-1pp"/>
+                                                </constraints>
+                                                <string key="text">Collection of Personal Information:
+</string>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ggd-Y2-Exq">
+                                                <rect key="frame" x="4" y="174" width="406" height="285"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="285" id="suz-sl-Ar3"/>
+                                                </constraints>
+                                                <string key="text">G. Registration Information: When you sign up for STICKJOY, we collect your name, email address, and password.
+H. Profile Information: You may provide additional information in your profile, such as your photos, location, date of birth, and other optional details.
+I. Personal Content: The platform allows you to share personal content, such as posts, photos, videos, and comments. The information you choose to share will be stored on our servers.
+J. Contact Information: If you choose to provide your contact information, such as your phone number, email address, or other contact details, we may collect and store that information.
+K. Usage Information: We collect information about how you use our social network, including your interactions, searches, browsing history, time spent on certain activities, and other data related to your behavior on the platform.
+L. Third-Party Information: We may receive information from third parties, such as service providers and business partners, who help us enhance and personalize your experience on our social network.
+</string>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cK5-mI-6V0">
+                                                <rect key="frame" x="8" y="467" width="398" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="ciJ-bA-ZN6"/>
+                                                </constraints>
+                                                <string key="text">Use of Collected Information:
+</string>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8UH-UT-XLI">
+                                                <rect key="frame" x="8" y="837" width="398" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="yhr-OX-lDB"/>
+                                                </constraints>
+                                                <string key="text">Sharing Information with Third Parties:
+</string>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9eD-FP-Lhb">
+                                                <rect key="frame" x="8" y="1074" width="398" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="q7w-x1-aQ6"/>
+                                                </constraints>
+                                                <string key="text">Information Security:
+</string>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0uA-7N-9mo">
+                                                <rect key="frame" x="4" y="491" width="406" height="338"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="338" id="dUY-XY-7yf"/>
+                                                </constraints>
+                                                <string key="text">H. Enhancing User Experience: We use the collected information to personalize your experience on STICKJOY, provide relevant content, and improve our services.
+I. Communication: We may use your contact information to send you updates, notifications, and communications related to your account, services, and new or modified features.
+J. Advertising: We may use the collected information to display personalized ads based on your interests and preferences.
+K. Social Features: When you share personal content on our social network, you understand and agree that other users may access, view, comment on, or share that content within the platform and on third-party platforms, according to the privacy settings you have selected.
+L. Analysis and Statistics: We use anonymous and aggregated data for analysis and to generate statistics that help us understand and improve our social network.
+M. Security and Fraud Prevention: We employ security measures to protect your personal information and prevent unauthorized access. We may also use personal information to detect and prevent fraudulent or abusive activities on our platform.
+N. Legal Compliance: We may use your information to comply with applicable laws and regulations, as well as to respond to legal requests and protect our legal rights.
+</string>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YFB-vl-Idv">
+                                                <rect key="frame" x="4" y="861" width="406" height="205"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="205" id="Ykg-2r-Z0b"/>
+                                                </constraints>
+                                                <string key="text">E. Service Providers: We may share your information with third parties who assist us in providing and improving our services, such as hosting providers, marketing services, analytics services, and payment processors.
+F. Business Partners: On occasion, we may share information with business partners in order to offer you joint products, services, or promotions that we believe may be of interest to you.
+G. Consent: We will not share your personal information with unaffiliated third parties without your consent, unless we are legally obligated to do so or it is necessary to protect our rights, safety, or property, or those of our users.
+H. Legal Compliance: We may share your information in response to a valid legal request, such as a court order or subpoena.
+</string>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aaV-IP-Ciz">
+                                                <rect key="frame" x="4" y="1098" width="406" height="75"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="75" id="nJQ-ON-OIl"/>
+                                                </constraints>
+                                                <string key="text">We implement reasonable security measures to protect your personal information against unauthorized access, disclosure, or alteration; however, no platform is entirely secure, and we cannot guarantee the absolute security of your personal information.</string>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data Retention:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9mi-V3-d0g">
+                                                <rect key="frame" x="8" y="1181" width="398" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="76K-Pb-JLj"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jn8-wv-OnO">
+                                                <rect key="frame" x="4" y="1205" width="406" height="60"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="Pzw-j0-f5l"/>
+                                                </constraints>
+                                                <string key="text">We will retain your personal information for as long as necessary to fulfill the purposes outlined in this policy, unless the law requires or allows for a longer retention period.</string>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Privacy of Minors:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8yK-kY-LsD">
+                                                <rect key="frame" x="8" y="1273" width="398" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="vQc-dR-Xu3"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AMe-BB-LeZ">
+                                                <rect key="frame" x="4" y="1297" width="406" height="90"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="90" id="A0l-tO-APQ"/>
+                                                </constraints>
+                                                <string key="text">Our social network is not directed at minors. We do not intentionally collect personal information from minors. If you are a parent, legal guardian, or responsible party and believe that your child has provided us with personal information, please contact us immediately, and we will take the necessary steps to delete that information from our records.</string>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Changes to the Privacy Policy:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xI9-CI-2ew">
+                                                <rect key="frame" x="8" y="1395" width="398" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="ipC-Nz-lW9"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BmT-Ul-Tpy">
+                                                <rect key="frame" x="4" y="1419" width="406" height="95"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="95" id="xVl-CF-rqJ"/>
+                                                </constraints>
+                                                <string key="text">We reserve the right to modify this Privacy Policy at any time. We will notify you of any significant changes through our platform or other means of communication. We recommend that you periodically review this policy to stay informed about how we protect your personal information.</string>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Rights:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GPC-kp-kpU">
+                                                <rect key="frame" x="8" y="1522" width="398" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="CJE-yV-1bQ"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xyF-8x-tW1">
+                                                <rect key="frame" x="4" y="1546" width="406" height="100"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="vuV-FE-pBm"/>
+                                                </constraints>
+                                                <string key="text">You have the right to access, correct, update, and delete your personal information. You can do so through your account settings or by contacting our support team.
+For any questions or concerns about our Privacy Policy, please contact us at administracion@stickjoy.app.</string>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="8UH-UT-XLI" firstAttribute="top" secondItem="0uA-7N-9mo" secondAttribute="bottom" constant="8" id="0iQ-7F-Ai0"/>
+                                            <constraint firstItem="QQK-pq-Xve" firstAttribute="top" secondItem="UWJ-z9-XOk" secondAttribute="top" constant="8" id="1UM-be-LZb"/>
+                                            <constraint firstItem="8yK-kY-LsD" firstAttribute="leading" secondItem="UWJ-z9-XOk" secondAttribute="leading" constant="8" id="3GY-Qa-P94"/>
+                                            <constraint firstAttribute="trailing" secondItem="8UH-UT-XLI" secondAttribute="trailing" constant="8" id="4Wx-fM-ji3"/>
+                                            <constraint firstAttribute="trailing" secondItem="xyF-8x-tW1" secondAttribute="trailing" constant="4" id="4pn-gC-NhS"/>
+                                            <constraint firstItem="9eD-FP-Lhb" firstAttribute="top" secondItem="YFB-vl-Idv" secondAttribute="bottom" constant="8" id="58v-HX-Mg6"/>
+                                            <constraint firstItem="9mi-V3-d0g" firstAttribute="leading" secondItem="UWJ-z9-XOk" secondAttribute="leading" constant="8" id="9Ur-C8-XfY"/>
+                                            <constraint firstItem="sHG-fP-bIx" firstAttribute="top" secondItem="JGW-Fp-wOn" secondAttribute="bottom" constant="8" id="AaP-P7-4gR"/>
+                                            <constraint firstItem="Jn8-wv-OnO" firstAttribute="top" secondItem="9mi-V3-d0g" secondAttribute="bottom" id="BQY-Tt-mhv"/>
+                                            <constraint firstAttribute="trailing" secondItem="YFB-vl-Idv" secondAttribute="trailing" constant="4" id="BcZ-3s-Dip"/>
+                                            <constraint firstAttribute="trailing" secondItem="BmT-Ul-Tpy" secondAttribute="trailing" constant="4" id="BtG-0r-1GA"/>
+                                            <constraint firstAttribute="trailing" secondItem="AMe-BB-LeZ" secondAttribute="trailing" constant="4" id="CQN-jX-mnN"/>
+                                            <constraint firstAttribute="trailing" secondItem="8yK-kY-LsD" secondAttribute="trailing" constant="8" id="DLj-iJ-JmS"/>
+                                            <constraint firstAttribute="trailing" secondItem="Jn8-wv-OnO" secondAttribute="trailing" constant="4" id="Di6-YF-v7s"/>
+                                            <constraint firstItem="xI9-CI-2ew" firstAttribute="leading" secondItem="UWJ-z9-XOk" secondAttribute="leading" constant="8" id="Fkn-Gm-LXf"/>
+                                            <constraint firstItem="0uA-7N-9mo" firstAttribute="top" secondItem="cK5-mI-6V0" secondAttribute="bottom" id="GS4-to-pwG"/>
+                                            <constraint firstItem="xyF-8x-tW1" firstAttribute="top" secondItem="GPC-kp-kpU" secondAttribute="bottom" id="Gca-O6-Xly"/>
+                                            <constraint firstItem="QQK-pq-Xve" firstAttribute="leading" secondItem="UWJ-z9-XOk" secondAttribute="leading" constant="8" id="I9A-a0-Eov"/>
+                                            <constraint firstItem="YFB-vl-Idv" firstAttribute="top" secondItem="8UH-UT-XLI" secondAttribute="bottom" id="LGB-0U-cH2"/>
+                                            <constraint firstAttribute="trailing" secondItem="xI9-CI-2ew" secondAttribute="trailing" constant="8" id="MST-2f-WR0"/>
+                                            <constraint firstItem="BmT-Ul-Tpy" firstAttribute="leading" secondItem="UWJ-z9-XOk" secondAttribute="leading" constant="4" id="MzK-eg-Wcw"/>
+                                            <constraint firstAttribute="trailing" secondItem="aaV-IP-Ciz" secondAttribute="trailing" constant="4" id="NE5-wX-l4Z"/>
+                                            <constraint firstAttribute="trailing" secondItem="Ggd-Y2-Exq" secondAttribute="trailing" constant="4" id="Osy-Ri-VcB"/>
+                                            <constraint firstAttribute="trailing" secondItem="GPC-kp-kpU" secondAttribute="trailing" constant="8" id="PIZ-5Y-hFU"/>
+                                            <constraint firstAttribute="trailing" secondItem="cK5-mI-6V0" secondAttribute="trailing" constant="8" id="Rp2-so-H5B"/>
+                                            <constraint firstAttribute="height" constant="1800" id="Rvv-hv-bJL"/>
+                                            <constraint firstItem="aaV-IP-Ciz" firstAttribute="leading" secondItem="UWJ-z9-XOk" secondAttribute="leading" constant="4" id="Trv-Jw-oCX"/>
+                                            <constraint firstItem="xyF-8x-tW1" firstAttribute="leading" secondItem="UWJ-z9-XOk" secondAttribute="leading" constant="4" id="VDo-4W-Dtf"/>
+                                            <constraint firstAttribute="trailing" secondItem="sHG-fP-bIx" secondAttribute="trailing" constant="8" id="YHA-8r-BVi"/>
+                                            <constraint firstItem="BmT-Ul-Tpy" firstAttribute="top" secondItem="xI9-CI-2ew" secondAttribute="bottom" id="a7J-jY-3lj"/>
+                                            <constraint firstItem="JGW-Fp-wOn" firstAttribute="leading" secondItem="UWJ-z9-XOk" secondAttribute="leading" constant="4" id="blO-kk-V4L"/>
+                                            <constraint firstItem="xI9-CI-2ew" firstAttribute="top" secondItem="AMe-BB-LeZ" secondAttribute="bottom" constant="8" id="bxd-xs-GqO"/>
+                                            <constraint firstItem="Ggd-Y2-Exq" firstAttribute="leading" secondItem="UWJ-z9-XOk" secondAttribute="leading" constant="4" id="d1i-Dq-tc8"/>
+                                            <constraint firstItem="0uA-7N-9mo" firstAttribute="leading" secondItem="UWJ-z9-XOk" secondAttribute="leading" constant="4" id="dGU-d3-pAh"/>
+                                            <constraint firstItem="aaV-IP-Ciz" firstAttribute="top" secondItem="9eD-FP-Lhb" secondAttribute="bottom" id="dUB-jI-Sgk"/>
+                                            <constraint firstItem="AMe-BB-LeZ" firstAttribute="top" secondItem="8yK-kY-LsD" secondAttribute="bottom" id="f57-gi-ABa"/>
+                                            <constraint firstAttribute="trailing" secondItem="9mi-V3-d0g" secondAttribute="trailing" constant="8" id="f60-ZL-iHL"/>
+                                            <constraint firstItem="AMe-BB-LeZ" firstAttribute="top" secondItem="8yK-kY-LsD" secondAttribute="bottom" id="fCt-Nl-wmX"/>
+                                            <constraint firstItem="8yK-kY-LsD" firstAttribute="top" secondItem="Jn8-wv-OnO" secondAttribute="bottom" constant="8" id="gT4-5r-U2f"/>
+                                            <constraint firstItem="BmT-Ul-Tpy" firstAttribute="top" secondItem="xI9-CI-2ew" secondAttribute="bottom" id="gvK-xI-avI"/>
+                                            <constraint firstItem="GPC-kp-kpU" firstAttribute="leading" secondItem="UWJ-z9-XOk" secondAttribute="leading" constant="8" id="hpu-4j-mXt"/>
+                                            <constraint firstItem="Jn8-wv-OnO" firstAttribute="leading" secondItem="UWJ-z9-XOk" secondAttribute="leading" constant="4" id="hzT-Ql-u9a"/>
+                                            <constraint firstItem="sHG-fP-bIx" firstAttribute="leading" secondItem="UWJ-z9-XOk" secondAttribute="leading" constant="8" id="iUm-aN-P8M"/>
+                                            <constraint firstItem="Jn8-wv-OnO" firstAttribute="top" secondItem="9mi-V3-d0g" secondAttribute="bottom" id="jPN-d0-1BR"/>
+                                            <constraint firstItem="9eD-FP-Lhb" firstAttribute="leading" secondItem="UWJ-z9-XOk" secondAttribute="leading" constant="8" id="kwX-A0-Fci"/>
+                                            <constraint firstItem="cK5-mI-6V0" firstAttribute="leading" secondItem="UWJ-z9-XOk" secondAttribute="leading" constant="8" id="kzG-4A-R0x"/>
+                                            <constraint firstItem="AMe-BB-LeZ" firstAttribute="leading" secondItem="UWJ-z9-XOk" secondAttribute="leading" constant="4" id="lIi-6H-Gjt"/>
+                                            <constraint firstItem="GPC-kp-kpU" firstAttribute="top" secondItem="BmT-Ul-Tpy" secondAttribute="bottom" constant="8" id="oeI-MI-xp7"/>
+                                            <constraint firstAttribute="trailing" secondItem="0uA-7N-9mo" secondAttribute="trailing" constant="4" id="ok8-gA-Lw4"/>
+                                            <constraint firstItem="xyF-8x-tW1" firstAttribute="top" secondItem="GPC-kp-kpU" secondAttribute="bottom" id="pOO-kH-8Wq"/>
+                                            <constraint firstAttribute="trailing" secondItem="JGW-Fp-wOn" secondAttribute="trailing" constant="4" id="pc4-Tj-w5w"/>
+                                            <constraint firstItem="cK5-mI-6V0" firstAttribute="top" secondItem="Ggd-Y2-Exq" secondAttribute="bottom" constant="8" id="sVz-5b-Oda"/>
+                                            <constraint firstAttribute="trailing" secondItem="9eD-FP-Lhb" secondAttribute="trailing" constant="8" id="shv-J6-TdQ"/>
+                                            <constraint firstItem="JGW-Fp-wOn" firstAttribute="top" secondItem="QQK-pq-Xve" secondAttribute="bottom" id="vlY-IA-ZcJ"/>
+                                            <constraint firstAttribute="trailing" secondItem="QQK-pq-Xve" secondAttribute="trailing" constant="9" id="vxV-Rh-Tmc"/>
+                                            <constraint firstItem="YFB-vl-Idv" firstAttribute="leading" secondItem="UWJ-z9-XOk" secondAttribute="leading" constant="4" id="vyf-Ky-PfX"/>
+                                            <constraint firstItem="9mi-V3-d0g" firstAttribute="top" secondItem="aaV-IP-Ciz" secondAttribute="bottom" constant="8" id="xZk-sl-fjD"/>
+                                            <constraint firstItem="8UH-UT-XLI" firstAttribute="leading" secondItem="UWJ-z9-XOk" secondAttribute="leading" constant="8" id="xgy-HO-HPV"/>
+                                            <constraint firstItem="Ggd-Y2-Exq" firstAttribute="top" secondItem="sHG-fP-bIx" secondAttribute="bottom" id="zRM-Na-QO3"/>
+                                            <constraint firstItem="0uA-7N-9mo" firstAttribute="top" secondItem="cK5-mI-6V0" secondAttribute="bottom" id="zSL-Dc-uWU"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="UWJ-z9-XOk" firstAttribute="leading" secondItem="7ze-qH-uZb" secondAttribute="leading" id="EBY-ci-TWw"/>
+                                    <constraint firstItem="UWJ-z9-XOk" firstAttribute="top" secondItem="7ze-qH-uZb" secondAttribute="top" id="gi7-I8-YtD"/>
+                                    <constraint firstAttribute="bottom" secondItem="UWJ-z9-XOk" secondAttribute="bottom" id="iRJ-aC-S6Q"/>
+                                    <constraint firstAttribute="trailing" secondItem="UWJ-z9-XOk" secondAttribute="trailing" id="jnM-tW-SjG"/>
+                                    <constraint firstItem="UWJ-z9-XOk" firstAttribute="width" secondItem="7ze-qH-uZb" secondAttribute="width" id="kQu-Nj-qM4"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="i2y-RJ-vpZ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7ze-qH-uZb" firstAttribute="top" secondItem="cRA-zg-Ldx" secondAttribute="top" id="Xkq-Ny-ljM"/>
+                            <constraint firstItem="i2y-RJ-vpZ" firstAttribute="bottom" secondItem="7ze-qH-uZb" secondAttribute="bottom" id="gL9-bP-dHW"/>
+                            <constraint firstItem="i2y-RJ-vpZ" firstAttribute="trailing" secondItem="7ze-qH-uZb" secondAttribute="trailing" id="hxy-KL-AzU"/>
+                            <constraint firstItem="7ze-qH-uZb" firstAttribute="leading" secondItem="i2y-RJ-vpZ" secondAttribute="leading" id="iqX-8J-f7d"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eox-iS-3Wy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-694.20289855072474" y="0.0"/>
+        </scene>
+        <!--Politicas Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="politicas" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="PoliticasController" customModule="Stickjoy_First_Edition" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GHY-bD-Bma">
+                                <rect key="frame" x="8" y="48" width="398" height="814"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XaO-8E-YoX">
+                                        <rect key="frame" x="0.0" y="0.0" width="398" height="1800"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Políticas de Privacidad" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wXY-5G-DG9">
+                                                <rect key="frame" x="8" y="8" width="381" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="321-hQ-62A"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="justified" selectable="NO" findInteractionEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zLW-np-hfq">
+                                                <rect key="frame" x="4" y="32" width="390" height="118"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="118" id="2Js-X9-pDE"/>
+                                                </constraints>
+                                                <string key="text">La privacidad y la seguridad de nuestros usuarios son de suma importancia para nosotros. Por lo tanto, hemos desarrollado esta Política de Privacidad para explicar cómo recopilamos, utilizamos, divulgamos y protegemos la información personal en nuestra red social con contenido personal. Al utilizar nuestros servicios, usted acepta los términos de esta política y está de acuerdo con nuestras prácticas de recopilación y uso de información.</string>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EHQ-mD-1ML">
+                                                <rect key="frame" x="8" y="158" width="382" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="c3r-vU-xix"/>
+                                                </constraints>
+                                                <string key="text">Recopilación de Información Personal:
+</string>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sr5-Ol-uxO">
+                                                <rect key="frame" x="4" y="182" width="390" height="310"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="310" id="OX4-fW-Wgk"/>
+                                                </constraints>
+                                                <string key="text">A. Información de registro: Al registrarse en STICKJOY, recopilamos su nombre, dirección de correo electrónico y contraseña.
+B. Información de perfil: Puede proporcionar información adicional en su perfil, como sus fotos, ubicación, fecha de nacimiento y otros detalles opcionales.
+C. Contenido personal: La plataforma permite compartir contenido personal, como publicaciones, fotos, videos y comentarios. La información que elija compartir se almacenará en nuestros servidores.
+D. Información de contacto: Si elige proporcionar su información de contacto, como su número de teléfono, dirección de correo electrónico u otros detalles de contacto, podemos recopilar y almacenar esa información.
+E. Información de uso: Recopilamos información sobre cómo utiliza nuestra red social, incluyendo sus interacciones, búsquedas, historial de navegación, tiempo dedicado a ciertas actividades y otros datos relacionados con su comportamiento en la plataforma.
+F. Información de terceros: Podemos recibir información de terceros, como proveedores de servicios y socios comerciales, que nos ayudan a mejorar y personalizar su experiencia en nuestra red social.
+</string>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Uso de la información recopilada:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bao-T2-8e9">
+                                                <rect key="frame" x="8" y="500" width="382" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="3Lg-rQ-y7Q"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6dp-rs-Ost">
+                                                <rect key="frame" x="8" y="852" width="382" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="obX-IP-aMD"/>
+                                                </constraints>
+                                                <string key="text">Compartir información con terceros:
+</string>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YAI-9T-iIF">
+                                                <rect key="frame" x="8" y="1132" width="382" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="1aY-23-iDz"/>
+                                                </constraints>
+                                                <string key="text">Seguridad de la información:
+</string>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rVy-RE-IlG">
+                                                <rect key="frame" x="4" y="524" width="390" height="320"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="320" id="oZa-ou-zfo"/>
+                                                </constraints>
+                                                <string key="text">A. Mejora de la experiencia del usuario: Utilizamos la información recopilada para personalizar su experiencia en STICKJOY, brindar contenido relevante y mejorar nuestros servicios.
+B. Comunicación: Podemos utilizar su información de contacto para enviarle actualizaciones, notificaciones y comunicaciones relacionadas con su cuenta, servicios y funciones nuevas o modificadas.
+C. Publicidad: Podemos utilizar la información recopilada para mostrar anuncios personalizados basados en sus intereses y preferencias.
+D. Funcionalidades sociales: Al compartir contenido personal en nuestra red social, comprende y acepta que otros usuarios podrán acceder, ver, comentar o compartir dentro de la plataforma y en plataformas de terceros dicho contenido, de acuerdo con la configuración de privacidad que haya seleccionado.
+E. Análisis y estadísticas: Utilizamos datos anónimos y agregados para realizar análisis y generar estadísticas que nos ayuden a comprender y mejorar nuestra red social. 
+F. Seguridad y Prevención del Fraude: Utilizamos medidas de seguridad para proteger su información personal y prevenir el acceso no autorizado. G. También podemos utilizar información personal para detectar y prevenir actividades fraudulentas o abusivas en nuestra plataforma.
+Cumplimiento legal: Podemos utilizar su información para cumplir con las leyes y regulaciones aplicables, así como para responder a solicitudes legales y proteger nuestros derechos legales.
+</string>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="11"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gdT-vv-zp9">
+                                                <rect key="frame" x="4" y="876" width="390" height="248"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="248" id="odu-RL-zba"/>
+                                                </constraints>
+                                                <string key="text">A. Proveedores de servicios: Podemos compartir su información con terceros que nos ayudan a proporcionar y mejorar nuestros servicios, como proveedores de alojamiento, de marketing, servicios de análisis y procesadores de pagos.
+B. Socios comerciales: En ocasiones, podemos compartir información con socios comerciales con el fin de ofrecerle productos, servicios o promociones conjuntas que consideremos de su interés. 
+C. Consentimiento: No compartiremos su información personal con terceros no afiliados sin su consentimiento, a menos que estemos legalmente obligados a hacerlo o sea necesario para proteger nuestros derechos, seguridad o propiedad, o los de nuestros usuarios
+D. Cumplimiento legal: Podemos compartir su información en respuesta a una solicitud legal válida, como una orden judicial o una citación.</string>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MGY-pU-Mjh">
+                                                <rect key="frame" x="4" y="1156" width="390" height="88"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="88" id="gPy-v7-WZJ"/>
+                                                </constraints>
+                                                <string key="text">Implementamos medidas de seguridad razonables para proteger su información personal contra acceso no autorizado, divulgación o alteración; sin embargo, ninguna plataforma es completamente segura, y no podemos garantizar la seguridad absoluta de su información personal.
+</string>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XRb-ZF-jat">
+                                                <rect key="frame" x="8" y="1252" width="382" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="NkA-hp-vum"/>
+                                                </constraints>
+                                                <string key="text">Retención de datos:
+</string>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ehy-6Y-izj">
+                                                <rect key="frame" x="4" y="1276" width="390" height="65"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="65" id="pJk-74-O3f"/>
+                                                </constraints>
+                                                <string key="text">Mantendremos su información personal durante el tiempo que sea necesario para cumplir con los fines establecidos en esta política, a menos que la ley exija o permita un período de retención más largo.</string>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nRh-MF-DI2">
+                                                <rect key="frame" x="8" y="1349" width="382" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="uE7-Cy-PE9"/>
+                                                </constraints>
+                                                <string key="text">Privacidad de los menores
+</string>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vx6-MB-SIt">
+                                                <rect key="frame" x="4" y="1373" width="390" height="105"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="105" id="M9M-YO-7Rn"/>
+                                                </constraints>
+                                                <string key="text">Nuestra red social no está dirigida a menores de edad. No recopilamos intencionalmente información personal de menores.. Si usted es padre, tutor legal o responsable y cree que su hijo nos ha proporcionado información personal, contáctenos de inmediato y tomaremos las medidas necesarias para eliminar esa información de nuestros registros.</string>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nrp-dx-ypY">
+                                                <rect key="frame" x="8" y="1486" width="382" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="f36-Oo-Fnf"/>
+                                                </constraints>
+                                                <string key="text">Cambios en la política de privacidad:
+</string>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HmI-3q-Yqm">
+                                                <rect key="frame" x="4" y="1510" width="390" height="105"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="105" id="tEA-cv-uyW"/>
+                                                </constraints>
+                                                <string key="text">Nos reservamos el derecho de modificar esta Política de Privacidad en cualquier momento. Le notificaremos sobre cualquier cambio significativo a través de nuestra plataforma o mediante otros medios de comunicación. Le recomendamos que revise periódicamente esta política para mantenerse informado sobre cómo protegemos su información personal.</string>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QOO-Yl-hZ5">
+                                                <rect key="frame" x="8" y="1623" width="382" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="1uW-jI-oQJ"/>
+                                                </constraints>
+                                                <string key="text">Sus derechos:
+</string>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oPB-Wc-GhD">
+                                                <rect key="frame" x="4" y="1647" width="390" height="120"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="120" id="d9C-FU-R1d"/>
+                                                </constraints>
+                                                <string key="text">Usted tiene el derecho de acceder, corregir, actualizar y eliminar su información personal. Puede hacerlo a través de la configuración de su cuenta o poniéndose en contacto con nuestro equipo de soporte.      
+Para cualquier consulta o inquietud sobre nuestra Política de Privacidad, por favor contáctenos a través de administracion@stickjoy.app.
+</string>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="6dp-rs-Ost" firstAttribute="top" secondItem="rVy-RE-IlG" secondAttribute="bottom" constant="8" id="0Yb-iN-pa4"/>
+                                            <constraint firstItem="nRh-MF-DI2" firstAttribute="top" secondItem="Ehy-6Y-izj" secondAttribute="bottom" constant="8" id="0iV-8Z-d2F"/>
+                                            <constraint firstItem="Ehy-6Y-izj" firstAttribute="top" secondItem="XRb-ZF-jat" secondAttribute="bottom" id="519-Nb-LdJ"/>
+                                            <constraint firstItem="HmI-3q-Yqm" firstAttribute="top" secondItem="Nrp-dx-ypY" secondAttribute="bottom" id="5do-xq-8Ne"/>
+                                            <constraint firstAttribute="trailing" secondItem="EHQ-mD-1ML" secondAttribute="trailing" constant="8" id="5qj-Bu-fDI"/>
+                                            <constraint firstItem="zLW-np-hfq" firstAttribute="top" secondItem="wXY-5G-DG9" secondAttribute="bottom" id="6dP-iG-idy"/>
+                                            <constraint firstAttribute="trailing" secondItem="YAI-9T-iIF" secondAttribute="trailing" constant="8" id="Aph-3Y-G4G"/>
+                                            <constraint firstAttribute="trailing" secondItem="nRh-MF-DI2" secondAttribute="trailing" constant="8" id="Bxw-fB-bbO"/>
+                                            <constraint firstItem="gdT-vv-zp9" firstAttribute="leading" secondItem="XaO-8E-YoX" secondAttribute="leading" constant="4" id="D9p-vP-ILF"/>
+                                            <constraint firstItem="Nrp-dx-ypY" firstAttribute="top" secondItem="vx6-MB-SIt" secondAttribute="bottom" constant="8" id="Dno-Qa-P15"/>
+                                            <constraint firstItem="vx6-MB-SIt" firstAttribute="top" secondItem="nRh-MF-DI2" secondAttribute="bottom" id="Eiq-ZW-17U"/>
+                                            <constraint firstAttribute="trailing" secondItem="QOO-Yl-hZ5" secondAttribute="trailing" constant="8" id="FRk-o9-64A"/>
+                                            <constraint firstAttribute="trailing" secondItem="MGY-pU-Mjh" secondAttribute="trailing" constant="4" id="Gsf-aq-rhs"/>
+                                            <constraint firstItem="sr5-Ol-uxO" firstAttribute="leading" secondItem="XaO-8E-YoX" secondAttribute="leading" constant="4" id="HkO-qI-5qu"/>
+                                            <constraint firstItem="vx6-MB-SIt" firstAttribute="leading" secondItem="XaO-8E-YoX" secondAttribute="leading" constant="4" id="L1V-8V-vZh"/>
+                                            <constraint firstItem="oPB-Wc-GhD" firstAttribute="top" secondItem="QOO-Yl-hZ5" secondAttribute="bottom" id="Lax-Q5-U1n"/>
+                                            <constraint firstItem="bao-T2-8e9" firstAttribute="top" secondItem="sr5-Ol-uxO" secondAttribute="bottom" constant="8" id="OXo-To-03k"/>
+                                            <constraint firstAttribute="trailing" secondItem="rVy-RE-IlG" secondAttribute="trailing" constant="4" id="Oka-7j-ZcG"/>
+                                            <constraint firstItem="EHQ-mD-1ML" firstAttribute="leading" secondItem="XaO-8E-YoX" secondAttribute="leading" constant="8" id="PBh-C6-GFz"/>
+                                            <constraint firstItem="rVy-RE-IlG" firstAttribute="top" secondItem="bao-T2-8e9" secondAttribute="bottom" id="PeF-mG-3zI"/>
+                                            <constraint firstItem="YAI-9T-iIF" firstAttribute="leading" secondItem="XaO-8E-YoX" secondAttribute="leading" constant="8" id="Pt1-0c-PKD"/>
+                                            <constraint firstItem="XRb-ZF-jat" firstAttribute="leading" secondItem="XaO-8E-YoX" secondAttribute="leading" constant="8" id="QIJ-nF-y3a"/>
+                                            <constraint firstAttribute="trailing" secondItem="Nrp-dx-ypY" secondAttribute="trailing" constant="8" id="RZE-Re-jGa"/>
+                                            <constraint firstItem="QOO-Yl-hZ5" firstAttribute="top" secondItem="HmI-3q-Yqm" secondAttribute="bottom" constant="8" id="SDl-a7-Uro"/>
+                                            <constraint firstItem="HmI-3q-Yqm" firstAttribute="leading" secondItem="XaO-8E-YoX" secondAttribute="leading" constant="4" id="T5m-1T-DCA"/>
+                                            <constraint firstItem="oPB-Wc-GhD" firstAttribute="top" secondItem="QOO-Yl-hZ5" secondAttribute="bottom" id="TZT-w8-OVv"/>
+                                            <constraint firstItem="rVy-RE-IlG" firstAttribute="top" secondItem="bao-T2-8e9" secondAttribute="bottom" id="Zfh-vv-fhp"/>
+                                            <constraint firstItem="XRb-ZF-jat" firstAttribute="top" secondItem="MGY-pU-Mjh" secondAttribute="bottom" constant="8" id="aUM-Kk-Icn"/>
+                                            <constraint firstItem="oPB-Wc-GhD" firstAttribute="leading" secondItem="XaO-8E-YoX" secondAttribute="leading" constant="4" id="alS-n4-DHo"/>
+                                            <constraint firstItem="nRh-MF-DI2" firstAttribute="leading" secondItem="XaO-8E-YoX" secondAttribute="leading" constant="8" id="apY-CE-wvl"/>
+                                            <constraint firstAttribute="trailing" secondItem="gdT-vv-zp9" secondAttribute="trailing" constant="4" id="bIQ-en-EPZ"/>
+                                            <constraint firstItem="MGY-pU-Mjh" firstAttribute="leading" secondItem="XaO-8E-YoX" secondAttribute="leading" constant="4" id="cTb-GB-Wez"/>
+                                            <constraint firstAttribute="trailing" secondItem="bao-T2-8e9" secondAttribute="trailing" constant="8" id="d0n-1o-eBe"/>
+                                            <constraint firstItem="EHQ-mD-1ML" firstAttribute="top" secondItem="zLW-np-hfq" secondAttribute="bottom" constant="8" id="d6X-wA-W6O"/>
+                                            <constraint firstItem="zLW-np-hfq" firstAttribute="leading" secondItem="XaO-8E-YoX" secondAttribute="leading" constant="4" id="eBu-1H-p5c"/>
+                                            <constraint firstAttribute="trailing" secondItem="6dp-rs-Ost" secondAttribute="trailing" constant="8" id="fiZ-y9-0hf"/>
+                                            <constraint firstItem="QOO-Yl-hZ5" firstAttribute="leading" secondItem="XaO-8E-YoX" secondAttribute="leading" constant="8" id="fjs-1U-tst"/>
+                                            <constraint firstAttribute="height" constant="1800" id="gPH-kG-aQo"/>
+                                            <constraint firstItem="vx6-MB-SIt" firstAttribute="top" secondItem="nRh-MF-DI2" secondAttribute="bottom" id="gRG-5H-eki"/>
+                                            <constraint firstItem="Ehy-6Y-izj" firstAttribute="top" secondItem="XRb-ZF-jat" secondAttribute="bottom" id="hXP-kO-dry"/>
+                                            <constraint firstAttribute="trailing" secondItem="wXY-5G-DG9" secondAttribute="trailing" constant="9" id="hbe-AW-I8S"/>
+                                            <constraint firstItem="sr5-Ol-uxO" firstAttribute="top" secondItem="EHQ-mD-1ML" secondAttribute="bottom" id="hnF-RX-dgK"/>
+                                            <constraint firstItem="HmI-3q-Yqm" firstAttribute="top" secondItem="Nrp-dx-ypY" secondAttribute="bottom" id="iGL-sT-epo"/>
+                                            <constraint firstAttribute="trailing" secondItem="XRb-ZF-jat" secondAttribute="trailing" constant="8" id="jyM-Il-SDU"/>
+                                            <constraint firstItem="6dp-rs-Ost" firstAttribute="leading" secondItem="XaO-8E-YoX" secondAttribute="leading" constant="8" id="kbj-Se-dwB"/>
+                                            <constraint firstAttribute="trailing" secondItem="oPB-Wc-GhD" secondAttribute="trailing" constant="4" id="mRl-VI-rEU"/>
+                                            <constraint firstItem="wXY-5G-DG9" firstAttribute="top" secondItem="XaO-8E-YoX" secondAttribute="top" constant="8" id="mlv-d6-Bbg"/>
+                                            <constraint firstItem="MGY-pU-Mjh" firstAttribute="top" secondItem="YAI-9T-iIF" secondAttribute="bottom" id="neY-OI-ICy"/>
+                                            <constraint firstAttribute="trailing" secondItem="HmI-3q-Yqm" secondAttribute="trailing" constant="4" id="nxc-96-mya"/>
+                                            <constraint firstItem="rVy-RE-IlG" firstAttribute="leading" secondItem="XaO-8E-YoX" secondAttribute="leading" constant="4" id="qo1-HW-fTz"/>
+                                            <constraint firstAttribute="trailing" secondItem="Ehy-6Y-izj" secondAttribute="trailing" constant="4" id="sDd-I4-meP"/>
+                                            <constraint firstItem="YAI-9T-iIF" firstAttribute="top" secondItem="gdT-vv-zp9" secondAttribute="bottom" constant="8" id="tJe-sG-cas"/>
+                                            <constraint firstItem="wXY-5G-DG9" firstAttribute="leading" secondItem="XaO-8E-YoX" secondAttribute="leading" constant="8" id="tnV-X3-ioY"/>
+                                            <constraint firstAttribute="trailing" secondItem="vx6-MB-SIt" secondAttribute="trailing" constant="4" id="tpS-vv-SLy"/>
+                                            <constraint firstItem="Ehy-6Y-izj" firstAttribute="leading" secondItem="XaO-8E-YoX" secondAttribute="leading" constant="4" id="tzc-op-IIZ"/>
+                                            <constraint firstItem="bao-T2-8e9" firstAttribute="leading" secondItem="XaO-8E-YoX" secondAttribute="leading" constant="8" id="tzv-SA-mHa"/>
+                                            <constraint firstAttribute="trailing" secondItem="sr5-Ol-uxO" secondAttribute="trailing" constant="4" id="wGX-6M-Rui"/>
+                                            <constraint firstItem="Nrp-dx-ypY" firstAttribute="leading" secondItem="XaO-8E-YoX" secondAttribute="leading" constant="8" id="wPe-QC-g12"/>
+                                            <constraint firstAttribute="trailing" secondItem="zLW-np-hfq" secondAttribute="trailing" constant="4" id="wy2-9D-Enp"/>
+                                            <constraint firstItem="gdT-vv-zp9" firstAttribute="top" secondItem="6dp-rs-Ost" secondAttribute="bottom" id="zqr-H1-LYr"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="XaO-8E-YoX" secondAttribute="trailing" id="7Ed-aK-RQM"/>
+                                    <constraint firstItem="XaO-8E-YoX" firstAttribute="width" secondItem="GHY-bD-Bma" secondAttribute="width" id="Oeu-4n-QTd"/>
+                                    <constraint firstItem="XaO-8E-YoX" firstAttribute="leading" secondItem="GHY-bD-Bma" secondAttribute="leading" id="W6s-l8-Wur"/>
+                                    <constraint firstItem="XaO-8E-YoX" firstAttribute="top" secondItem="GHY-bD-Bma" secondAttribute="top" id="jUB-2z-e9H"/>
+                                    <constraint firstAttribute="bottom" secondItem="XaO-8E-YoX" secondAttribute="bottom" id="tpK-fz-kxc"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="GHY-bD-Bma" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="3CG-mK-tE5"/>
+                            <constraint firstItem="GHY-bD-Bma" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="8" id="bZj-2L-2Wn"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="GHY-bD-Bma" secondAttribute="trailing" constant="8" id="fqJ-tP-B5I"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="GHY-bD-Bma" secondAttribute="bottom" id="iQH-GZ-Y9X"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139.13043478260872" y="2.6785714285714284"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="2uf-oc-kM7">
+            <objects>
+                <viewController storyboardIdentifier="politicasSuscrip" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4O2-EO-2i8" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1jm-ei-YQ4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y11-bG-R62">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nWk-J1-8hu">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1500"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Introducción" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dMx-P0-4gt">
+                                                <rect key="frame" x="8" y="8" width="397" height="0.0"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" id="aIM-ny-mU1"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="justified" selectable="NO" findInteractionEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y9O-39-WCo">
+                                                <rect key="frame" x="4" y="8" width="406" height="75"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="75" id="npL-vi-vi9"/>
+                                                </constraints>
+                                                <string key="text">Bienvenid@ a Stickjoy, ¡la plataforma para celebrar y compartir tus momentos inolvidables con amig@s! Antes de suscribirte a nuestro servicio Premium, por favor, lee detenidamente los siguientes términos y condiciones:
+</string>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M2A-Tz-E4F">
+                                                <rect key="frame" x="8" y="91" width="398" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="f3C-9O-5y0"/>
+                                                </constraints>
+                                                <string key="text">Eliminación de Publicidad
+</string>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Carga de Contenido" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QaL-pQ-c15">
+                                                <rect key="frame" x="8" y="168" width="398" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="I2y-Ly-kPd"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Al suscribirte a nuestra opción Premium, disfrutarás de una experiencia sin anuncios publicitarios en tus álbumes y tu perfil." textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4a4-l8-ohq">
+                                                <rect key="frame" x="4" y="115" width="406" height="45"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="A78-7o-LT8"/>
+                                                </constraints>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GHx-01-vzb">
+                                                <rect key="frame" x="8" y="275" width="398" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="u4E-iD-tVE"/>
+                                                </constraints>
+                                                <string key="text">Privacidad y Control de Datos
+</string>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sVw-NU-ty8">
+                                                <rect key="frame" x="8" y="367" width="398" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="PSu-ei-hM5"/>
+                                                </constraints>
+                                                <string key="text">Pagos a Terceros
+</string>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qgx-n7-80I">
+                                                <rect key="frame" x="8" y="458" width="398" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="oTi-ex-aH6"/>
+                                                </constraints>
+                                                <string key="text">Restricción de Edad
+</string>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d54-T6-fbR">
+                                                <rect key="frame" x="4" y="299" width="406" height="60"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="LDi-MD-oeq"/>
+                                                </constraints>
+                                                <string key="text">Los suscriptores de la opción Premium tendrán las mismas opciones de privacidad que los usuarios gratuitos, manteniendo el control total sobre quién puede acceder a sus álbumes.
+</string>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Tr-aW-GoG">
+                                                <rect key="frame" x="4" y="391" width="406" height="59"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="59" id="3Nj-6D-8p1"/>
+                                                </constraints>
+                                                <string key="text">Las transacciones de pago se procesarán a través de terceros proveedores de servicios de pago, por lo que no almacenamos ni tenemos acceso a la información de pago de los usuarios.
+</string>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8iU-oM-7ba">
+                                                <rect key="frame" x="4" y="482" width="406" height="74"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="74" id="6fP-SZ-nJl"/>
+                                                </constraints>
+                                                <string key="text">Nuestros servicios están destinados solo para usuarios que hayan alcanzado la mayoría de edad en su país de residencia. Si no has alcanzado la mayoría de edad, sólo puedes utilizar Stickjoy bajo la supervisión de tu tutor legal o padres.
+</string>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pXh-6t-Fhb">
+                                                <rect key="frame" x="8" y="564" width="398" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="fYU-Ac-4NO"/>
+                                                </constraints>
+                                                <string key="text">Datos Personales
+</string>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I6D-eC-JDj">
+                                                <rect key="frame" x="4" y="588" width="406" height="45"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="WY0-t4-w90"/>
+                                                </constraints>
+                                                <string key="text">El tratamiento y protección de los datos personales se rigen por nuestra Política de Privacidad, disponible en el menú Configuraciones de la app.
+</string>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZZ1-Om-Pju">
+                                                <rect key="frame" x="8" y="641" width="398" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="Lpl-hN-brt"/>
+                                                </constraints>
+                                                <string key="text">No Reembolsable
+</string>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mE4-yb-vD4">
+                                                <rect key="frame" x="4" y="665" width="406" height="45"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="Bkb-gn-eYG"/>
+                                                </constraints>
+                                                <string key="text">La suscripción Premium es un servicio no reembolsable, y no se otorgan reembolsos por períodos parciales de uso.
+</string>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cancelación" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y8l-bb-lXk">
+                                                <rect key="frame" x="8" y="718" width="398" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="4Iy-Ke-Vaf"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Si deseas cancelar tu suscripción, deberás hacerlo a través de la App Store de tu dispositivo." textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iJn-ce-mk5">
+                                                <rect key="frame" x="4" y="742" width="406" height="45"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="UDu-rW-qSW"/>
+                                                </constraints>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rxT-u3-bE2">
+                                                <rect key="frame" x="8" y="795" width="398" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="BRT-8k-naB"/>
+                                                </constraints>
+                                                <string key="text">Cierre de la App 
+</string>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aSS-Mn-gSp">
+                                                <rect key="frame" x="4" y="819" width="406" height="59"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="59" id="e4q-AX-PX8"/>
+                                                </constraints>
+                                                <string key="text">En caso de que la app se cierre indefinidamente o de forma definitiva, no nos haremos responsables de la recuperación de tus datos ni del reembolso del dinero de la suscripción.</string>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contacto" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ayo-lV-fzU">
+                                                <rect key="frame" x="8" y="886" width="398" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="dhS-WS-qES"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6qL-Iz-ws2">
+                                                <rect key="frame" x="4" y="910" width="406" height="45"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="6LH-YM-xgp"/>
+                                                </constraints>
+                                                <string key="text">Si deseas ponerte en contacto con nosotros, puedes hacerlo a través de la dirección de correo electrónico: administracion@stickjoy.app</string>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cambios y Actualizaciones" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ix-mK-ngR">
+                                                <rect key="frame" x="8" y="963" width="402" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="E9J-Ga-QdD"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kp4-nu-c5n">
+                                                <rect key="frame" x="4" y="987" width="406" height="59"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="59" id="egy-wG-b6m"/>
+                                                </constraints>
+                                                <string key="text">Nos reservamos el derecho de realizar cambios en los términos y condiciones de la suscripción, así como en los servicios ofrecidos, con notificación previa a los usuarios.</string>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kNd-AG-BxR">
+                                                <rect key="frame" x="4" y="1054" width="406" height="60"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="30v-h5-0X1"/>
+                                                </constraints>
+                                                <string key="text">Al suscribirte a Stickjoy Premium, aceptas y estás de acuerdo con estos términos y condiciones. Te recomendamos revisar esta sección periódicamente para estar al tanto de cualquier actualización o cambio.</string>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J1P-kC-dXo">
+                                                <rect key="frame" x="4" y="1122" width="406" height="45"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="5ph-Lj-AUR"/>
+                                                </constraints>
+                                                <string key="text">¡Gracias por formar parte de Stickjoy y por elegir nuestra suscripción Premium para hacer de tus recuerdos momentos inolvidables!</string>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rcu-Zc-0RX">
+                                                <rect key="frame" x="4" y="192" width="406" height="75"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="75" id="KtP-x2-Sgu"/>
+                                                </constraints>
+                                                <string key="text">Al suscribirte a nuestro servicio Premium, tendrás la ventaja de poder subir múltiples fotos y/o videos simultáneamente. Esta funcionalidad te brinda mayor comodidad y eficiencia al gestionar tu contenido, permitiéndote disfrutar plenamente de tu experiencia de usuario.
+</string>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="aSS-Mn-gSp" firstAttribute="top" secondItem="rxT-u3-bE2" secondAttribute="bottom" id="0mC-en-Qq4"/>
+                                            <constraint firstItem="GHx-01-vzb" firstAttribute="top" secondItem="rcu-Zc-0RX" secondAttribute="bottom" constant="8" id="19h-SX-liH"/>
+                                            <constraint firstItem="dMx-P0-4gt" firstAttribute="top" secondItem="nWk-J1-8hu" secondAttribute="top" constant="8" id="1D9-lZ-MVL"/>
+                                            <constraint firstAttribute="trailing" secondItem="d54-T6-fbR" secondAttribute="trailing" constant="4" id="1JQ-Nm-E9f"/>
+                                            <constraint firstAttribute="trailing" secondItem="kNd-AG-BxR" secondAttribute="trailing" constant="4" id="1Kt-UA-PYK"/>
+                                            <constraint firstItem="4a4-l8-ohq" firstAttribute="leading" secondItem="nWk-J1-8hu" secondAttribute="leading" constant="4" id="1qa-b3-bO8"/>
+                                            <constraint firstItem="6qL-Iz-ws2" firstAttribute="leading" secondItem="nWk-J1-8hu" secondAttribute="leading" constant="4" id="4GL-4l-D2b"/>
+                                            <constraint firstItem="Kp4-nu-c5n" firstAttribute="top" secondItem="2ix-mK-ngR" secondAttribute="bottom" id="4ZF-cE-CGX"/>
+                                            <constraint firstItem="6qL-Iz-ws2" firstAttribute="top" secondItem="ayo-lV-fzU" secondAttribute="bottom" id="4pA-BO-Yjj"/>
+                                            <constraint firstItem="sVw-NU-ty8" firstAttribute="leading" secondItem="nWk-J1-8hu" secondAttribute="leading" constant="8" id="5MY-x2-qvH"/>
+                                            <constraint firstAttribute="trailing" secondItem="6qL-Iz-ws2" secondAttribute="trailing" constant="4" id="6Ou-x9-JE6"/>
+                                            <constraint firstAttribute="trailing" secondItem="Y8l-bb-lXk" secondAttribute="trailing" constant="8" id="6X7-n0-eUG"/>
+                                            <constraint firstItem="J1P-kC-dXo" firstAttribute="leading" secondItem="nWk-J1-8hu" secondAttribute="leading" constant="4" id="6Xm-Qe-TMk"/>
+                                            <constraint firstItem="4a4-l8-ohq" firstAttribute="top" secondItem="M2A-Tz-E4F" secondAttribute="bottom" id="9XK-xb-93u"/>
+                                            <constraint firstAttribute="trailing" secondItem="mE4-yb-vD4" secondAttribute="trailing" constant="4" id="9tY-XO-AC8"/>
+                                            <constraint firstItem="iJn-ce-mk5" firstAttribute="top" secondItem="Y8l-bb-lXk" secondAttribute="bottom" id="Ap4-WD-cjp"/>
+                                            <constraint firstItem="rcu-Zc-0RX" firstAttribute="leading" secondItem="nWk-J1-8hu" secondAttribute="leading" constant="4" id="CTj-xh-w6d"/>
+                                            <constraint firstItem="Qgx-n7-80I" firstAttribute="top" secondItem="1Tr-aW-GoG" secondAttribute="bottom" constant="8" id="CdD-be-5uh"/>
+                                            <constraint firstItem="Qgx-n7-80I" firstAttribute="leading" secondItem="nWk-J1-8hu" secondAttribute="leading" constant="8" id="DfH-8P-0Je"/>
+                                            <constraint firstItem="Y8l-bb-lXk" firstAttribute="top" secondItem="mE4-yb-vD4" secondAttribute="bottom" constant="8" id="E4w-Zh-M77"/>
+                                            <constraint firstItem="Kp4-nu-c5n" firstAttribute="leading" secondItem="nWk-J1-8hu" secondAttribute="leading" constant="4" id="GmC-Ut-uW4"/>
+                                            <constraint firstItem="pXh-6t-Fhb" firstAttribute="leading" secondItem="nWk-J1-8hu" secondAttribute="leading" constant="8" id="H4A-ho-gfA"/>
+                                            <constraint firstAttribute="trailing" secondItem="GHx-01-vzb" secondAttribute="trailing" constant="8" id="HDX-UK-Evs"/>
+                                            <constraint firstAttribute="height" constant="1500" id="HDc-ZC-Z0v"/>
+                                            <constraint firstItem="d54-T6-fbR" firstAttribute="top" secondItem="GHx-01-vzb" secondAttribute="bottom" id="HGM-gm-6DK"/>
+                                            <constraint firstItem="ayo-lV-fzU" firstAttribute="top" secondItem="aSS-Mn-gSp" secondAttribute="bottom" constant="8" symbolic="YES" id="J5G-5i-eU6"/>
+                                            <constraint firstItem="pXh-6t-Fhb" firstAttribute="top" secondItem="8iU-oM-7ba" secondAttribute="bottom" constant="8" id="KfG-gI-2pX"/>
+                                            <constraint firstItem="QaL-pQ-c15" firstAttribute="top" secondItem="4a4-l8-ohq" secondAttribute="bottom" constant="8" id="LhV-HE-Eef"/>
+                                            <constraint firstItem="QaL-pQ-c15" firstAttribute="leading" secondItem="nWk-J1-8hu" secondAttribute="leading" constant="8" id="Mhf-d9-oSP"/>
+                                            <constraint firstItem="I6D-eC-JDj" firstAttribute="top" secondItem="pXh-6t-Fhb" secondAttribute="bottom" id="Mwg-2C-xBs"/>
+                                            <constraint firstAttribute="trailing" secondItem="ayo-lV-fzU" secondAttribute="trailing" constant="8" id="NDm-IU-OzT"/>
+                                            <constraint firstItem="aSS-Mn-gSp" firstAttribute="top" secondItem="rxT-u3-bE2" secondAttribute="bottom" id="NpB-FQ-m0M"/>
+                                            <constraint firstAttribute="trailing" secondItem="J1P-kC-dXo" secondAttribute="trailing" constant="4" id="OBP-GA-ExY"/>
+                                            <constraint firstAttribute="trailing" secondItem="iJn-ce-mk5" secondAttribute="trailing" constant="4" id="Pzz-0X-8CI"/>
+                                            <constraint firstItem="ayo-lV-fzU" firstAttribute="leading" secondItem="nWk-J1-8hu" secondAttribute="leading" constant="8" id="Qfm-pM-of5"/>
+                                            <constraint firstItem="I6D-eC-JDj" firstAttribute="top" secondItem="pXh-6t-Fhb" secondAttribute="bottom" id="Rib-fy-QOE"/>
+                                            <constraint firstAttribute="trailing" secondItem="4a4-l8-ohq" secondAttribute="trailing" constant="4" id="SMV-tU-nXQ"/>
+                                            <constraint firstItem="rxT-u3-bE2" firstAttribute="leading" secondItem="nWk-J1-8hu" secondAttribute="leading" constant="8" id="Sd6-2s-uCy"/>
+                                            <constraint firstItem="rcu-Zc-0RX" firstAttribute="top" secondItem="QaL-pQ-c15" secondAttribute="bottom" id="TAi-Lb-i5N"/>
+                                            <constraint firstItem="mE4-yb-vD4" firstAttribute="leading" secondItem="nWk-J1-8hu" secondAttribute="leading" constant="4" id="Tbf-By-ELA"/>
+                                            <constraint firstItem="8iU-oM-7ba" firstAttribute="leading" secondItem="nWk-J1-8hu" secondAttribute="leading" constant="4" id="TkT-BL-3Ne"/>
+                                            <constraint firstAttribute="trailing" secondItem="dMx-P0-4gt" secondAttribute="trailing" constant="9" id="Tu9-4e-pSc"/>
+                                            <constraint firstItem="sVw-NU-ty8" firstAttribute="top" secondItem="d54-T6-fbR" secondAttribute="bottom" constant="8" id="UR7-SJ-dIp"/>
+                                            <constraint firstItem="GHx-01-vzb" firstAttribute="leading" secondItem="nWk-J1-8hu" secondAttribute="leading" constant="8" id="Vku-4f-UfL"/>
+                                            <constraint firstItem="2ix-mK-ngR" firstAttribute="leading" secondItem="nWk-J1-8hu" secondAttribute="leading" constant="8" id="WCt-Gu-Hig"/>
+                                            <constraint firstAttribute="trailing" secondItem="rcu-Zc-0RX" secondAttribute="trailing" constant="4" id="WIo-ts-xcs"/>
+                                            <constraint firstAttribute="trailing" secondItem="sVw-NU-ty8" secondAttribute="trailing" constant="8" id="Wtp-cQ-4Yb"/>
+                                            <constraint firstAttribute="trailing" secondItem="Kp4-nu-c5n" secondAttribute="trailing" constant="4" id="XUx-kl-o1n"/>
+                                            <constraint firstItem="Y9O-39-WCo" firstAttribute="leading" secondItem="nWk-J1-8hu" secondAttribute="leading" constant="4" id="XoE-Xl-J2z"/>
+                                            <constraint firstItem="iJn-ce-mk5" firstAttribute="top" secondItem="Y8l-bb-lXk" secondAttribute="bottom" id="Y2a-HH-RLQ"/>
+                                            <constraint firstItem="1Tr-aW-GoG" firstAttribute="leading" secondItem="nWk-J1-8hu" secondAttribute="leading" constant="4" id="YKP-9j-Ohd"/>
+                                            <constraint firstAttribute="trailing" secondItem="1Tr-aW-GoG" secondAttribute="trailing" constant="4" id="Ys7-WF-fz2"/>
+                                            <constraint firstAttribute="trailing" secondItem="aSS-Mn-gSp" secondAttribute="trailing" constant="4" id="ZGv-lZ-8rk"/>
+                                            <constraint firstAttribute="trailing" secondItem="8iU-oM-7ba" secondAttribute="trailing" constant="4" id="aVW-qT-Wn4"/>
+                                            <constraint firstItem="1Tr-aW-GoG" firstAttribute="top" secondItem="sVw-NU-ty8" secondAttribute="bottom" id="bYt-QQ-WTO"/>
+                                            <constraint firstItem="M2A-Tz-E4F" firstAttribute="top" secondItem="Y9O-39-WCo" secondAttribute="bottom" constant="8" id="cbY-J2-xlv"/>
+                                            <constraint firstItem="M2A-Tz-E4F" firstAttribute="leading" secondItem="nWk-J1-8hu" secondAttribute="leading" constant="8" id="ctJ-6p-ISF"/>
+                                            <constraint firstItem="dMx-P0-4gt" firstAttribute="leading" secondItem="nWk-J1-8hu" secondAttribute="leading" constant="8" id="dV8-ho-lLo"/>
+                                            <constraint firstAttribute="trailing" secondItem="Y9O-39-WCo" secondAttribute="trailing" constant="4" id="df8-lP-Pec"/>
+                                            <constraint firstItem="J1P-kC-dXo" firstAttribute="top" secondItem="kNd-AG-BxR" secondAttribute="bottom" constant="8" symbolic="YES" id="doH-lM-C0d"/>
+                                            <constraint firstItem="mE4-yb-vD4" firstAttribute="top" secondItem="ZZ1-Om-Pju" secondAttribute="bottom" id="gOP-jI-TQt"/>
+                                            <constraint firstAttribute="trailing" secondItem="I6D-eC-JDj" secondAttribute="trailing" constant="4" id="gVc-qL-d4B"/>
+                                            <constraint firstAttribute="trailing" secondItem="QaL-pQ-c15" secondAttribute="trailing" constant="8" id="ggq-S4-BGm"/>
+                                            <constraint firstAttribute="trailing" secondItem="M2A-Tz-E4F" secondAttribute="trailing" constant="8" id="ghP-Gf-El3"/>
+                                            <constraint firstAttribute="trailing" secondItem="pXh-6t-Fhb" secondAttribute="trailing" constant="8" id="iYv-L2-BDd"/>
+                                            <constraint firstItem="6qL-Iz-ws2" firstAttribute="top" secondItem="ayo-lV-fzU" secondAttribute="bottom" id="jD5-2z-gDZ"/>
+                                            <constraint firstAttribute="trailing" secondItem="ZZ1-Om-Pju" secondAttribute="trailing" constant="8" id="jvO-nW-iZU"/>
+                                            <constraint firstItem="ZZ1-Om-Pju" firstAttribute="leading" secondItem="nWk-J1-8hu" secondAttribute="leading" constant="8" id="kqg-c9-1D3"/>
+                                            <constraint firstItem="Kp4-nu-c5n" firstAttribute="top" secondItem="2ix-mK-ngR" secondAttribute="bottom" id="mue-0Z-Psg"/>
+                                            <constraint firstAttribute="trailing" secondItem="rxT-u3-bE2" secondAttribute="trailing" constant="8" id="nOX-fa-VGJ"/>
+                                            <constraint firstItem="iJn-ce-mk5" firstAttribute="leading" secondItem="nWk-J1-8hu" secondAttribute="leading" constant="4" id="nZg-cL-mt7"/>
+                                            <constraint firstItem="d54-T6-fbR" firstAttribute="leading" secondItem="nWk-J1-8hu" secondAttribute="leading" constant="4" id="p4i-R6-hFe"/>
+                                            <constraint firstAttribute="trailing" secondItem="2ix-mK-ngR" secondAttribute="trailing" constant="4" id="rLi-1m-c3V"/>
+                                            <constraint firstItem="aSS-Mn-gSp" firstAttribute="leading" secondItem="nWk-J1-8hu" secondAttribute="leading" constant="4" id="rg2-Ug-gKJ"/>
+                                            <constraint firstAttribute="trailing" secondItem="Qgx-n7-80I" secondAttribute="trailing" constant="8" id="rgw-Hz-URe"/>
+                                            <constraint firstItem="ZZ1-Om-Pju" firstAttribute="top" secondItem="I6D-eC-JDj" secondAttribute="bottom" constant="8" id="s0J-Cb-bfU"/>
+                                            <constraint firstItem="I6D-eC-JDj" firstAttribute="leading" secondItem="nWk-J1-8hu" secondAttribute="leading" constant="4" id="sTt-KD-pgd"/>
+                                            <constraint firstItem="d54-T6-fbR" firstAttribute="top" secondItem="GHx-01-vzb" secondAttribute="bottom" id="sqE-X9-LDZ"/>
+                                            <constraint firstItem="rxT-u3-bE2" firstAttribute="top" secondItem="iJn-ce-mk5" secondAttribute="bottom" constant="8" id="ulR-ZH-9M3"/>
+                                            <constraint firstItem="2ix-mK-ngR" firstAttribute="top" secondItem="6qL-Iz-ws2" secondAttribute="bottom" constant="8" symbolic="YES" id="w6D-eB-KOt"/>
+                                            <constraint firstItem="kNd-AG-BxR" firstAttribute="leading" secondItem="nWk-J1-8hu" secondAttribute="leading" constant="4" id="wis-5d-jhw"/>
+                                            <constraint firstItem="8iU-oM-7ba" firstAttribute="top" secondItem="Qgx-n7-80I" secondAttribute="bottom" id="x7x-p2-kYy"/>
+                                            <constraint firstItem="kNd-AG-BxR" firstAttribute="top" secondItem="Kp4-nu-c5n" secondAttribute="bottom" constant="8" symbolic="YES" id="xb3-XT-4vl"/>
+                                            <constraint firstItem="Y8l-bb-lXk" firstAttribute="leading" secondItem="nWk-J1-8hu" secondAttribute="leading" constant="8" id="xlA-hs-iyS"/>
+                                            <constraint firstItem="mE4-yb-vD4" firstAttribute="top" secondItem="ZZ1-Om-Pju" secondAttribute="bottom" id="y8a-3U-6NW"/>
+                                            <constraint firstItem="Y9O-39-WCo" firstAttribute="top" secondItem="dMx-P0-4gt" secondAttribute="bottom" id="ztx-Q5-N2m"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="nWk-J1-8hu" firstAttribute="leading" secondItem="y11-bG-R62" secondAttribute="leading" id="CHV-fj-c3E"/>
+                                    <constraint firstItem="nWk-J1-8hu" firstAttribute="width" secondItem="y11-bG-R62" secondAttribute="width" id="QnM-tZ-dge"/>
+                                    <constraint firstItem="nWk-J1-8hu" firstAttribute="top" secondItem="y11-bG-R62" secondAttribute="top" id="ayT-1K-hoN"/>
+                                    <constraint firstAttribute="bottom" secondItem="nWk-J1-8hu" secondAttribute="bottom" id="srG-G9-7Yq"/>
+                                    <constraint firstAttribute="trailing" secondItem="nWk-J1-8hu" secondAttribute="trailing" id="zcj-g8-ELu"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3Zq-hY-4A8"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="3Zq-hY-4A8" firstAttribute="trailing" secondItem="y11-bG-R62" secondAttribute="trailing" id="4WD-BV-Ibb"/>
+                            <constraint firstItem="3Zq-hY-4A8" firstAttribute="bottom" secondItem="y11-bG-R62" secondAttribute="bottom" id="aFk-3d-sbf"/>
+                            <constraint firstItem="y11-bG-R62" firstAttribute="leading" secondItem="1jm-ei-YQ4" secondAttribute="leading" id="dah-B1-Pb1"/>
+                            <constraint firstItem="y11-bG-R62" firstAttribute="top" secondItem="1jm-ei-YQ4" secondAttribute="top" id="mno-C5-Cih"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x1o-Iz-iO7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="971.01449275362324" y="-9.375"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="aaW-xG-t9R">
+            <objects>
+                <viewController storyboardIdentifier="suscripEng" useStoryboardIdentifierAsRestorationIdentifier="YES" id="JtD-Ef-oQS" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ups-SR-ZyL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Y1-XX-yyM">
+                                <rect key="frame" x="0.0" y="48" width="414" height="848"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rzU-5K-0zW">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1100"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UUx-DL-gZH">
+                                                <rect key="frame" x="8" y="8" width="397" height="0.0"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" id="kdo-50-v7X"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="justified" selectable="NO" findInteractionEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dsv-R1-GhN">
+                                                <rect key="frame" x="4" y="8" width="406" height="60"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="h4h-T0-xHX"/>
+                                                </constraints>
+                                                <string key="text">Welcome to Stickjoy, the platform to celebrate and share your unforgettable moments with friends! Before subscribing to our Premium service, please read the following terms and conditions carefully:</string>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wfu-Z7-Zri">
+                                                <rect key="frame" x="8" y="76" width="398" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="DJh-bF-KxY"/>
+                                                </constraints>
+                                                <string key="text">Advertising Removal
+</string>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Content Upload" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VQ0-bh-Qwc">
+                                                <rect key="frame" x="8" y="153" width="398" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="67u-Fl-WdT"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yNU-3O-I5b">
+                                                <rect key="frame" x="4" y="100" width="406" height="45"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="rV6-es-RON"/>
+                                                </constraints>
+                                                <string key="text">By subscribing to our Premium option, you will enjoy an ad-free experience in your albums and your profile.
+</string>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m9M-pB-Vet">
+                                                <rect key="frame" x="8" y="260" width="398" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="0uf-Be-wbN"/>
+                                                </constraints>
+                                                <string key="text">Privacy and Data Control
+</string>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tvd-yV-Oly">
+                                                <rect key="frame" x="8" y="340" width="398" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="fLX-HM-qD1"/>
+                                                </constraints>
+                                                <string key="text">Payments to Third Parties
+</string>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1bS-xf-lz0">
+                                                <rect key="frame" x="8" y="431" width="398" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="qb3-rA-Qzx"/>
+                                                </constraints>
+                                                <string key="text">Age Restriction
+</string>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Yd-oY-KGg">
+                                                <rect key="frame" x="4" y="284" width="406" height="48"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="48" id="e7N-Ms-T8P"/>
+                                                </constraints>
+                                                <string key="text">Premium option subscribers will have the same privacy options as free users, maintaining full control over who can access their albums.
+</string>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PtI-YG-lV5">
+                                                <rect key="frame" x="4" y="364" width="406" height="59"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="59" id="dd8-UD-07R"/>
+                                                </constraints>
+                                                <string key="text">Payment transactions will be processed through third-party payment service providers, so we do not store or have access to users' payment information.
+</string>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="izQ-Pw-fja">
+                                                <rect key="frame" x="4" y="455" width="406" height="74"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="74" id="72s-SB-Kdc"/>
+                                                </constraints>
+                                                <string key="text">Our services are intended only for users who have reached the legal age of majority in their country of residence. If you have not reached the legal age of majority, you can only use Stickjoy under the supervision of your legal guardian or parents.
+</string>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E1R-2X-RRm">
+                                                <rect key="frame" x="8" y="537" width="398" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="phi-aA-ZBY"/>
+                                                </constraints>
+                                                <string key="text">Personal Data
+</string>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wfr-Qu-AU5">
+                                                <rect key="frame" x="4" y="561" width="406" height="45"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="dxw-ZO-v4h"/>
+                                                </constraints>
+                                                <string key="text">The processing and protection of personal data are governed by our Privacy Policy, available in the app's Settings menu.
+</string>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ol-MT-vtf">
+                                                <rect key="frame" x="8" y="614" width="398" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="PTi-NN-EMP"/>
+                                                </constraints>
+                                                <string key="text">Non-Refundable
+</string>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K3c-lu-8Tf">
+                                                <rect key="frame" x="4" y="638" width="406" height="45"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="a1x-Pn-QZe"/>
+                                                </constraints>
+                                                <string key="text">The Premium subscription is a non-refundable service, and no refunds are provided for partial periods of use.
+</string>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cancellation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YXg-h6-cXe">
+                                                <rect key="frame" x="8" y="691" width="398" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="JV0-RC-sKm"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kev-jW-0yE">
+                                                <rect key="frame" x="4" y="715" width="406" height="45"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="4rv-f1-UwM"/>
+                                                </constraints>
+                                                <string key="text">If you wish to cancel your subscription, you must do so through your device's App Store.
+</string>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cr1-mV-aom">
+                                                <rect key="frame" x="8" y="768" width="398" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="Qas-O9-2t2"/>
+                                                </constraints>
+                                                <string key="text">App Closure
+</string>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Im-JC-VVk">
+                                                <rect key="frame" x="4" y="792" width="406" height="49"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="49" id="U9u-4m-hIJ"/>
+                                                </constraints>
+                                                <string key="text">In the event that the app is permanently or indefinitely closed, we will not be responsible for data recovery or subscription fee refunds.
+</string>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fYH-ib-fG7">
+                                                <rect key="frame" x="8" y="849" width="398" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="oiA-9L-vFW"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J77-On-yoJ">
+                                                <rect key="frame" x="4" y="873" width="406" height="45"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="sVA-sJ-2PZ"/>
+                                                </constraints>
+                                                <string key="text">If you wish to get in touch with us, you can do so through the email address: administracion@stickjoy.app
+</string>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dRo-tK-SDm">
+                                                <rect key="frame" x="8" y="926" width="402" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="79d-lL-Z9o"/>
+                                                </constraints>
+                                                <string key="text">Changes and Updates
+</string>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xXj-ni-XKS">
+                                                <rect key="frame" x="4" y="950" width="406" height="59"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="59" id="d8L-x8-7fh"/>
+                                                </constraints>
+                                                <string key="text">We reserve the right to make changes to the subscription terms and conditions, as well as the services offered, with prior notification to users.</string>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HbM-lm-nNl">
+                                                <rect key="frame" x="4" y="1017" width="406" height="60"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="r5B-aS-9Yw"/>
+                                                </constraints>
+                                                <string key="text">By subscribing to Stickjoy Premium, you accept and agree to these terms and conditions. We recommend reviewing this section periodically to stay informed of any updates or changes.
+</string>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Thank you for being a part of Stickjoy and for choosing our Premium subscription to make your memories unforgettable!" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WsV-hx-AuA">
+                                                <rect key="frame" x="4" y="1085" width="406" height="45"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="td7-0L-FiH"/>
+                                                </constraints>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hvx-kt-e68">
+                                                <rect key="frame" x="4" y="177" width="406" height="75"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="75" id="T0c-Mh-AAL"/>
+                                                </constraints>
+                                                <string key="text">By subscribing to our premium service, you’ll have the advantage of uploading multiple photos and/or videos simultaneously. This feature provides you with greater convenience and efficiency in managing your content, allowing you to fully enjoy your user experience.</string>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="HbM-lm-nNl" firstAttribute="leading" secondItem="rzU-5K-0zW" secondAttribute="leading" constant="4" id="05v-Ds-0IH"/>
+                                            <constraint firstItem="izQ-Pw-fja" firstAttribute="top" secondItem="1bS-xf-lz0" secondAttribute="bottom" id="0dv-i2-noX"/>
+                                            <constraint firstAttribute="trailing" secondItem="VQ0-bh-Qwc" secondAttribute="trailing" constant="8" id="0oU-md-J61"/>
+                                            <constraint firstItem="UUx-DL-gZH" firstAttribute="leading" secondItem="rzU-5K-0zW" secondAttribute="leading" constant="8" id="10b-dI-XAY"/>
+                                            <constraint firstItem="hvx-kt-e68" firstAttribute="top" secondItem="VQ0-bh-Qwc" secondAttribute="bottom" id="14U-B6-aKl"/>
+                                            <constraint firstItem="HbM-lm-nNl" firstAttribute="top" secondItem="xXj-ni-XKS" secondAttribute="bottom" constant="8" symbolic="YES" id="2TT-Ti-kS3"/>
+                                            <constraint firstItem="8Yd-oY-KGg" firstAttribute="top" secondItem="m9M-pB-Vet" secondAttribute="bottom" id="34r-57-vTk"/>
+                                            <constraint firstItem="J77-On-yoJ" firstAttribute="top" secondItem="fYH-ib-fG7" secondAttribute="bottom" id="43j-rh-OBm"/>
+                                            <constraint firstItem="YXg-h6-cXe" firstAttribute="top" secondItem="K3c-lu-8Tf" secondAttribute="bottom" constant="8" id="4bj-GA-Ram"/>
+                                            <constraint firstItem="kev-jW-0yE" firstAttribute="top" secondItem="YXg-h6-cXe" secondAttribute="bottom" id="4gj-D4-3vt"/>
+                                            <constraint firstAttribute="trailing" secondItem="dRo-tK-SDm" secondAttribute="trailing" constant="4" id="5Bg-EP-uhi"/>
+                                            <constraint firstItem="fYH-ib-fG7" firstAttribute="top" secondItem="4Im-JC-VVk" secondAttribute="bottom" constant="8" symbolic="YES" id="8eF-Js-box"/>
+                                            <constraint firstItem="Cr1-mV-aom" firstAttribute="top" secondItem="kev-jW-0yE" secondAttribute="bottom" constant="8" id="8gq-Eq-DBj"/>
+                                            <constraint firstItem="yNU-3O-I5b" firstAttribute="top" secondItem="wfu-Z7-Zri" secondAttribute="bottom" id="8wc-ZZ-ewJ"/>
+                                            <constraint firstItem="8Yd-oY-KGg" firstAttribute="leading" secondItem="rzU-5K-0zW" secondAttribute="leading" constant="4" id="9VF-OI-gaV"/>
+                                            <constraint firstItem="3Ol-MT-vtf" firstAttribute="leading" secondItem="rzU-5K-0zW" secondAttribute="leading" constant="8" id="9VR-dD-zx6"/>
+                                            <constraint firstAttribute="trailing" secondItem="4Im-JC-VVk" secondAttribute="trailing" constant="4" id="9d3-Ib-uhu"/>
+                                            <constraint firstAttribute="trailing" secondItem="UUx-DL-gZH" secondAttribute="trailing" constant="9" id="A5c-Ci-pnY"/>
+                                            <constraint firstItem="hvx-kt-e68" firstAttribute="leading" secondItem="rzU-5K-0zW" secondAttribute="leading" constant="4" id="CoR-Er-PWM"/>
+                                            <constraint firstItem="PtI-YG-lV5" firstAttribute="leading" secondItem="rzU-5K-0zW" secondAttribute="leading" constant="4" id="EL8-0n-hvL"/>
+                                            <constraint firstItem="WsV-hx-AuA" firstAttribute="leading" secondItem="rzU-5K-0zW" secondAttribute="leading" constant="4" id="EQw-MB-kx4"/>
+                                            <constraint firstItem="wfu-Z7-Zri" firstAttribute="leading" secondItem="rzU-5K-0zW" secondAttribute="leading" constant="8" id="EYS-Lc-bfF"/>
+                                            <constraint firstAttribute="trailing" secondItem="Cr1-mV-aom" secondAttribute="trailing" constant="8" id="F2q-vt-tz4"/>
+                                            <constraint firstItem="izQ-Pw-fja" firstAttribute="leading" secondItem="rzU-5K-0zW" secondAttribute="leading" constant="4" id="FL9-rn-Vw2"/>
+                                            <constraint firstAttribute="trailing" secondItem="3Ol-MT-vtf" secondAttribute="trailing" constant="8" id="FMB-tA-OKm"/>
+                                            <constraint firstItem="K3c-lu-8Tf" firstAttribute="top" secondItem="3Ol-MT-vtf" secondAttribute="bottom" id="Fhz-L5-dMR"/>
+                                            <constraint firstAttribute="trailing" secondItem="1bS-xf-lz0" secondAttribute="trailing" constant="8" id="G1H-Mf-1Gx"/>
+                                            <constraint firstItem="PtI-YG-lV5" firstAttribute="top" secondItem="tvd-yV-Oly" secondAttribute="bottom" id="HVD-r4-QWQ"/>
+                                            <constraint firstItem="YXg-h6-cXe" firstAttribute="leading" secondItem="rzU-5K-0zW" secondAttribute="leading" constant="8" id="Ibf-fn-m6H"/>
+                                            <constraint firstAttribute="trailing" secondItem="8Yd-oY-KGg" secondAttribute="trailing" constant="4" id="Ie4-NS-S3r"/>
+                                            <constraint firstAttribute="trailing" secondItem="WsV-hx-AuA" secondAttribute="trailing" constant="4" id="K10-eK-N7f"/>
+                                            <constraint firstItem="xXj-ni-XKS" firstAttribute="leading" secondItem="rzU-5K-0zW" secondAttribute="leading" constant="4" id="KBw-Y6-8Bj"/>
+                                            <constraint firstAttribute="trailing" secondItem="tvd-yV-Oly" secondAttribute="trailing" constant="8" id="Kw0-Jl-adp"/>
+                                            <constraint firstItem="xXj-ni-XKS" firstAttribute="top" secondItem="dRo-tK-SDm" secondAttribute="bottom" id="L0V-bh-C4V"/>
+                                            <constraint firstItem="kev-jW-0yE" firstAttribute="top" secondItem="YXg-h6-cXe" secondAttribute="bottom" id="Lcd-VJ-OPd"/>
+                                            <constraint firstItem="UUx-DL-gZH" firstAttribute="top" secondItem="rzU-5K-0zW" secondAttribute="top" constant="8" id="Llm-6F-sBC"/>
+                                            <constraint firstAttribute="trailing" secondItem="E1R-2X-RRm" secondAttribute="trailing" constant="8" id="MRP-OP-RJ2"/>
+                                            <constraint firstItem="E1R-2X-RRm" firstAttribute="leading" secondItem="rzU-5K-0zW" secondAttribute="leading" constant="8" id="Mfk-mr-7ZP"/>
+                                            <constraint firstAttribute="trailing" secondItem="wfu-Z7-Zri" secondAttribute="trailing" constant="8" id="Nby-uC-rRF"/>
+                                            <constraint firstAttribute="trailing" secondItem="K3c-lu-8Tf" secondAttribute="trailing" constant="4" id="NgR-gL-HL7"/>
+                                            <constraint firstItem="Cr1-mV-aom" firstAttribute="leading" secondItem="rzU-5K-0zW" secondAttribute="leading" constant="8" id="POy-La-b2h"/>
+                                            <constraint firstAttribute="trailing" secondItem="kev-jW-0yE" secondAttribute="trailing" constant="4" id="PSn-64-VDB"/>
+                                            <constraint firstItem="wfr-Qu-AU5" firstAttribute="leading" secondItem="rzU-5K-0zW" secondAttribute="leading" constant="4" id="PXB-6q-4yk"/>
+                                            <constraint firstItem="fYH-ib-fG7" firstAttribute="leading" secondItem="rzU-5K-0zW" secondAttribute="leading" constant="8" id="PxJ-LJ-QmQ"/>
+                                            <constraint firstAttribute="trailing" secondItem="xXj-ni-XKS" secondAttribute="trailing" constant="4" id="Q2h-md-jJ1"/>
+                                            <constraint firstItem="tvd-yV-Oly" firstAttribute="top" secondItem="8Yd-oY-KGg" secondAttribute="bottom" constant="8" id="SaG-8w-Laq"/>
+                                            <constraint firstItem="m9M-pB-Vet" firstAttribute="leading" secondItem="rzU-5K-0zW" secondAttribute="leading" constant="8" id="TCe-8l-fuQ"/>
+                                            <constraint firstItem="wfu-Z7-Zri" firstAttribute="top" secondItem="dsv-R1-GhN" secondAttribute="bottom" constant="8" id="Tfv-ke-Q6x"/>
+                                            <constraint firstItem="8Yd-oY-KGg" firstAttribute="top" secondItem="m9M-pB-Vet" secondAttribute="bottom" id="TvC-CI-qIf"/>
+                                            <constraint firstItem="kev-jW-0yE" firstAttribute="leading" secondItem="rzU-5K-0zW" secondAttribute="leading" constant="4" id="UCb-wu-DAp"/>
+                                            <constraint firstItem="4Im-JC-VVk" firstAttribute="top" secondItem="Cr1-mV-aom" secondAttribute="bottom" id="Ua1-RS-fWV"/>
+                                            <constraint firstAttribute="trailing" secondItem="J77-On-yoJ" secondAttribute="trailing" constant="4" id="VH9-fB-8Wj"/>
+                                            <constraint firstItem="VQ0-bh-Qwc" firstAttribute="top" secondItem="yNU-3O-I5b" secondAttribute="bottom" constant="8" id="WDQ-OF-iul"/>
+                                            <constraint firstItem="K3c-lu-8Tf" firstAttribute="leading" secondItem="rzU-5K-0zW" secondAttribute="leading" constant="4" id="X7K-sg-53B"/>
+                                            <constraint firstAttribute="height" constant="1100" id="XwO-sk-AOk"/>
+                                            <constraint firstAttribute="trailing" secondItem="hvx-kt-e68" secondAttribute="trailing" constant="4" id="ZhE-NZ-NGh"/>
+                                            <constraint firstItem="1bS-xf-lz0" firstAttribute="leading" secondItem="rzU-5K-0zW" secondAttribute="leading" constant="8" id="aKd-6B-o8g"/>
+                                            <constraint firstItem="m9M-pB-Vet" firstAttribute="top" secondItem="hvx-kt-e68" secondAttribute="bottom" constant="8" id="aMH-No-8GX"/>
+                                            <constraint firstAttribute="trailing" secondItem="dsv-R1-GhN" secondAttribute="trailing" constant="4" id="bEC-2E-40N"/>
+                                            <constraint firstAttribute="trailing" secondItem="yNU-3O-I5b" secondAttribute="trailing" constant="4" id="bQU-r0-dis"/>
+                                            <constraint firstAttribute="trailing" secondItem="PtI-YG-lV5" secondAttribute="trailing" constant="4" id="bRb-x8-nR5"/>
+                                            <constraint firstItem="E1R-2X-RRm" firstAttribute="top" secondItem="izQ-Pw-fja" secondAttribute="bottom" constant="8" id="bYd-Rc-uNa"/>
+                                            <constraint firstItem="J77-On-yoJ" firstAttribute="top" secondItem="fYH-ib-fG7" secondAttribute="bottom" id="c3U-9y-AVU"/>
+                                            <constraint firstItem="VQ0-bh-Qwc" firstAttribute="leading" secondItem="rzU-5K-0zW" secondAttribute="leading" constant="8" id="cnX-1v-O2b"/>
+                                            <constraint firstItem="K3c-lu-8Tf" firstAttribute="top" secondItem="3Ol-MT-vtf" secondAttribute="bottom" id="dOq-1J-61q"/>
+                                            <constraint firstItem="yNU-3O-I5b" firstAttribute="leading" secondItem="rzU-5K-0zW" secondAttribute="leading" constant="4" id="dbi-5z-cPP"/>
+                                            <constraint firstItem="1bS-xf-lz0" firstAttribute="top" secondItem="PtI-YG-lV5" secondAttribute="bottom" constant="8" id="fc7-d5-gsz"/>
+                                            <constraint firstItem="wfr-Qu-AU5" firstAttribute="top" secondItem="E1R-2X-RRm" secondAttribute="bottom" id="gnf-PA-fjW"/>
+                                            <constraint firstItem="tvd-yV-Oly" firstAttribute="leading" secondItem="rzU-5K-0zW" secondAttribute="leading" constant="8" id="h0b-Dk-TMk"/>
+                                            <constraint firstAttribute="trailing" secondItem="HbM-lm-nNl" secondAttribute="trailing" constant="4" id="i3T-Rt-PKQ"/>
+                                            <constraint firstItem="4Im-JC-VVk" firstAttribute="leading" secondItem="rzU-5K-0zW" secondAttribute="leading" constant="4" id="l5z-B8-dn9"/>
+                                            <constraint firstItem="J77-On-yoJ" firstAttribute="leading" secondItem="rzU-5K-0zW" secondAttribute="leading" constant="4" id="lMv-bj-7jI"/>
+                                            <constraint firstAttribute="trailing" secondItem="izQ-Pw-fja" secondAttribute="trailing" constant="4" id="mGQ-v5-Jnj"/>
+                                            <constraint firstAttribute="trailing" secondItem="fYH-ib-fG7" secondAttribute="trailing" constant="8" id="nW1-XM-pej"/>
+                                            <constraint firstItem="dsv-R1-GhN" firstAttribute="top" secondItem="UUx-DL-gZH" secondAttribute="bottom" id="ndp-NY-dGM"/>
+                                            <constraint firstAttribute="trailing" secondItem="m9M-pB-Vet" secondAttribute="trailing" constant="8" id="njr-ae-7Sy"/>
+                                            <constraint firstItem="dRo-tK-SDm" firstAttribute="top" secondItem="J77-On-yoJ" secondAttribute="bottom" constant="8" symbolic="YES" id="o7P-Zj-WcW"/>
+                                            <constraint firstItem="wfr-Qu-AU5" firstAttribute="top" secondItem="E1R-2X-RRm" secondAttribute="bottom" id="pdJ-je-Mpp"/>
+                                            <constraint firstItem="dRo-tK-SDm" firstAttribute="leading" secondItem="rzU-5K-0zW" secondAttribute="leading" constant="8" id="qLb-2P-lT5"/>
+                                            <constraint firstItem="dsv-R1-GhN" firstAttribute="leading" secondItem="rzU-5K-0zW" secondAttribute="leading" constant="4" id="qhy-ty-Zae"/>
+                                            <constraint firstItem="4Im-JC-VVk" firstAttribute="top" secondItem="Cr1-mV-aom" secondAttribute="bottom" id="riw-KV-GZu"/>
+                                            <constraint firstItem="3Ol-MT-vtf" firstAttribute="top" secondItem="wfr-Qu-AU5" secondAttribute="bottom" constant="8" id="vlZ-Ke-Zzi"/>
+                                            <constraint firstItem="WsV-hx-AuA" firstAttribute="top" secondItem="HbM-lm-nNl" secondAttribute="bottom" constant="8" symbolic="YES" id="wPX-8l-u8Y"/>
+                                            <constraint firstItem="xXj-ni-XKS" firstAttribute="top" secondItem="dRo-tK-SDm" secondAttribute="bottom" id="wne-jb-hYz"/>
+                                            <constraint firstAttribute="trailing" secondItem="wfr-Qu-AU5" secondAttribute="trailing" constant="4" id="yGy-b9-NQo"/>
+                                            <constraint firstAttribute="trailing" secondItem="YXg-h6-cXe" secondAttribute="trailing" constant="8" id="yV4-6j-THa"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="rzU-5K-0zW" firstAttribute="width" secondItem="6Y1-XX-yyM" secondAttribute="width" id="JCb-eT-IQU"/>
+                                    <constraint firstItem="rzU-5K-0zW" firstAttribute="top" secondItem="6Y1-XX-yyM" secondAttribute="top" id="LOu-bp-Wz1"/>
+                                    <constraint firstAttribute="trailing" secondItem="rzU-5K-0zW" secondAttribute="trailing" id="Ug2-Yg-mKJ"/>
+                                    <constraint firstItem="rzU-5K-0zW" firstAttribute="leading" secondItem="6Y1-XX-yyM" secondAttribute="leading" id="ZAG-DB-TJR"/>
+                                    <constraint firstAttribute="bottom" secondItem="rzU-5K-0zW" secondAttribute="bottom" id="aBH-bK-mow"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="g4a-UH-VDU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="6Y1-XX-yyM" secondAttribute="bottom" id="7b7-bK-Kbu"/>
+                            <constraint firstItem="6Y1-XX-yyM" firstAttribute="leading" secondItem="ups-SR-ZyL" secondAttribute="leading" id="UT6-lZ-Lnh"/>
+                            <constraint firstItem="6Y1-XX-yyM" firstAttribute="top" secondItem="g4a-UH-VDU" secondAttribute="top" id="db0-bd-Nvk"/>
+                            <constraint firstItem="g4a-UH-VDU" firstAttribute="trailing" secondItem="6Y1-XX-yyM" secondAttribute="trailing" id="ira-mG-JNk"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iUH-J0-ves" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1899" y="-52"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

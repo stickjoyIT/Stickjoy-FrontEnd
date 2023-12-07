@@ -9,6 +9,7 @@
 
 import SwiftUI
 
+@available(iOS 16.0, *)
 struct EditableProfileScreen: View {
     //DeleteAlbumMenu
     @State private var isDeleteAlbumMenuPresented = false
@@ -75,6 +76,7 @@ struct EditableProfileScreen: View {
     }
 }
 
+@available(iOS 16.0, *)
 struct EditableProfileScreen_Previews: PreviewProvider {
     static var previews: some View {
         EditableProfileScreen()

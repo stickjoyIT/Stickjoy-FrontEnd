@@ -85,6 +85,7 @@ struct EditableProfileBody: View {
     }
 }
 
+@available(iOS 16.0, *)
 struct EditableProfileBody_Previews: PreviewProvider {
     static var previews: some View {
         EditableProfileScreen()

@@ -11,121 +11,146 @@
 import SwiftUI
 
 struct AlbumInfoPanelScreen: View {
+    @Environment (\.dismiss) var dismiss
+    @Binding var id_album:String
+    @Binding var id_user:String
+    @ObservedObject var avm = AlbumViewModel()
+    @Binding var lenguaje:String
+    @State var myId = UserDefaults.standard.string(forKey: "id") ?? ""
+    @State var album_info = AlbumInfo(id: "", albumTitle: "", albumImage: "", albumAdministrator: "", albumCreation: "", albumUpdate: "", albumType: "", albumParticipants: "", albumPrivacy: 0, id_album: "", owner_id: "", description: "", userOwner: "", isCollap: false)
+    @Binding var isColaborator:Bool
+    @Binding var editC:Bool
     var body: some View {
-        ScrollView {
-            VStack(alignment: .center, spacing: 16) {
-                Button(action: {
-                    //Añadir acción de regresar
-                }){
-                    Image(systemName: "arrow.left.circle.fill")
-                        .font(.title)
-                        .foregroundColor(.secondary)
-                        .padding(.horizontal)
-                    Spacer()
-                }
-                HStack(alignment: .center) {
-                    
+        VStack {
+            VStack(alignment: .leading) {
+                HStack {
+                    Button(action: {
+                        //Añadir acción de regresar
+                        dismiss()
+                    }){
+                        Image(systemName: "arrow.left.circle.fill")
+                            .font(.title)
+                            .foregroundColor(.secondary)
+                            .padding(.horizontal)
+                    }
                     //Título
-                    Text("Album Information")
+                    Text(lenguaje == "es" ? "Información de álbum" : "Album Information")
                         .font(.largeTitle)
                         .bold()
                         .padding(.horizontal)
-                }
-                
-                //Este VStack es para que esto esté leading y el título centered.
-                VStack(alignment: .leading){
-                    
-                    //Esto está en este mismo código, abajo.
-                    AlbumInfoPanelSection()
-                    
-                    Divider()
-                    
-                    //Esto está en este mismo código, abajo.
-                    AlbumCollaboratorsSection()
-                    
                     Spacer()
                 }
-                    
-                    VStack(alignment: .center) {
-                        Button(action: {
-                            
-                          //El botón de editar solo aparece solo está activado o visible si el usuario participa en ese álbum.
-                        }) {
-                            Text("Edit Album")
-                                .foregroundColor(.black)
-                                .frame(width: 250)
-                                .padding()
-                                .background(Color.customYellow)
-                                .cornerRadius(32)
-                        }
-                        
-                        //Texto de aviso para usuarios que no son administradores. Recordar que si no es admin, no puede editar mas que eliminar sus propias fotos.
-                        Text("If you are not admin, you can only delete the content you uploaded.")
-                            .multilineTextAlignment(.center)
-                            .frame(width: 300)
-                    }
             }
+            ScrollView {
+                VStack(alignment: .center, spacing: 16) {
+                    //Este VStack es para que esto esté leading y el título centered.
+                    VStack(alignment: .leading){
+                        //Esto está en este mismo código, abajo.
+                        AlbumInfoPanelSection(albumInfo: $album_info, lenguaje: $lenguaje)
+                        Divider()
+                        //Esto está en este mismo código, abajo.
+                        //AlbumCollaboratorsSection()
+                        Spacer()
+                    }
+                    if isColaborator {
+                        VStack(alignment: .center) {
+                            Button(action: {
+                              //El botón de editar solo aparece solo está activado o visible si el usuario participa en ese álbum.
+                                editC = true
+                                dismiss()
+                            }) {
+                                Text(lenguaje == "es" ? "Editar álbum": "Edit album")
+                                    .foregroundColor(.black)
+                                    .frame(width: 250)
+                                    .padding()
+                                    .background(Color.customYellow)
+                                    .cornerRadius(32)
+                            }
+                            
+                            //Texto de aviso para usuarios que no son administradores. Recordar que si no es admin, no puede editar mas que eliminar sus propias fotos.
+                            Text(lenguaje == "es" ? "Si no eres administrador, solo puedes eliminar el contenido que subiste" : "If you are not admin, you can only delete the content you uploaded.")
+                                .multilineTextAlignment(.center)
+                                .frame(width: 300)
+                        }
+                    }
+                }
+            }
+            .navigationBarTitleDisplayMode(.inline)
+            .onAppear{
+                avm.getAlbumViewInfo(id_album: id_album, id_user: id_user, albumInfo: { albm in
+                    album_info = albm
+                }, isColaborator: { c in
+                    isColaborator = c
+                })
         }
-        .navigationBarTitleDisplayMode(.inline)
+        }
     }
 }
 
 struct AlbumInfoPanelScreen_Previews: PreviewProvider {
     static var previews: some View {
-        AlbumInfoPanelScreen()
+        AlbumInfoPanelScreen(id_album: .constant(""), id_user: .constant(""), lenguaje: .constant("es"), isColaborator: .constant(false), editC: .constant(false))
     }
 }
 
 // Sección de Información de Álbum
 struct AlbumInfoPanelSection: View {
+    @Binding var albumInfo:AlbumInfo
+    @Binding var lenguaje:String
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
             HStack {
-                Text("Album Name:")
+                Text(lenguaje == "es" ? "Nombre del álbum:" : "Album Name:")
                 //Aquí va nombre original del album
-                Text("Album Name")
+                Text(albumInfo.albumTitle)
                     .bold()
             }
             HStack {
-                Text("Album Administrator:")
+                Text(lenguaje == "es" ? "Administrador del álbum:" : "Album Administrator:")
                 //Aquí va nombre original del username
-                Text("@username")
+                Text(albumInfo.albumAdministrator)
                     .bold()
             }
             HStack{
-                Text("Album Creation:")
+                Text(lenguaje == "es" ? "Fecha de creación:" : "Album Creation:")
                 //Aquí va fecha original de creación
-                Text("12/05/23")
+                Text(albumInfo.albumCreation)
                     .bold()
             }
             HStack{
-                Text("Album Creation: YYYY-MM-DD")
-                //Aquí va fecha original de actualización (última subida o modificación)
-                Text("23/05/23")
-                    .bold()
-            }
-            HStack{
-                Text("Album Last Update:")
+                Text(lenguaje == "es" ? "Última actualización:" : "Album Last Update:")
                 //Aquí va la cantidad original de elementos
-                Text("89")
+                Text(albumInfo.albumUpdate)
                     .bold()
             }
             HStack{
-                Text("Album Type")
+                Text(lenguaje == "es" ? "Tipo de álbum:" : "Album Type:")
                 //Aquí va el tipo de privacidad real
-                Text("Collaborative")
+                Text(albumInfo.albumType)
                     .bold()
             }
             HStack{
-                Text("Album Privacy:")
+                Text(lenguaje == "es" ? "Privacidad de álbum:" : "Album Privacy:")
                 //Aquí va el tipo de privacidad real
-                Text("Private")
-                    .bold()
+                switch albumInfo.albumPrivacy {
+                case 0:
+                    Text(lenguaje == "es" ? "Privado" : "Privacy")
+                        .bold()
+                case 1:
+                    Text(lenguaje == "es" ? "Amigos" : "Friends")
+                        .bold()
+                case 2:
+                    Text(lenguaje == "es" ? "Público" : "Public")
+                        .bold()
+                default:
+                    Text("")
+                        .bold()
+                }
             }
             HStack{
-                Text("Number of Collaborators:")
+                Text(lenguaje == "es" ? "Número de colaboradores:" : "Number of Collaborators:")
                 //Aquí va el número real de colaboradores
-                Text("5")
+                Text(albumInfo.albumParticipants)
                     .bold()
             }
         }

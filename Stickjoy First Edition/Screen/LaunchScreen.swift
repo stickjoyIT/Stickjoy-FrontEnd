@@ -11,13 +11,11 @@
 import SwiftUI
 
 struct LaunchScreen: View {
-    @State private var selectedLanguage: String?
     
+    @State private var selectedLanguage: String?
     @Binding var logueado: Bool
     @Binding var lenguaje:String
-    
     @State var loginView = false
-    
     @State var registerView = false
     
     var body: some View {
@@ -27,21 +25,14 @@ struct LaunchScreen: View {
                 
                 VStack {
                     Spacer() // Para empujar título a centro de pantalla
-                    
-                    /*Text("Stickjoy")
-                        .font(.largeTitle)
-                        .fontWeight(.bold)
-                        .padding()
-                        .foregroundColor(.black)*/
-                    Image("Logo_Stick")
-                    
+                    Image("Logo_Stick").resizable().frame(width: 134, height: 56).padding()
                     Spacer() // Para añadir espacio entre botones y título
                     
                     Button(action:  {
                         registerView = true
                         
                     }, label: {
-                        Text(lenguaje == "es" ? "Primera vez" : "First Time")
+                        Text(lenguaje == "es" ? "Primera vez" : "First time")
                             .foregroundColor(.white)
                             .frame(width: 250)
                             .padding()
@@ -52,7 +43,7 @@ struct LaunchScreen: View {
                     Button(action: {
                         loginView = true
                     }, label: {
-                        Text(lenguaje == "es" ? "Iniciar Sesión" : "Log In")
+                        Text(lenguaje == "es" ? "Iniciar sesión" : "Log In")
                             .foregroundColor(.black) // Set foreground color to black
                             .frame(width: 250)
                             .padding()
@@ -85,7 +76,7 @@ struct LaunchScreen: View {
                             lenguaje = "en"
                             UserDefaults.standard.set("en", forKey: "lenguaje")
                         }) {
-                            Text(lenguaje == "es" ? "Ingles" : "English")
+                            Text(lenguaje == "es" ? "Inglés" : "English")
                                 .fontWeight(lenguaje == "en" ? .bold : .regular)
                                 .frame(width: 80)
                                 .padding()
@@ -103,6 +94,12 @@ struct LaunchScreen: View {
                 .fullScreenCover(isPresented: $registerView){
                     SignInScreen(logueado: self.$logueado)
                 }
+            }
+        }.onAppear{
+            if let leng = UserDefaults.standard.string(forKey: "lenguaje") {
+                lenguaje = leng
+            } else {
+                UserDefaults.standard.set("es",forKey: "lenguaje")
             }
         }
     }

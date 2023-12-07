@@ -1,0 +1,52 @@
+{
+  "identifier" : "AE1880AA",
+  "nonRenewingSubscriptions" : [
+
+  ],
+  "products" : [
+
+  ],
+  "settings" : {
+
+  },
+  "subscriptionGroups" : [
+    {
+      "id" : "AFF3417D",
+      "localizations" : [
+
+      ],
+      "name" : "Stickjoy",
+      "subscriptions" : [
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "29.99",
+          "familyShareable" : false,
+          "groupNumber" : 1,
+          "internalID" : "2D284CF9",
+          "introductoryOffer" : null,
+          "localizations" : [
+            {
+              "description" : "Premium",
+              "displayName" : "Stickjoy",
+              "locale" : "en_US"
+            }
+          ],
+          "productID" : "com.Stickjoy.id",
+          "recurringSubscriptionPeriod" : "P1M",
+          "referenceName" : "Stickjoy",
+          "subscriptionGroupID" : "AFF3417D",
+          "type" : "RecurringSubscription"
+        }
+      ]
+    }
+  ],
+  "version" : {
+    "major" : 2,
+    "minor" : 0
+  }
+}

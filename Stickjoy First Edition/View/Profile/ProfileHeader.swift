@@ -6,44 +6,59 @@
 //
 
 import SwiftUI
+import Combine
 
+@available(iOS 16.0, *)
 struct ProfileHeader: View {
     //Adopción de Modo claro oscuro
     @Environment (\.colorScheme) var scheme
-    let name = UserDefaults.standard.string(forKey: "nombre") ?? "User Name"
-    
+    @Binding var name:String
+    @Binding var username:String
+    @Binding var description:String
     @Binding var editor:Bool
-    
+    let maxName = 20
+    let maxDescrip = 250
     var body: some View {
         
         ZStack(alignment: .top) {
             (scheme == .dark ? Color.black : Color.white) // Ensure the ZStack has a background color
-            
-            
             VStack(alignment: .leading, spacing: 8) {
                 HStack {
-                    Text(name)
-                        .font(.largeTitle)
-                        .fontWeight(.bold)
-                    
-                    Spacer()
-                    
-                    Button(action: {
-                        editor = true
-                        // Add your action here
-                    }) {
-                        Image(systemName: "pencil.circle.fill")
-                            .font(.title).foregroundColor(.blue)
+                    if editor {
+                        TextField(name, text: $name).font(.largeTitle)
+                            .fontWeight(.bold)
+                            .onReceive(Just(name)) { _ in limitText(maxName) }
+                    } else {
+                        Text(name)
+                            .font(.largeTitle)
+                            .fontWeight(.bold)
+                        
+                        Spacer()
+                        
+                        Button(action: {
+                            editor = true
+                            // Add your action here
+                        }) {
+                            Image(systemName: "pencil.circle.fill")
+                                .font(.title).foregroundColor(.blue)
+                        }
+                        //Añadí este frame para que el nombre de album quepa
+                        .frame(width: 20, height: 20)
                     }
-                    //Añadí este frame para que el nombre de album quepa
-                    .frame(width: 20, height: 20)
                 }
-                Text("@"+(name.replacingOccurrences(of: " ", with: "")) )
+                Text((username.replacingOccurrences(of: " ", with: "")) )
                     .font(.headline)
                 
-                Text(ProfileInfo.profileDescription)
-                    .foregroundColor(.secondary)
-                    .font(.body)
+                if editor {
+                    TextField(description, text: $description)
+                        .foregroundColor(.secondary)
+                        .font(.body)
+                        .onReceive(Just(description)) { _ in limitText(maxDescrip) }
+                } else {
+                    Text(description)
+                        .foregroundColor(.secondary)
+                        .font(.body)
+                }
             }
             .padding(.leading, 24)
             .padding(.trailing, 24)
@@ -52,10 +67,18 @@ struct ProfileHeader: View {
         }
         .edgesIgnoringSafeArea(.horizontal) // Extend the header to the screen edges
     }
+    
+    //Function to keep text length in limits
+        func limitText(_ upper: Int) {
+            if name.count > upper {
+                name = String(name.prefix(upper))
+            }
+        }
+    //Function to keep text length in limits
+        func limitTextDesc(_ upper: Int) {
+            if description.count > upper {
+                description = String(description.prefix(upper))
+            }
+        }
 }
 
-struct ProfileHeader_Previews: PreviewProvider {
-    static var previews: some View {
-        ProfileScreen(lenguaje: .constant("es"))
-    }
-}

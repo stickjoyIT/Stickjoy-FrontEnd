@@ -16,6 +16,7 @@ struct FriendsHeader: View {
     @Binding var amigos:[Amigo]
     
     @Binding var loading:Bool
+    @Binding var lenguaje:String
     
     var body: some View {
         ZStack(alignment: .top) {
@@ -23,7 +24,7 @@ struct FriendsHeader: View {
             
             VStack(alignment: .leading, spacing: 8) {
                 HStack {
-                    Text("Amigos")
+                    Text(lenguaje == "es" ? "Amigos" : "Friends")
                         .font(.largeTitle)
                         .bold()
                     Spacer()
@@ -43,7 +44,7 @@ struct FriendsHeader: View {
 
 struct FriendsHeader_Previews: PreviewProvider {
     static var previews: some View {
-        FriendsHeader(textSearch: .constant(""),amigos: .constant([]), loading: .constant(false))
+        FriendsHeader(textSearch: .constant(""),amigos: .constant([]), loading: .constant(false), lenguaje: .constant("es"))
     }
 }
 
